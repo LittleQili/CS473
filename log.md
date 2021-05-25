@@ -3,6 +3,8 @@
 ## CUDA 编程部分
 ### 遇到的问题与解决
 - 在进行地址传递的时候，分配到device里面的地址只需要一层地址传递就行。不需要把这个地址外面的壳子再套一层进行传递，这样会出问题（虽然这里还是不太懂0.0）
+- **未解决**：mm_shared_mem.cu里面为什么需要第二个`__suyncthreads()`?
+
 
 ### 知识点
 #### 2.基本概念: Grids, Blocks, Threads
@@ -23,9 +25,21 @@
     `dimBlock`指的是一个block里面，thread的构成，比如dimBlock = (32,32)表示有32*32个thread两个维度，每个维度上有32个
 
     `dimGrid` `dimBlock` 可以使用`dim3`定义。
-
+  - **重要**
+    
+    CUDA的thread、block 用内置变量获取方式和内存模型完全不同。视觉上的横向是x（内存是y）。所以kernel function代码会出现这样的情况：
+    ```c
+    int row = threadIdx.y + blockIdx.y * blockDim.y;
+    int col = threadIdx.x + blockIdx.x * blockDim.x;
+    ```
 
 ##### memory相关
+- `__syncthreads()`
+  
+  是**block内**thread同步的工具。具体可以参考p136官方文档。
+  > waits until all threads in the thread block have reached this point and all global and shared
+memory accesses made by these threads prior to __syncthreads() are visible to all threads
+in the block.
 - host 和 device memory 在DRAM中被认为是完全分开的。Kernel 在 device memory上运行。
 - Linear memory: 其实就是我们平常说的一块内存用指针访问。
   - `cudaMalloc()`

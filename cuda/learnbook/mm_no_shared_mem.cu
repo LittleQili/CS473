@@ -11,6 +11,7 @@ typedef struct
 
 #define BLOCK_SIZE 16
 
+// 这里的kernel是，单个kernel读两次global memory，写一次global memory，每次计算出来一个值。
 __global__ void MatMulKernel(const Matrix A, const Matrix B, Matrix C)
 {
     int row = threadIdx.y + blockIdx.y * blockDim.y;
@@ -79,7 +80,7 @@ void MatMul(const Matrix A, const Matrix B, Matrix C)
 
 int main()
 {
-    int awidth = 64, aheight = 64, bwidth = 64;
+    int awidth = 64, aheight = 32, bwidth = 64;
     Matrix A, B;
     A.width = awidth;
     A.height = aheight;
