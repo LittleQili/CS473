@@ -1,3 +1,6 @@
+// POW21: 数组大小
+// POW14：block数目
+// NTHREADS: block内线程块数目
 #define POW21 2 * 1024 * 1024
 #define POW14 16 * 1024
 #define POW21BYTES POW21 * sizeof(int)

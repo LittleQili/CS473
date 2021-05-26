@@ -1,3 +1,4 @@
+// 本质和reduction0.cu是一样的
 #define FOURMB 2 * 1024 * 1024
 #define BYTES FOURMB * sizeof(int)
 #define NTHREADS 128

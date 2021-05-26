@@ -2,12 +2,19 @@
 加油，提高效率，按时休息，一定可以写完。
 ## CUDA 编程部分
 ### 作业思路
-或许可以用shared memory解决一下。
+- 或许可以用shared memory解决一下。
 加油！
+- 再学习一下reduction的解决流程。这个问题是两个数组，基本的解决思想是差不多的。**处理线性区域**
+
+  学到的思路：
+  - 线程尽量操作线性区域，不要跳块。这样能尽可能用满内存的带宽（优化2）
+  - 可以合并不同block（优化3）、不同grid（优化6）之间的global memory访问。
+  - loop unrolling: 1)（优化4）利用SIMT的性质，展开warp内的循环，减少syncthreads操作；2)（优化5）利用block size的一个维度最多1024个线程，完成循环的完全展开
 ### 遇到的问题与解决
 - 在进行地址传递的时候，分配到device里面的地址只需要一层地址传递就行。不需要把这个地址外面的壳子再套一层进行传递，这样会出问题（虽然这里还是不太懂0.0）
-- **未解决**：mm_shared_mem.cu里面为什么需要第二个`__suyncthreads()`?
-
+- **未解决**：mm_shared_mem.cu里面为什么需要第二个`__syncthreads()`?
+- **未完全理解**：在reduction的一系列例子中，是不是优化2（笔记）能够减少内存访问的冲突。
+- **未解决**：当数组数并非2次方，应该怎样对齐？
 
 ### 知识点
 #### 2.基本概念: Grids, Blocks, Threads
@@ -18,7 +25,7 @@
   - blockIdx: 当前grid内部block的ID
   - blockDim: 当前block里面各个维度有多少个thread
   - gridDim: 当前grid里面各个维度有多少个block
-  - warpSize: 一个SM里面最多跑几个线程
+  - warpSize: 一个SM里面最多跑几个线程, 事实上 = 32
 
 - kernel 调用相关
   - `kernelfunc<<<dimGrid, dimBlock>>>`
@@ -35,6 +42,13 @@
     int row = threadIdx.y + blockIdx.y * blockDim.y;
     int col = threadIdx.x + blockIdx.x * blockDim.x;
     ```
+  - CUDA kernel调用相关的各个常量的上限(好像也包含cache) [ref](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#features-and-technical-specifications__technical-specifications-per-compute-capability)
+
+    这里列出几个常用的：
+    - in-grid: x:(2\^31-1), y: 65535, z: 65535
+    - in-block: x: 1024, y: 1024, z: 64
+
+  
 
 ##### memory相关
 - `__syncthreads()`
@@ -45,7 +59,7 @@ memory accesses made by these threads prior to __syncthreads() are visible to al
 in the block.
 - host 和 device memory 在DRAM中被认为是完全分开的。Kernel 在 device memory上运行。
 - Linear memory: 其实就是我们平常说的一块内存用指针访问。
-  - `cudaMalloc()`
+  - `cudaMalloc()`: 在global memory中分配空间
     ```c
     float* d_A;cudaMalloc(&d_A, size);
     ```
