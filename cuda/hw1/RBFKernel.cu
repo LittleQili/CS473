@@ -1,4 +1,5 @@
 // #define DEBUG
+#define ONLY_NORM2
 #ifdef DEBUG
 #define FOURMB (2 * 1024 * 1024)
 #define BYTES (FOURMB * sizeof(int))
@@ -32,7 +33,7 @@
 	}
 
 // TODO: 定义GPU kernel函数,并在rbfComputeGPU中调用
-
+#ifndef ONLY_NORM2
 __device__ void wrapReduce(volatile int *sdata, int tid)
 {
 	sdata[tid] += sdata[tid + 32];
@@ -69,7 +70,7 @@ __global__ void reduce(int *g_idata, int *g_odata, unsigned int n)
 	if (tid == 0)
 		g_odata[blockIdx.x] = sdata[0];
 }
-
+#endif
 __global__ void norm2(int *input1, int *input2, int *output, int len)
 {
 	int i = blockIdx.x * blockDim.x + threadIdx.x;
@@ -122,6 +123,7 @@ __host__ int rbfComputeGPU(int *input1, int *input2, int len)
 #ifdef DEBUG
 		CUDA_CALL(cudaMemcpy(test2norm, d_idata, calBytes, cudaMemcpyDeviceToHost));
 #endif
+#ifndef ONLY_NORM2
 		dimGrid.x = nReduBlocks;
 		reduce<<<dimGrid, dimBlock, smemSize>>>(d_idata, d_odata, len);
 		int s = nReduBlocks;
@@ -135,6 +137,7 @@ __host__ int rbfComputeGPU(int *input1, int *input2, int len)
 		}
 		// TODO: 将gpu的输出拷回cpu
 		CUDA_CALL(cudaMemcpy(&res, d_odata, sizeof(int), cudaMemcpyDeviceToHost));
+#endif
 	}
 	clock_gettime(CLOCK_REALTIME, &time_end);
 	double costTime = (time_end.tv_sec - time_start.tv_sec) * 1000 * 1000 * 1000 + time_end.tv_nsec - time_start.tv_nsec;
@@ -168,7 +171,11 @@ int rbfComputeCPU(int *input1, int *input2, int len)
 		res = 0;
 		for (int i = 0; i < len; i++)
 		{
+#ifndef ONLY_NORM2
 			res += (input1[i] - input2[i]) * (input1[i] - input2[i]);
+#else
+			res = (input1[i] - input2[i]) * (input1[i] - input2[i]);
+#endif
 		}
 	}
 	clock_gettime(CLOCK_REALTIME, &time_end);
@@ -196,6 +203,7 @@ __host__ int main()
 		printf("n=%d:\n", n);
 		int cpu_result = rbfComputeCPU(h_idata1, h_idata2, n);
 		int gpu_result = rbfComputeGPU(h_idata1, h_idata2, n);
+#ifndef ONLY_NORM2
 		if (cpu_result != gpu_result)
 		{
 			printf("ERROR happen when compute %d\n", n);
@@ -204,6 +212,7 @@ __host__ int main()
 			free(h_idata2);
 			exit(1);
 		}
+#endif
 	}
 	free(h_idata1);
 	free(h_idata2);
