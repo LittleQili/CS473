@@ -72,9 +72,13 @@ __global__ void reduce(int *g_idata, int *g_odata, unsigned int n)
 
 __global__ void norm2(int *input1, int *input2, int *output, int len)
 {
+	extern __shared__ int smem[];
+	int tid = threadIdx.x;
 	int i = blockIdx.x * blockDim.x + threadIdx.x;
-	output[i] = (input1[i] - input2[i]) * (input1[i] - input2[i]);
-	// __syncthreads();
+	smem[tid] = input1[i]-input2[i];
+	__syncthreads();
+	smem[tid] = smem[tid] * smem[tid];
+	output[i] = smem[tid];
 }
 
 // no fusion version:
