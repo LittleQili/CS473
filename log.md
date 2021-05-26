@@ -14,7 +14,13 @@
 - 大致思路：
   1. 2 kernel: 先完成两个向量的剑法、平方，然后采用reduce的kernel进行reduce
   2. Fusion 上面两个kernel.
+
+- 接下来的工作：
+  1. 想一想如何fusion
+  2. 总结一下这6种优化方法目的和效果的关系，整理一下运行效果，写个报告出来。
+
 ### 遇到的问题与解决
+
 - 在进行地址传递的时候，分配到device里面的地址只需要一层地址传递就行。不需要把这个地址外面的壳子再套一层进行传递，这样会出问题（虽然这里还是不太懂0.0）
 - **未解决**：mm_shared_mem.cu里面为什么需要第二个`__syncthreads()`?
 - **未完全理解**：在reduction的一系列例子中，是不是优化2（笔记）能够减少内存访问的冲突。
@@ -59,8 +65,8 @@
   
   是**block内**thread同步的工具。具体可以参考p136官方文档。
   > waits until all threads in the thread block have reached this point and all global and shared
-memory accesses made by these threads prior to __syncthreads() are visible to all threads
-in the block.
+  memory accesses made by these threads prior to __syncthreads() are visible to all threads
+  in the block.
 - host 和 device memory 在DRAM中被认为是完全分开的。Kernel 在 device memory上运行。
 - Linear memory: 其实就是我们平常说的一块内存用指针访问。
   - `cudaMalloc()`: 在global memory中分配空间
