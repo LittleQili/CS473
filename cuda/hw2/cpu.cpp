@@ -105,6 +105,6 @@ int main()
     clock_gettime(CLOCK_REALTIME, &time_end);
 	double costTime = (time_end.tv_sec - time_start.tv_sec) * 1000 * 1000 * 1000 + time_end.tv_nsec - time_start.tv_nsec;
 	printf("CPU cal cost:%.7lfms\n", costTime / 1000 / 1000);
-    SaveBMPFile(img, width, height, "black.bmp");
+    SaveBMPFile(img, width, height, "cpu.bmp");
     free(img);
 }
