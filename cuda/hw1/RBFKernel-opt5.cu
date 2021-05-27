@@ -1,5 +1,5 @@
 // #define DEBUG
-#define ONLY_NORM2
+// #define ONLY_NORM2
 #ifdef DEBUG
 #define FOURMB (2 * 1024 * 1024)
 #define BYTES (FOURMB * sizeof(int))

@@ -70,12 +70,12 @@ __global__ void reduce(int *g_idata, int *g_odata, unsigned int n)
 		g_odata[blockIdx.x] = sdata[0];
 }
 
-__global__ void norm2(int *input, int *output, int len)
+__global__ void norm2(int *input1, int *output, int len)
 {
 	extern __shared__ int smem[];
 	int tid = threadIdx.x;
 	int i = blockIdx.x * blockDim.x + threadIdx.x;
-	smem[tid] = input[(i<<1)] - input[(i<<1)+1];
+	smem[tid] = input1[i]-input1[i+len];
 	__syncthreads();
 	smem[tid] = smem[tid] * smem[tid];
 	output[i] = smem[tid];
@@ -93,23 +93,18 @@ __host__ int rbfComputeGPU(int *input1, int *input2, int len)
 
 	int nReduBlocks = len / NTHREADS / 2;
 	int n2NormBlocks = len / NTHREADS;
-	int calBytes = len * sizeof(int) * 2;
+	int calBytes = len * sizeof(int);
 
 	// TODO: 在gpu上分配空间
 	// CUDA_CALL();
-	CUDA_CALL(cudaMalloc((void **)&d_idata1, calBytes));
+	CUDA_CALL(cudaMalloc((void **)&d_idata1, calBytes* 2));
 	// CUDA_CALL(cudaMalloc((void **)&d_idata2, calBytes));
-	CUDA_CALL(cudaMalloc((void **)&d_idata, calBytes / 2));
+	CUDA_CALL(cudaMalloc((void **)&d_idata, calBytes));
 	CUDA_CALL(cudaMalloc((void **)&d_odata, nReduBlocks * sizeof(int)));
 	CUDA_CALL(cudaMalloc((void **)&d_intermediateSums, sizeof(int) * nReduBlocks));
 	// TODO: 将cpu的输入拷到gpu上的globalMemory
-	for (int i = 0; i < len; ++i)
-	{
-		CUDA_CALL(cudaMemcpy(&d_idata1[i * 2], &input1[i], sizeof(int), cudaMemcpyHostToDevice));
-		CUDA_CALL(cudaMemcpy(&d_idata1[i * 2+1], &input2[i], sizeof(int), cudaMemcpyHostToDevice));
-	}
-	// CUDA_CALL(cudaMemcpy(d_idata1, input1, calBytes, cudaMemcpyHostToDevice));
-	// CUDA_CALL(cudaMemcpy(d_idata2, input2, calBytes, cudaMemcpyHostToDevice));
+	CUDA_CALL(cudaMemcpy(d_idata1, input1, calBytes, cudaMemcpyHostToDevice));
+	CUDA_CALL(cudaMemcpy(&d_idata1[len], input2, calBytes, cudaMemcpyHostToDevice));
 
 #ifdef DEBUG
 	int *test2norm;

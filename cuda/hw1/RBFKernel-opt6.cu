@@ -1,9 +1,10 @@
 // #define DEBUG
+// #define ONLY_NORM2
 #ifdef DEBUG
 #define FOURMB (2 * 1024 * 1024)
 #define BYTES (FOURMB * sizeof(int))
-#define NTHREADS 128
-#define INITN 256
+#define NTHREADS 64
+#define INITN 128
 #else
 #define FOURMB (2 * 1024 * 1024)
 // #define FOURM
@@ -33,16 +34,25 @@
 
 // TODO: 定义GPU kernel函数,并在rbfComputeGPU中调用
 
+#ifndef ONLY_NORM2
+template <unsigned int blockSize>
 __device__ void wrapReduce(volatile int *sdata, int tid)
 {
-	sdata[tid] += sdata[tid + 32];
-	sdata[tid] += sdata[tid + 16];
-	sdata[tid] += sdata[tid + 8];
-	sdata[tid] += sdata[tid + 4];
-	sdata[tid] += sdata[tid + 2];
-	sdata[tid] += sdata[tid + 1];
+	if (blockSize >= 64)
+		sdata[tid] += sdata[tid + 32];
+	if (blockSize >= 32)
+		sdata[tid] += sdata[tid + 16];
+	if (blockSize >= 16)
+		sdata[tid] += sdata[tid + 8];
+	if (blockSize >= 8)
+		sdata[tid] += sdata[tid + 4];
+	if (blockSize >= 4)
+		sdata[tid] += sdata[tid + 2];
+	if (blockSize >= 2)
+		sdata[tid] += sdata[tid + 1];
 }
 
+template <unsigned int blockSize>
 __global__ void reduce(int *g_idata, int *g_odata, unsigned int n)
 {
 	extern __shared__ int sdata[];
@@ -54,31 +64,39 @@ __global__ void reduce(int *g_idata, int *g_odata, unsigned int n)
 
 	__syncthreads();
 
-	for (unsigned int s = blockDim.x / 2; s > 32; s >>= 1)
+	if (blockSize >= 512 && (tid < 256))
 	{
-		if (tid < s)
-		{
-			sdata[tid] += sdata[tid + s];
-		}
+		sdata[tid] += sdata[tid + 256];
 		__syncthreads();
 	}
-
+	if (blockSize >= 256 && (tid < 128))
+	{
+		sdata[tid] += sdata[tid + 128];
+		__syncthreads();
+	}
+	if (blockSize >= 128 && (tid < 64))
+	{
+		sdata[tid] += sdata[tid + 64];
+		__syncthreads();
+	}
 	// write result for this block to global mem
 	if (tid < 32)
-		wrapReduce(sdata, tid);
+		wrapReduce<blockSize>(sdata, tid);
 	if (tid == 0)
 		g_odata[blockIdx.x] = sdata[0];
 }
-
+#endif
 __global__ void norm2(int *input, int *output, int len)
 {
 	extern __shared__ int smem[];
 	int tid = threadIdx.x;
-	int i = blockIdx.x * blockDim.x + threadIdx.x;
-	smem[tid] = input[(i<<1)] - input[(i<<1)+1];
+	int i = blockIdx.x * blockDim.x * 2 + threadIdx.x;
+	int truei = blockIdx.x * blockDim.x + threadIdx.x;
+	smem[tid] = input[i] - input[i + blockDim.x];
 	__syncthreads();
+
 	smem[tid] = smem[tid] * smem[tid];
-	output[i] = smem[tid];
+	output[truei] = smem[tid];
 }
 
 // no fusion version:
@@ -93,20 +111,20 @@ __host__ int rbfComputeGPU(int *input1, int *input2, int len)
 
 	int nReduBlocks = len / NTHREADS / 2;
 	int n2NormBlocks = len / NTHREADS;
-	int calBytes = len * sizeof(int) * 2;
+	int calBytes = len * sizeof(int);
 
 	// TODO: 在gpu上分配空间
 	// CUDA_CALL();
-	CUDA_CALL(cudaMalloc((void **)&d_idata1, calBytes));
+	CUDA_CALL(cudaMalloc((void **)&d_idata1, calBytes * 2));
 	// CUDA_CALL(cudaMalloc((void **)&d_idata2, calBytes));
-	CUDA_CALL(cudaMalloc((void **)&d_idata, calBytes / 2));
+	CUDA_CALL(cudaMalloc((void **)&d_idata, calBytes));
 	CUDA_CALL(cudaMalloc((void **)&d_odata, nReduBlocks * sizeof(int)));
 	CUDA_CALL(cudaMalloc((void **)&d_intermediateSums, sizeof(int) * nReduBlocks));
 	// TODO: 将cpu的输入拷到gpu上的globalMemory
-	for (int i = 0; i < len; ++i)
+	for (int i = 0; i < len; i += NTHREADS)
 	{
-		CUDA_CALL(cudaMemcpy(&d_idata1[i * 2], &input1[i], sizeof(int), cudaMemcpyHostToDevice));
-		CUDA_CALL(cudaMemcpy(&d_idata1[i * 2+1], &input2[i], sizeof(int), cudaMemcpyHostToDevice));
+		CUDA_CALL(cudaMemcpy(&d_idata1[i * 2], &input1[i], NTHREADS * sizeof(int), cudaMemcpyHostToDevice));
+		CUDA_CALL(cudaMemcpy(&d_idata1[i * 2 + NTHREADS], &input2[i], NTHREADS * sizeof(int), cudaMemcpyHostToDevice));
 	}
 	// CUDA_CALL(cudaMemcpy(d_idata1, input1, calBytes, cudaMemcpyHostToDevice));
 	// CUDA_CALL(cudaMemcpy(d_idata2, input2, calBytes, cudaMemcpyHostToDevice));
@@ -127,23 +145,26 @@ __host__ int rbfComputeGPU(int *input1, int *input2, int len)
 		dim3 dimBlock(NTHREADS, 1, 1);
 		dim3 dimGrid(n2NormBlocks, 1, 1);
 		int smemSize = NTHREADS * sizeof(int);
+		// dim3 trydimBlock((NTHREADS << 1), 1, 1);
 		norm2<<<dimGrid, dimBlock, smemSize>>>(d_idata1, d_idata, len);
 #ifdef DEBUG
 		CUDA_CALL(cudaMemcpy(test2norm, d_idata, calBytes, cudaMemcpyDeviceToHost));
 #endif
+#ifndef ONLY_NORM2
 		dimGrid.x = nReduBlocks;
-		reduce<<<dimGrid, dimBlock, smemSize>>>(d_idata, d_odata, len);
+		reduce<NTHREADS><<<dimGrid, dimBlock, smemSize>>>(d_idata, d_odata, len);
 		int s = nReduBlocks;
 		while (s > 1)
 		{
 			dim3 dimGrid((s + NTHREADS - 1) / NTHREADS, 1, 1);
 			CUDA_CALL(cudaMemcpy(d_intermediateSums, d_odata, s * sizeof(int), cudaMemcpyDeviceToDevice));
-			reduce<<<dimGrid, dimBlock, smemSize>>>(d_intermediateSums, d_odata, s);
+			reduce<NTHREADS><<<dimGrid, dimBlock, smemSize>>>(d_intermediateSums, d_odata, s);
 			CUDA_CALL(cudaGetLastError());
 			s /= (NTHREADS * 2);
 		}
 		// TODO: 将gpu的输出拷回cpu
 		CUDA_CALL(cudaMemcpy(&res, d_odata, sizeof(int), cudaMemcpyDeviceToHost));
+#endif
 	}
 	clock_gettime(CLOCK_REALTIME, &time_end);
 	double costTime = (time_end.tv_sec - time_start.tv_sec) * 1000 * 1000 * 1000 + time_end.tv_nsec - time_start.tv_nsec;
@@ -177,7 +198,11 @@ int rbfComputeCPU(int *input1, int *input2, int len)
 		res = 0;
 		for (int i = 0; i < len; i++)
 		{
+#ifndef ONLY_NORM2
 			res += (input1[i] - input2[i]) * (input1[i] - input2[i]);
+#else
+			res = (input1[i] - input2[i]) * (input1[i] - input2[i]);
+#endif
 		}
 	}
 	clock_gettime(CLOCK_REALTIME, &time_end);
@@ -205,6 +230,7 @@ __host__ int main()
 		printf("n=%d:\n", n);
 		int cpu_result = rbfComputeCPU(h_idata1, h_idata2, n);
 		int gpu_result = rbfComputeGPU(h_idata1, h_idata2, n);
+#ifndef ONLY_NORM2
 		if (cpu_result != gpu_result)
 		{
 			printf("ERROR happen when compute %d\n", n);
@@ -213,6 +239,7 @@ __host__ int main()
 			free(h_idata2);
 			exit(1);
 		}
+#endif
 	}
 	free(h_idata1);
 	free(h_idata2);
