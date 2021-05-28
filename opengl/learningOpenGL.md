@@ -14,3 +14,10 @@
 - 将src里面的glad.c内容添加到工程源文件中。建议新建源文件，或者copy到：项目文件夹/项目名称文件夹下。
 
 > 好像不太适合用linux环境进行编程。先用自己的电脑做吧
+>
+> F:\term6\GPU\CS473\opengl\env_sync\include
+>
+> F:\term6\GPU\CS473\opengl\env_sync\lib
+>
+> F:\term6\GPU\CS473\opengl\env_sync\src
+
