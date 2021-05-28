@@ -21,3 +21,6 @@
 >
 > F:\term6\GPU\CS473\opengl\env_sync\src
 
+https://blog.csdn.net/u013295276/article/details/78268601 作业链接
+
+https://learnopengl.com/In-Practice/Debugging 调试教程
