@@ -108,14 +108,15 @@ int main()
     // ------------------------------------------------------------------
     // opengl的“标准化设备坐标”是-1.0到1.0,包括x y z三个维度。可以认为是世界坐标系
     float vertices[] = {
-         0.5f,  0.5f, 0.0f,  // top right
-         0.5f, -0.5f, 0.0f,  // bottom right
-        -0.5f, -0.5f, 0.0f,  // bottom left
-        -0.5f,  0.5f, 0.0f   // top left 
+        -0.8f,  0.0f, 0.0f,  // top right
+        -0.4f,  0.68f, 0.0f,  // bottom right
+        0.0f, 0.0f, 0.0f,  // bottom left
+        -0.4f, -0.68f, 0.0f,  // bottom left
+        0.4f, -0.68f, 0.0f   // top left 
     };
     unsigned int indices[] = {  // note that we start from 0!
-        0, 1, 3,  // first Triangle
-        1, 2, 3   // second Triangle
+        0, 1, 2,  // first Triangle
+        2, 3, 4   // second Triangle
     };
 
     unsigned int VBO, VAO, EBO;
