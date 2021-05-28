@@ -1,3 +1,5 @@
+// 创建相同的两个三角形，但对它们的数据使用不同的VAO和VBO：
+
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
@@ -107,24 +109,31 @@ int main()
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------
     // opengl的“标准化设备坐标”是-1.0到1.0,包括x y z三个维度。可以认为是世界坐标系
-    float vertices[] = {
-        -0.5f, -0.5f, 0.0f, // left  
-         0.5f, -0.5f, 0.0f, // right 
-         0.0f,  0.5f, 0.0f  // top   
-    }; 
+    float vertices1[] = {
+        -0.8f,  0.0f, 0.0f,  // top right
+        -0.4f,  0.68f, 0.0f,  // bottom right
+        0.0f, 0.0f, 0.0f  // bottom left
+    };
+    float vertices2[] = {
+        0.0f, 0.0f, 0.0f,  // bottom left
+        -0.4f, -0.68f, 0.0f,  // bottom left
+        0.4f, -0.68f, 0.0f   // top left 
+    };
 
-    unsigned int VBO, VAO;
-    glGenVertexArrays(1, &VAO);
-    
-    glGenBuffers(1, &VBO);
+    unsigned int VBO[2], VAO[2];
+    glGenVertexArrays(2, VAO);
+    glGenBuffers(2, VBO);
+
+
+    // 从这里开始 5 条语句是一组的
     // bind the Vertex Array Object first, then bind and set vertex buffer(s), and then configure vertex attributes(s).
-    glBindVertexArray(VAO);
+    glBindVertexArray(VAO[0]);
 
     // 顶点缓冲对象的缓冲类型是GL_ARRAY_BUFFER
     // 使用glBindBuffer函数把新创建的缓冲绑定到GL_ARRAY_BUFFER目标上.
     // 我们使用的任何（在GL_ARRAY_BUFFER目标上的）缓冲调用都会用来配置当前绑定的缓冲(VBO)
     // OpenGL允许我们同时绑定多个缓冲，只要它们是不同的缓冲类型
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBindBuffer(GL_ARRAY_BUFFER, VBO[0]);
 
     // glBufferData函数是一个专门用来把用户定义的数据复制到当前绑定缓冲的函数
     // 第一个参数是目标缓冲的类型：顶点缓冲对象当前绑定到GL_ARRAY_BUFFER目标上。
@@ -133,23 +142,30 @@ int main()
     // 第四个参数指定了我们希望显卡如何管理给定的数据:  GL_STATIC_DRAW ：数据不会或几乎不会改变。
     //                                              GL_DYNAMIC_DRAW：数据会被改变很多。
     //                                              GL_STREAM_DRAW ：数据每次绘制时都会改变。
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices1), vertices1, GL_STATIC_DRAW);
+
 
     // 链接顶点属性
     
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
 
+    // glBindVertexArray(0); // no need to unbind at all as we directly bind a different VAO the next few lines 
+
+    glBindVertexArray(VAO[1]);
+    glBindBuffer(GL_ARRAY_BUFFER, VBO[1]);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices2), vertices2, GL_STATIC_DRAW);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+    glEnableVertexAttribArray(0);
+    // glBindVertexArray(0); // not really necessary as well, but beware of calls that could affect VAOs while this one is bound (like binding element buffer objects, or enabling/disabling vertex attributes)
+
     // note that this is allowed, the call to glVertexAttribPointer registered VBO as the vertex attribute's bound vertex buffer object so afterwards we can safely unbind
     glBindBuffer(GL_ARRAY_BUFFER, 0); 
 
-    // You can unbind the VAO afterwards so other VAO calls won't accidentally modify this VAO, but this rarely happens. Modifying other
-    // VAOs requires a call to glBindVertexArray anyways so we generally don't unbind VAOs (nor VBOs) when it's not directly necessary.
-    glBindVertexArray(0); 
 
 
     // uncomment this call to draw in wireframe polygons.
-    //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
     // render loop
     // -----------
@@ -166,9 +182,12 @@ int main()
 
         // draw our first triangle
         glUseProgram(shaderProgram);
-        glBindVertexArray(VAO); // seeing as we only have a single VAO there's no need to bind it every time, but we'll do so to keep things a bit more organized
+        // draw first triangle using the data from the first VAO
+        glBindVertexArray(VAO[0]);
         glDrawArrays(GL_TRIANGLES, 0, 3);
-        // glBindVertexArray(0); // no need to unbind it every time 
+        // then we draw the second triangle using the data from the second VAO
+        glBindVertexArray(VAO[1]);
+        glDrawArrays(GL_TRIANGLES, 0, 3);
  
         // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
         // -------------------------------------------------------------------------------
@@ -178,8 +197,8 @@ int main()
 
     // optional: de-allocate all resources once they've outlived their purpose:
     // ------------------------------------------------------------------------
-    glDeleteVertexArrays(1, &VAO);
-    glDeleteBuffers(1, &VBO);
+    glDeleteVertexArrays(2, VAO);
+    glDeleteBuffers(2, VBO);
     glDeleteProgram(shaderProgram);
 
     // glfw: terminate, clearing all previously allocated GLFW resources.
