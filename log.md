@@ -1,5 +1,8 @@
 # Log of CS473 HW
 加油，提高效率，按时休息，一定可以写完。
+## OpenGL 编程部分
+看[这里](opengl/learningOpenGL.md)
+看了一下，好像服务器不适合做opengl编程，因为没有办法显示
 ## CUDA 编程部分
 ### 作业2思路
 #### CPU版本代码阅读
