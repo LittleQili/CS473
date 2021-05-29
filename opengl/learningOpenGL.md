@@ -10,7 +10,7 @@
 - 配置项目属性：
   - VC++目录-包含目录-include
   - VC++目录-库目录-lib
-  - 链接器-输入-附加依赖项-添加glfw3.lib
+  - 链接器-输入-附加依赖项-添加glfw3.lib glut.lib glut32.lib
 - 将src里面的glad.c内容添加到工程源文件中。建议新建源文件，或者copy到：项目文件夹/项目名称文件夹下。
 
 > 好像不太适合用linux环境进行编程。先用自己的电脑做吧
@@ -24,3 +24,13 @@
 https://blog.csdn.net/u013295276/article/details/78268601 作业链接
 
 https://learnopengl.com/In-Practice/Debugging 调试教程
+
+
+
+用gl库跑通的一个代码：https://github.com/SahibYar/Voronoi-Fortune-Algorithm/tree/master/Voronoi_cpp
+
+配置环境教程，x86环境编译，添加一个链接库就行了：https://blog.csdn.net/weixin_41962350/article/details/109345558
+
+
+
+想借用的教程 https://nullprogram.com/blog/2014/06/01/
