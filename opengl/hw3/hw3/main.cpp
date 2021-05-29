@@ -78,6 +78,8 @@ int main()
     // VAOs requires a call to glBindVertexArray anyways so we generally don't unbind VAOs (nor VBOs) when it's not directly necessary.
     // glBindVertexArray(0);
 
+    float offset = 0.5f;
+    ourShader.setFloat("xOffset", offset);
 
     // render loop
     // -----------
