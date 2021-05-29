@@ -70,25 +70,25 @@ int main()
     // bind the Vertex Array Object first, then bind and set vertex buffer(s), and then configure vertex attributes(s).
     glBindVertexArray(VAO);
 
-    // ���㻺�����Ļ���������GL_ARRAY_BUFFER
-    // ʹ��glBindBuffer�������´����Ļ���󶨵�GL_ARRAY_BUFFERĿ����.
-    // ����ʹ�õ��κΣ���GL_ARRAY_BUFFERĿ���ϵģ�������ö����������õ�ǰ�󶨵Ļ���(VBO)
-    // OpenGL��������ͬʱ�󶨶�����壬ֻҪ�����ǲ�ͬ�Ļ�������
+    // 顶点缓冲对象的缓冲类型是GL_ARRAY_BUFFER
+    // 使用glBindBuffer函数把新创建的缓冲绑定到GL_ARRAY_BUFFER目标上.
+    // 我们使用的任何（在GL_ARRAY_BUFFER目标上的）缓冲调用都会用来配置当前绑定的缓冲(VBO)
+    // OpenGL允许我们同时绑定多个缓冲，只要它们是不同的缓冲类型
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
 
-    // glBufferData������һ��ר���������û���������ݸ��Ƶ���ǰ�󶨻���ĺ���
-    // ��һ��������Ŀ�껺������ͣ����㻺�����ǰ�󶨵�GL_ARRAY_BUFFERĿ���ϡ�
-    // �ڶ�������ָ���������ݵĴ�С(���ֽ�Ϊ��λ)����һ���򵥵�sizeof������������ݴ�С���С�
-    // ����������������ϣ�����͵�ʵ�����ݡ�
-    // ���ĸ�����ָ��������ϣ���Կ���ι�������������:  GL_STATIC_DRAW �����ݲ���򼸺�����ı䡣
-    //                                              GL_DYNAMIC_DRAW�����ݻᱻ�ı�ܶࡣ
-    //                                              GL_STREAM_DRAW ������ÿ�λ���ʱ����ı䡣
+    // glBufferData函数是一个专门用来把用户定义的数据复制到当前绑定缓冲的函数
+    // 第一个参数是目标缓冲的类型：顶点缓冲对象当前绑定到GL_ARRAY_BUFFER目标上。
+    // 第二个参数指定传输数据的大小(以字节为单位)；用一个简单的sizeof计算出顶点数据大小就行。
+    // 第三个参数是我们希望发送的实际数据。
+    // 第四个参数指定了我们希望显卡如何管理给定的数据:  GL_STATIC_DRAW ：数据不会或几乎不会改变。
+    //                                              GL_DYNAMIC_DRAW：数据会被改变很多。
+    //                                              GL_STREAM_DRAW ：数据每次绘制时都会改变。
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 
-    // ���Ӷ�������
+    // 链接顶点属性
 
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
@@ -99,6 +99,33 @@ int main()
     // You can unbind the VAO afterwards so other VAO calls won't accidentally modify this VAO, but this rarely happens. Modifying other
     // VAOs requires a call to glBindVertexArray anyways so we generally don't unbind VAOs (nor VBOs) when it's not directly necessary.
     glBindVertexArray(0);
+
+    
+    // srand(time(NULL));
+    // glm::vec2 inputPixel[NUM_POINT];
+    // for(int i = 0;i < NUM_POINT;++i){
+    //     inputPixel[i].x = rand()%SCR_WIDTH;
+    //     inputPixel[i].y = rand()%SCR_HEIGHT;
+    // }
+    // ourShader.setVec2("inputPixel", inputPixel);
+
+    //std::cout <<
+    // for(int i = 0;i < NUM_POINT;++i){
+    //     std::cout << "x: " << inputPixel[i].x << ", y: " << inputPixel[i].y << "\n";
+    // }
+    float inputPixel[NUM_POINT];
+    for(int i = 0;i < NUM_POINT;++i){
+        // if(i < NUM_POINT/2) inputPixel[i] = 0;
+        // else inputPixel[i] = 1024;
+        inputPixel[i] = 512.0;
+        //std::cout << i<<"=" << inputPixel[i]<<" ";
+    }
+    inputPixel[23] = 12.0;
+    for(int i = 0;i < NUM_POINT;++i){
+        std::cout << i<<"=" << inputPixel[i]<<" ";
+    }
+    ourShader.setFloatV("inputPixel", inputPixel, NUM_POINT);
+
     while (!glfwWindowShouldClose(window))
     {
         // input
