@@ -11,7 +11,7 @@ void processInput(GLFWwindow *window);
 // settings
 const unsigned int SCR_WIDTH = 1024;
 const unsigned int SCR_HEIGHT = 1024;
-const unsigned int NUM_POINT = 32;
+const unsigned int NUM_POINT = 500;
 
 int main()
 {
@@ -101,7 +101,6 @@ int main()
     glBindVertexArray(0);
 
     
-    // srand(time(NULL));
     // glm::vec2 inputPixel[NUM_POINT];
     // for(int i = 0;i < NUM_POINT;++i){
     //     inputPixel[i].x = rand()%SCR_WIDTH;
@@ -113,19 +112,21 @@ int main()
     // for(int i = 0;i < NUM_POINT;++i){
     //     std::cout << "x: " << inputPixel[i].x << ", y: " << inputPixel[i].y << "\n";
     // }
-    float inputPixel[NUM_POINT];
-    for(int i = 0;i < NUM_POINT;++i){
-        // if(i < NUM_POINT/2) inputPixel[i] = 0;
-        // else inputPixel[i] = 1024;
-        inputPixel[i] = 512.0;
-        //std::cout << i<<"=" << inputPixel[i]<<" ";
-    }
-    inputPixel[23] = 12.0;
-    for(int i = 0;i < NUM_POINT;++i){
-        std::cout << i<<"=" << inputPixel[i]<<" ";
-    }
-    ourShader.setFloatV("inputPixel", inputPixel, NUM_POINT);
-
+    // int inputPixel[NUM_POINT];
+    srand(time(NULL));
+    // for(int i = 0;i < NUM_POINT;++i){
+    //     // if(i < NUM_POINT/2) inputPixel[i] = 0;
+    //     // else inputPixel[i] = 1024;
+    //     inputPixel[i] =rand()%SCR_WIDTH;
+    //     //std::cout << i<<"=" << inputPixel[i]<<" ";
+    // }
+    // // inputPixel[23] = 12.0;
+    // for(int i = 0;i < NUM_POINT;++i){
+    //     std::cout << rand()%SCR_WIDTH<<", ";
+    // }
+    // ourShader.setIntV("inputPixel", inputPixel, NUM_POINT);
+    int numloop = 0;
+    float rendertime = glfwGetTime();
     while (!glfwWindowShouldClose(window))
     {
         // input
@@ -146,7 +147,10 @@ int main()
         // -------------------------------------------------------------------------------
         glfwSwapBuffers(window);
         glfwPollEvents();
+        ++numloop;
     }
+    rendertime = ((glfwGetTime()-rendertime)/numloop) * 1000;
+    std::cout << "render time: " << rendertime <<"ms, number of loop: "<<numloop<< std::endl;
 
     // optional: de-allocate all resources once they've outlived their purpose:
     // ------------------------------------------------------------------------

@@ -112,16 +112,35 @@ public:
     // ------------------------------------------------------------------------
     void setInt(const std::string& name, int value) const
     {
+        GLuint location = glGetUniformLocation(ID, name.c_str());
         glUniform1i(glGetUniformLocation(ID, name.c_str()), value);
     }
     // ------------------------------------------------------------------------
     void setFloat(const std::string& name, float value) const
     {
-        glUniform1f(glGetUniformLocation(ID, name.c_str()), value);
+        glUniform1f(glGetUniformLocation(ID, name.c_str()), value); 
     }
     void setFloatV(const std::string& name, float value[],int num) const
     {
-        glUniform1fv(glGetUniformLocation(ID, name.c_str()),num,value);
+        for (int i = 0; i < num; ++i) {
+            std::string actname = name + "[" + std::to_string(i) + "]";
+            GLuint location = glGetUniformLocation(ID, actname.c_str());
+            float tmp = value[i];
+            glUniform1f(location, value[i]);
+        }
+    }
+    void setIntV(const std::string& name, int value[], int num) const
+    {
+        // GLuint testlocation = glGetUniformLocation(ID, name.c_str());
+        // GLuint testlocation2 = glGetUniformLocation(ID, "testinput");
+        // GLuint testlocation3 = glGetUniformLocation(ID, "testinput2");
+        // for (int i = 0; i < num; ++i) {
+        //     std::string actname = name + "[" + std::to_string(i) + "]";
+        //     GLuint location = glGetUniformLocation(ID, actname.c_str());
+        //     int tmp = value[i];
+        //     glUniform1i(location, value[i]);
+        // }
+        glUniform1iv(glGetUniformLocation(ID,"inputPixel"), 32, value);
     }
     // ------------------------------------------------------------------------
     void setVec2(const std::string& name, const glm::vec2& value) const
