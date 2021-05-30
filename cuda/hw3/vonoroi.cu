@@ -219,7 +219,7 @@ __host__ void jumpFlood(int numPoints, int Size, std::vector<float2> &pointPos, 
     free(img);
 }
 
-__global__ void draw(mypoint *img,float* px, float* py,int numPoints, int Size)
+__global__ void draw(int* pointIndex, float* px, float* py,int numPoints, int Size)
 {
     int x = threadIdx.x;
     int y = blockIdx.x;
@@ -236,19 +236,23 @@ __global__ void draw(mypoint *img,float* px, float* py,int numPoints, int Size)
 
     // extern __shared__ mypoint smem[]
     // smem[]
-    img[y * Size + x].r = 0;
-    img[y * Size + x].g = (float)(minpos) * 256.0 / (float)(numPoints);
-    img[y * Size + x].b = 0;
+    pointIndex[y*Size + x] = minpos;
 }
+
+// __host__ void drawLine(int numPoints, int Size, std::vector<float2> &pointPos)
 
 __host__ void naive(int numPoints, int Size, std::vector<float2> &pointPos)
 {
     int sizeofimg = Size * Size * sizeof(mypoint);
     int sizeofpoints = sizeof(float) * numPoints;
+    int sizeofpointindex = sizeof(int) * Size*Size;
     mypoint *img = (mypoint *)malloc(sizeofimg);
     assert(img);
-    mypoint *cudaimg;
-    CUDA_CALL(cudaMalloc((void **)&cudaimg, sizeofimg));
+    // mypoint *cudaimg;
+    // CUDA_CALL(cudaMalloc((void **)&cudaimg, sizeofimg));
+    int *nearestIndex;
+    CUDA_CALL(cudaMalloc((void **)&nearestIndex, sizeofpointindex));
+    int *indexRes = (int*)malloc(sizeofpointindex);
 
     float tmppointx[numPoints];
     float tmppointy[numPoints];
@@ -266,21 +270,26 @@ __host__ void naive(int numPoints, int Size, std::vector<float2> &pointPos)
     struct timespec time_start = {0, 0}, time_end = {0, 0};
     clock_gettime(CLOCK_REALTIME, &time_start);
 
-    draw<<<Size, Size>>>(cudaimg,pointX,pointY,numPoints,Size);
-    CUDA_CALL(cudaMemcpy(img, cudaimg, sizeofimg, cudaMemcpyDeviceToHost));
+    draw<<<Size, Size>>>(nearestIndex,pointX,pointY,numPoints,Size);
+    CUDA_CALL(cudaMemcpy(indexRes, nearestIndex, sizeofpointindex, cudaMemcpyDeviceToHost));
     // for(int i = 0;i < width * height;++i){
     //     printf("r%d g%d b%d, ",img[i].r,img[i].g,img[i].b);
     // }
+    for(int i = 0;i < numPoints;++i){
+        img[i].r = img[i].b = 0;
+        img[i].g = (int)(float(indexRes[i]) * 256.0 / (float)(numPoints))%256;
+    }
     clock_gettime(CLOCK_REALTIME, &time_end);
     double costTime = (time_end.tv_sec - time_start.tv_sec) * 1000 * 1000 * 1000 + time_end.tv_nsec - time_start.tv_nsec;
     printf("Naive cal cost:%.7lfms\n", costTime / 1000 / 1000);
     SaveBMPFile(img, LEN_LINE, LEN_LINE, "naive.bmp");
 
-    CUDA_CALL(cudaFree(cudaimg));
+    CUDA_CALL(cudaFree(nearestIndex));
     CUDA_CALL(cudaFree(pointX));
     CUDA_CALL(cudaFree(pointY));
 
     free(img);
+    free(indexRes);
 }
 
 __host__ int main()
@@ -309,5 +318,6 @@ __host__ int main()
 
     jumpFlood(numPoints, Size, pointPos, seedVec1, colorLinear);
     naive(numPoints,Size, pointPos);
+    printf("%d",sizeof(unsigned char));
     return 0;
 }
