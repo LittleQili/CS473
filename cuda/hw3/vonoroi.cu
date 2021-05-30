@@ -292,6 +292,7 @@ __host__ int main()
     std::vector<int> seedVec1(Size * Size, -1);
     std::vector<int> seedVec2(Size * Size, -1);
     std::vector<uchar1> colorLinear;
+    srand(time(NULL));
     for (int i = 0; i < numPoints; ++i)
     {
         float X = static_cast<float>(rand()) / RAND_MAX * Size;
