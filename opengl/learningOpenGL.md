@@ -34,3 +34,10 @@ https://learnopengl.com/In-Practice/Debugging 调试教程
 
 
 想借用的教程 https://nullprogram.com/blog/2014/06/01/
+
+CUDA https://blog.csdn.net/weixin_33872566/article/details/86034159
+
+https://antongerdelan.net/opengl/  https://antongerdelan.net/opengl/hellotriangle.html
+
+配置glew教程 https://blog.csdn.net/sunmenmian/article/details/88594161 **opengl32.lib**;glfw3.lib;glew32sd.lib sys32和syswow 64都记得复制一份
+
