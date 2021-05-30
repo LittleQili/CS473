@@ -182,7 +182,7 @@ __host__ void jumpFlood(int numPoints, int Size, std::vector<float2> &pointPos, 
         cudaDeviceSynchronize();
         clock_gettime(CLOCK_REALTIME, &intime_end);
         incostTime += (intime_end.tv_sec - intime_start.tv_sec) * 1000 * 1000 * 1000 + intime_end.tv_nsec - intime_start.tv_nsec;
-        
+
         CUDA_CALL(cudaMemcpy(Ping, Pong, BufferSize, cudaMemcpyDeviceToDevice));
         std::swap(Ping, Pong);
     }
@@ -208,9 +208,17 @@ __host__ void jumpFlood(int numPoints, int Size, std::vector<float2> &pointPos, 
             const int seed = seedVec[x + y * Size];
             if (seed != -1)
             {
+                if (seed < 250)
+                {
+                    img[x + y * Size].g = (unsigned char)(seed);
+                    img[x + y * Size].b = (unsigned char)(seed);
+                }
+                else
+                {
+                    img[x + y * Size].g = (unsigned char)(500 - seed);
+                    img[x + y * Size].b = (unsigned char)(seed - 250);
+                }
                 img[x + y * Size].r = 0;
-                img[x + y * Size].g = colorLinear[seed].x;
-                img[x + y * Size].b = 0;
             }
         }
     }
@@ -219,16 +227,18 @@ __host__ void jumpFlood(int numPoints, int Size, std::vector<float2> &pointPos, 
     free(img);
 }
 
-__global__ void draw(mypoint *img,float* px, float* py,int numPoints, int Size)
+__global__ void draw(mypoint *img, float *px, float *py, int numPoints, int Size)
 {
     int x = threadIdx.x;
     int y = blockIdx.x;
-    
+
     int minpos = 0;
-    float mind = (px[0] - x) * (px[0] - x) + (py[0] - y)*(py[0] - y);
-    for(int i  = 0;i < numPoints;++i){
-        float distance = (px[i] - x) * (px[i] - x) + (py[i] - y)*(py[i] - y);
-        if(distance < mind){
+    float mind = (px[0] - x) * (px[0] - x) + (py[0] - y) * (py[0] - y);
+    for (int i = 0; i < numPoints; ++i)
+    {
+        float distance = (px[i] - x) * (px[i] - x) + (py[i] - y) * (py[i] - y);
+        if (distance < mind)
+        {
             minpos = i;
             mind = distance;
         }
@@ -237,8 +247,16 @@ __global__ void draw(mypoint *img,float* px, float* py,int numPoints, int Size)
     // extern __shared__ mypoint smem[]
     // smem[]
     img[y * Size + x].r = 0;
-    img[y * Size + x].g = (float)(minpos) * 256.0 / (float)(numPoints);
-    img[y * Size + x].b = 0;
+    if (minpos < 250)
+    {
+        img[y * Size + x].g = (unsigned char)(minpos);
+        img[x + y * Size].b = (unsigned char)(minpos);
+    }
+    else
+    {
+        img[y * Size + x].g = (unsigned char)(500 - minpos);
+        img[x + y * Size].b = (unsigned char)(minpos - 250);
+    }
 }
 
 __host__ void naive(int numPoints, int Size, std::vector<float2> &pointPos)
@@ -266,7 +284,7 @@ __host__ void naive(int numPoints, int Size, std::vector<float2> &pointPos)
     struct timespec time_start = {0, 0}, time_end = {0, 0};
     clock_gettime(CLOCK_REALTIME, &time_start);
 
-    draw<<<Size, Size>>>(cudaimg,pointX,pointY,numPoints,Size);
+    draw<<<Size, Size>>>(cudaimg, pointX, pointY, numPoints, Size);
     CUDA_CALL(cudaMemcpy(img, cudaimg, sizeofimg, cudaMemcpyDeviceToHost));
     // for(int i = 0;i < width * height;++i){
     //     printf("r%d g%d b%d, ",img[i].r,img[i].g,img[i].b);
@@ -308,6 +326,6 @@ __host__ int main()
     }
 
     jumpFlood(numPoints, Size, pointPos, seedVec1, colorLinear);
-    naive(numPoints,Size, pointPos);
+    naive(numPoints, Size, pointPos);
     return 0;
 }
