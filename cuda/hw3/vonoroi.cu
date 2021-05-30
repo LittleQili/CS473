@@ -173,11 +173,16 @@ __host__ void jumpFlood(int numPoints, int Size, std::vector<float2> &pointPos, 
 
     struct timespec time_start = {0, 0}, time_end = {0, 0};
     clock_gettime(CLOCK_REALTIME, &time_start);
+    struct timespec intime_start = {0, 0}, intime_end = {0, 0};
+    double incostTime = 0.0;
     for (int i = Size / 2; i > 0; i = i >> 1)
     {
+        clock_gettime(CLOCK_REALTIME, &intime_start);
         KerneljumpFlood<<<GridDim, BlockDim>>>(Size, Size, SiteArray, Ping, Pong, i, Mutex);
         cudaDeviceSynchronize();
-
+        clock_gettime(CLOCK_REALTIME, &intime_end);
+        incostTime += (intime_end.tv_sec - intime_start.tv_sec) * 1000 * 1000 * 1000 + intime_end.tv_nsec - intime_start.tv_nsec;
+        
         CUDA_CALL(cudaMemcpy(Ping, Pong, BufferSize, cudaMemcpyDeviceToDevice));
         std::swap(Ping, Pong);
     }
@@ -185,6 +190,7 @@ __host__ void jumpFlood(int numPoints, int Size, std::vector<float2> &pointPos, 
     clock_gettime(CLOCK_REALTIME, &time_end);
     double costTime = (time_end.tv_sec - time_start.tv_sec) * 1000 * 1000 * 1000 + time_end.tv_nsec - time_start.tv_nsec;
     printf("JumpFlood cal cost:%.7lfms\n", costTime / 1000 / 1000);
+    printf("JumpFlood in cal cost:%.7lfms\n", incostTime / 1000 / 1000);
 
     CUDA_CALL(cudaFree(SiteArray));
     CUDA_CALL(cudaFree(Ping));

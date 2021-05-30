@@ -1,9 +1,8 @@
 all:
-	nvcc vonoroi_jumpflood.cu -o jumpflood.out
-# test:
+	nvcc vonoroi.cu -o vonoroi.out
 run:
-	nvcc vonoroi_jumpflood.cu -o jumpflood.out
-	./jumpflood.out
+	nvcc vonoroi.cu -o vonoroi.out
+	./vonoroi.out
 clean:
 	rm *.out
 	rm *.bmp
