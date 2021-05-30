@@ -99,7 +99,7 @@ void SaveBMPFile(mypoint *dst, unsigned int width, unsigned int height, const ch
 }
 
 // from ping to pong
-__global__ void Kernel(int SizeX, int SizeY, const float2 *SiteArray, int *Ping, int *Pong, int k, int *Mutex)
+__global__ void KerneljumpFlood(int SizeX, int SizeY, const float2 *SiteArray, int *Ping, int *Pong, int k, int *Mutex)
 {
     //
     int pixelx = threadIdx.x + blockIdx.x * blockDim.x;
@@ -147,24 +147,8 @@ __global__ void Kernel(int SizeX, int SizeY, const float2 *SiteArray, int *Ping,
     }
 }
 
-__host__ void jumpFlood(int numPoints, int Size)
+__host__ void jumpFlood(int numPoints, int Size, std::vector<float2> &pointPos, std::vector<int> &seedVec, std::vector<uchar1> &colorLinear)
 {
-    std::vector<float2> pointPos;
-    std::vector<int> seedVec(Size * Size, -1);
-    std::vector<uchar1> colorLinear;
-    for (int i = 0; i < numPoints; ++i)
-    {
-        float X = static_cast<float>(rand()) / RAND_MAX * Size;
-        float Y = static_cast<float>(rand()) / RAND_MAX * Size;
-        int pixelx = static_cast<int>(floorf(X));
-        int pixely = static_cast<int>(floorf(Y));
-
-        pointPos.push_back(make_float2(pixelx + 0.5f, pixely + 0.5f));
-        seedVec[pixelx + pixely * Size] = i;
-
-        colorLinear.push_back(make_uchar1(static_cast<unsigned char>(static_cast<float>(i) / numPoints * 255.0f)));
-    }
-
     size_t SiteSize = numPoints * sizeof(float2);
     float2 *SiteArray;
     size_t BufferSize = Size * Size * sizeof(int);
@@ -191,7 +175,7 @@ __host__ void jumpFlood(int numPoints, int Size)
     clock_gettime(CLOCK_REALTIME, &time_start);
     for (int i = Size / 2; i > 0; i = i >> 1)
     {
-        Kernel<<<GridDim, BlockDim>>>(Size, Size, SiteArray, Ping, Pong, i, Mutex);
+        KerneljumpFlood<<<GridDim, BlockDim>>>(Size, Size, SiteArray, Ping, Pong, i, Mutex);
         cudaDeviceSynchronize();
 
         CUDA_CALL(cudaMemcpy(Ping, Pong, BufferSize, cudaMemcpyDeviceToDevice));
@@ -200,7 +184,7 @@ __host__ void jumpFlood(int numPoints, int Size)
     CUDA_CALL(cudaMemcpy(&seedVec[0], Pong, BufferSize, cudaMemcpyDeviceToHost));
     clock_gettime(CLOCK_REALTIME, &time_end);
     double costTime = (time_end.tv_sec - time_start.tv_sec) * 1000 * 1000 * 1000 + time_end.tv_nsec - time_start.tv_nsec;
-    printf("GPU cal cost:%.7lfms\n", costTime / 1000 / 1000);
+    printf("JumpFlood cal cost:%.7lfms\n", costTime / 1000 / 1000);
 
     CUDA_CALL(cudaFree(SiteArray));
     CUDA_CALL(cudaFree(Ping));
@@ -229,11 +213,94 @@ __host__ void jumpFlood(int numPoints, int Size)
     free(img);
 }
 
+__global__ void draw(mypoint *img,float* px, float* py,int numPoints, int Size)
+{
+    int x = threadIdx.x;
+    int y = blockIdx.x;
+    
+    int minpos = 0;
+    float mind = (px[0] - x) * (px[0] - x) + (py[0] - y)*(py[0] - y);
+    for(int i  = 0;i < numPoints;++i){
+        float distance = (px[i] - x) * (px[i] - x) + (py[i] - y)*(py[i] - y);
+        if(distance < mind){
+            minpos = i;
+            mind = distance;
+        }
+    }
+
+    // extern __shared__ mypoint smem[]
+    // smem[]
+    img[y * Size + x].r = 0;
+    img[y * Size + x].g = (float)(minpos) * 256.0 / (float)(numPoints);
+    img[y * Size + x].b = 0;
+}
+
+__host__ void naive(int numPoints, int Size, std::vector<float2> &pointPos)
+{
+    int sizeofimg = Size * Size * sizeof(mypoint);
+    int sizeofpoints = sizeof(float) * numPoints;
+    mypoint *img = (mypoint *)malloc(sizeofimg);
+    assert(img);
+    mypoint *cudaimg;
+    CUDA_CALL(cudaMalloc((void **)&cudaimg, sizeofimg));
+
+    float tmppointx[numPoints];
+    float tmppointy[numPoints];
+    for (int i = 0; i < numPoints; ++i)
+    {
+        tmppointx[i] = pointPos[i].x;
+        tmppointy[i] = pointPos[i].y;
+    }
+    float *pointX, *pointY;
+    CUDA_CALL(cudaMalloc((void **)&pointX, sizeofpoints));
+    CUDA_CALL(cudaMalloc((void **)&pointY, sizeofpoints));
+    CUDA_CALL(cudaMemcpy(pointX, &tmppointx[0], sizeofpoints, cudaMemcpyHostToDevice));
+    CUDA_CALL(cudaMemcpy(pointY, &tmppointy[0], sizeofpoints, cudaMemcpyHostToDevice));
+
+    struct timespec time_start = {0, 0}, time_end = {0, 0};
+    clock_gettime(CLOCK_REALTIME, &time_start);
+
+    draw<<<Size, Size>>>(cudaimg,pointX,pointY,numPoints,Size);
+    CUDA_CALL(cudaMemcpy(img, cudaimg, sizeofimg, cudaMemcpyDeviceToHost));
+    // for(int i = 0;i < width * height;++i){
+    //     printf("r%d g%d b%d, ",img[i].r,img[i].g,img[i].b);
+    // }
+    clock_gettime(CLOCK_REALTIME, &time_end);
+    double costTime = (time_end.tv_sec - time_start.tv_sec) * 1000 * 1000 * 1000 + time_end.tv_nsec - time_start.tv_nsec;
+    printf("Naive cal cost:%.7lfms\n", costTime / 1000 / 1000);
+    SaveBMPFile(img, LEN_LINE, LEN_LINE, "naive.bmp");
+
+    CUDA_CALL(cudaFree(cudaimg));
+    CUDA_CALL(cudaFree(pointX));
+    CUDA_CALL(cudaFree(pointY));
+
+    free(img);
+}
+
 __host__ int main()
 {
     int numPoints = NUM_POINTS;
     int Size = LEN_LINE;
 
-    jumpFlood(numPoints,Size);
+    std::vector<float2> pointPos;
+    std::vector<int> seedVec1(Size * Size, -1);
+    std::vector<int> seedVec2(Size * Size, -1);
+    std::vector<uchar1> colorLinear;
+    for (int i = 0; i < numPoints; ++i)
+    {
+        float X = static_cast<float>(rand()) / RAND_MAX * Size;
+        float Y = static_cast<float>(rand()) / RAND_MAX * Size;
+        int pixelx = static_cast<int>(floorf(X));
+        int pixely = static_cast<int>(floorf(Y));
+
+        pointPos.push_back(make_float2(pixelx + 0.5f, pixely + 0.5f));
+        seedVec1[pixelx + pixely * Size] = i;
+        seedVec2[pixelx + pixely * Size] = i;
+
+        colorLinear.push_back(make_uchar1(static_cast<unsigned char>(static_cast<float>(i) / numPoints * 255.0f)));
+    }
+
+    jumpFlood(numPoints, Size, pointPos, seedVec1, colorLinear);
+    naive(numPoints,Size, pointPos);
     return 0;
 }
