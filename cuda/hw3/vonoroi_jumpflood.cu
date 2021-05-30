@@ -98,175 +98,142 @@ void SaveBMPFile(mypoint *dst, unsigned int width, unsigned int height, const ch
     fclose(fd);
 }
 
-__global__ void Kernel( int SizeX , int SizeY , const float2 * SiteArray , const int * Ping , int * Pong , int k , int * Mutex )
+// from ping to pong
+__global__ void Kernel(int SizeX, int SizeY, const float2 *SiteArray, int *Ping, int *Pong, int k, int *Mutex)
 {
     //
-    const int CellX = threadIdx.x + blockIdx.x * blockDim.x ;
-    const int CellY = threadIdx.y + blockIdx.y * blockDim.y ;
+    int pixelx = threadIdx.x + blockIdx.x * blockDim.x;
+    int pixely = threadIdx.y + blockIdx.y * blockDim.y;
+    int pixelIdx = pixelx + pixely * SizeX;
 
-    const int CellIdx = CellX + CellY * SizeX ;
-    const int Seed = Ping[CellIdx] ;
-    if ( Seed < 0 )
+    int2 OffsetArray[8] = {{-1, -1}, {0, -1}, {1, -1}, {-1, 0}, {1, 0}, {-1, 1}, {0, 1}, {1, 1}};
+
+    int seed = Ping[pixelIdx];
+    if (seed < 0)
+        return;
+
+    for (int i = 0; i < 8; ++i)
     {
-        return ;
-    }
-
-    //
-    const int2 OffsetArray[8] = { { - 1 , - 1 } ,
-                                  {   0 , - 1 } ,
-                                  {   1 , - 1 } ,
-                                  { - 1 ,   0 } ,
-                                  {   1 ,   0 } ,
-                                  { - 1 ,   1 } ,
-                                  {   0 ,   1 } ,
-                                  {   1 ,   1 } } ;
-
-    for ( int i = 0 ; i < 8 ; ++ i )
-    {
-        const int FillCellX = CellX + k * OffsetArray[i].x ;
-        const int FillCellY = CellY + k * OffsetArray[i].y ; 
-        if ( FillCellX >= 0 && FillCellX < SizeX && FillCellY >= 0 && FillCellY < SizeY )
+        int nextpixelx = pixelx + k * OffsetArray[i].x;
+        int nextpixely = pixely + k * OffsetArray[i].y;
+        if (nextpixelx >= 0 && nextpixelx < SizeX && nextpixely >= 0 && nextpixely < SizeY)
         {
-            //
-            const int FillCellIdx = FillCellX + FillCellY * SizeX ;
+            int nextpixelIdx = nextpixelx + nextpixely * SizeX;
 
-            // Lock
-            //
-            while ( atomicCAS( Mutex , - 1 , FillCellIdx ) == FillCellIdx )
+            while (atomicCAS(Mutex, -1, nextpixelIdx) == nextpixelIdx)
             {
             }
+            int nextseed = Pong[nextpixelIdx];
 
-            const int FillSeed = Pong[FillCellIdx] ;
-
-            if ( FillSeed < 0 )
-            {
-                Pong[FillCellIdx] = Seed ;
-            }
+            if (nextseed < 0)
+                Pong[nextpixelIdx] = seed;
             else
             {
-                float2 P = make_float2( FillCellX + 0.5f , FillCellY + 0.5f ) ;
+                float2 P = make_float2(nextpixelx + 0.5f, nextpixely + 0.5f);
 
-                float2 A = SiteArray[Seed] ;
-                float2 PA = make_float2( A.x - P.x , A.y - P.y ) ;
-                float PALength = PA.x * PA.x + PA.y * PA.y ;
+                float2 A = SiteArray[seed];
+                float2 PA = make_float2(A.x - P.x, A.y - P.y);
+                float PALength = PA.x * PA.x + PA.y * PA.y;
 
-                const float2 B = SiteArray[FillSeed] ;
-                float2 PB = make_float2( B.x - P.x , B.y - P.y ) ;
-                float PBLength = PB.x * PB.x + PB.y * PB.y ;
+                float2 B = SiteArray[nextseed];
+                float2 PB = make_float2(B.x - P.x, B.y - P.y);
+                float PBLength = PB.x * PB.x + PB.y * PB.y;
 
-                if ( PALength < PBLength )
-                {
-                    Pong[FillCellIdx] = Seed ;
-                }
+                if (PALength < PBLength)
+                    Pong[nextpixelIdx] = seed;
             }
-
-            // Release
-            //
-            atomicExch( Mutex , - 1 ) ;
+            atomicExch(Mutex, -1);
         }
     }
 }
 
-__host__ int main()
+__host__ void jumpFlood(int numPoints, int Size)
 {
-    //
-    int NumSites = NUM_POINTS ;
-    int Size     = LEN_LINE ;
-
-    //
-    int NumCudaDevice = 0 ;
-    cudaGetDeviceCount( & NumCudaDevice ) ;
-    if ( ! NumCudaDevice )
+    std::vector<float2> pointPos;
+    std::vector<int> seedVec(Size * Size, -1);
+    std::vector<uchar1> colorLinear;
+    for (int i = 0; i < numPoints; ++i)
     {
-        return EXIT_FAILURE ;
+        float X = static_cast<float>(rand()) / RAND_MAX * Size;
+        float Y = static_cast<float>(rand()) / RAND_MAX * Size;
+        int pixelx = static_cast<int>(floorf(X));
+        int pixely = static_cast<int>(floorf(Y));
+
+        pointPos.push_back(make_float2(pixelx + 0.5f, pixely + 0.5f));
+        seedVec[pixelx + pixely * Size] = i;
+
+        colorLinear.push_back(make_uchar1(static_cast<unsigned char>(static_cast<float>(i) / numPoints * 255.0f)));
     }
 
-    //
-    //
-    std::vector< float2 > SiteVec ;
-    std::vector< int >    SeedVec( Size * Size , - 1 ) ;
-    std::vector< uchar3 > RandomColorVec ;
-    for ( int i = 0 ; i < NumSites ; ++ i )
+    size_t SiteSize = numPoints * sizeof(float2);
+    float2 *SiteArray;
+    size_t BufferSize = Size * Size * sizeof(int);
+    int *Ping, *Pong;
+    int *Mutex;
+    CUDA_CALL(cudaMalloc(&SiteArray, SiteSize));
+    CUDA_CALL(cudaMemcpy(SiteArray, &pointPos[0], SiteSize, cudaMemcpyHostToDevice));
+
+    CUDA_CALL(cudaMalloc(&Ping, BufferSize));
+    CUDA_CALL(cudaMemcpy(Ping, &seedVec[0], BufferSize, cudaMemcpyHostToDevice));
+    CUDA_CALL(cudaMalloc(&Pong, BufferSize));
+    CUDA_CALL(cudaMemcpy(Pong, Ping, BufferSize, cudaMemcpyDeviceToDevice));
+
+    CUDA_CALL(cudaMalloc(&Mutex, sizeof(int)));
+    CUDA_CALL(cudaMemset(Mutex, -1, sizeof(int)));
+
+    cudaDeviceProp CudaDeviceProperty;
+    cudaGetDeviceProperties(&CudaDeviceProperty, 0);
+    dim3 BlockDim(CudaDeviceProperty.warpSize, CudaDeviceProperty.warpSize);
+    dim3 GridDim((Size + BlockDim.x - 1) / BlockDim.x,
+                 (Size + BlockDim.y - 1) / BlockDim.y);
+
+    struct timespec time_start = {0, 0}, time_end = {0, 0};
+    clock_gettime(CLOCK_REALTIME, &time_start);
+    for (int i = Size / 2; i > 0; i = i >> 1)
     {
-        float X = static_cast< float >( rand() ) / RAND_MAX * Size ;
-        float Y = static_cast< float >( rand() ) / RAND_MAX * Size ;
-        int CellX = static_cast< int >( floorf( X ) ) ;
-        int CellY = static_cast< int >( floorf( Y ) ) ;
+        Kernel<<<GridDim, BlockDim>>>(Size, Size, SiteArray, Ping, Pong, i, Mutex);
+        cudaDeviceSynchronize();
 
-        SiteVec.push_back( make_float2( CellX + 0.5f , CellY + 0.5f ) ) ;
-        SeedVec[CellX + CellY * Size] = i ;
-
-        RandomColorVec.push_back( make_uchar3( static_cast< unsigned char >( static_cast< float >( i ) / NumSites * 255.0f ) ,
-                                               static_cast< unsigned char >( static_cast< float >( i ) / NumSites * 255.0f ) ,
-                                               static_cast< unsigned char >( static_cast< float >( i ) / NumSites * 255.0f ) ) ) ;
+        CUDA_CALL(cudaMemcpy(Ping, Pong, BufferSize, cudaMemcpyDeviceToDevice));
+        std::swap(Ping, Pong);
     }
+    CUDA_CALL(cudaMemcpy(&seedVec[0], Pong, BufferSize, cudaMemcpyDeviceToHost));
+    clock_gettime(CLOCK_REALTIME, &time_end);
+    double costTime = (time_end.tv_sec - time_start.tv_sec) * 1000 * 1000 * 1000 + time_end.tv_nsec - time_start.tv_nsec;
+    printf("GPU cal cost:%.7lfms\n", costTime / 1000 / 1000);
 
-    //
-    size_t SiteSize = NumSites * sizeof( float2 ) ;
+    CUDA_CALL(cudaFree(SiteArray));
+    CUDA_CALL(cudaFree(Ping));
+    CUDA_CALL(cudaFree(Pong));
+    CUDA_CALL(cudaFree(Mutex));
 
-    float2 * SiteArray = NULL ;
-    cudaMalloc( & SiteArray , SiteSize ) ;
-    cudaMemcpy( SiteArray , & SiteVec[0] , SiteSize , cudaMemcpyHostToDevice ) ;
-
-    //
-    size_t BufferSize = Size * Size * sizeof( int ) ;
-
-    int * Ping = NULL , * Pong = NULL ;
-    cudaMalloc( & Ping , BufferSize ) , cudaMemcpy( Ping , & SeedVec[0] , BufferSize , cudaMemcpyHostToDevice ) ;
-    cudaMalloc( & Pong , BufferSize ) , cudaMemcpy( Pong , Ping , BufferSize , cudaMemcpyDeviceToDevice ) ;
-
-    //
-    int * Mutex = NULL ;
-    cudaMalloc( & Mutex , sizeof( int ) ) , cudaMemset( Mutex , - 1 , sizeof( int ) ) ;
-
-    //
-    //
-    cudaDeviceProp CudaDeviceProperty ;
-    cudaGetDeviceProperties( & CudaDeviceProperty , 0 ) ;
-
-    dim3 BlockDim( CudaDeviceProperty.warpSize , CudaDeviceProperty.warpSize ) ;
-    dim3 GridDim( ( Size + BlockDim.x - 1 ) / BlockDim.x ,
-                  ( Size + BlockDim.y - 1 ) / BlockDim.y ) ;
-
-    for ( int k = Size / 2 ; k > 0 ; k = k >> 1 )
-    {
-        Kernel<<< GridDim , BlockDim >>>( Size , Size , SiteArray , Ping , Pong , k , Mutex ) ;
-        cudaDeviceSynchronize() ;
-
-        cudaMemcpy( Ping , Pong , BufferSize , cudaMemcpyDeviceToDevice ) ;
-        std::swap( Ping , Pong ) ;
-    }
-    cudaMemcpy( & SeedVec[0] , Pong , BufferSize , cudaMemcpyDeviceToHost ) ;
-
-    //
-    cudaFree( SiteArray ) ;
-    cudaFree( Ping ) ;
-    cudaFree( Pong ) ;
-    cudaFree( Mutex ) ;
-
-    //
-    //
     int sizeofimg = LEN_LINE * LEN_LINE * sizeof(mypoint);
     mypoint *img = (mypoint *)malloc(sizeofimg);
     assert(img);
 
-    // std::vector< uchar3 > Pixels( Size * Size ) ;
-    for ( int y = 0 ; y < Size ; ++ y )
+    for (int y = 0; y < Size; ++y)
     {
-        for ( int x = 0 ; x < Size ; ++ x )
+        for (int x = 0; x < Size; ++x)
         {
-            const int Seed = SeedVec[x + y * Size] ;
-            if ( Seed != - 1 )
+            const int seed = seedVec[x + y * Size];
+            if (seed != -1)
             {
-                img[x + y * Size].r = 0 ;
-                img[x + y * Size].g = RandomColorVec[Seed].y ;
-                img[x + y * Size].b = 0 ;
+                img[x + y * Size].r = 0;
+                img[x + y * Size].g = colorLinear[seed].x;
+                img[x + y * Size].b = 0;
             }
         }
     }
 
-    SaveBMPFile(img, LEN_LINE, LEN_LINE, "gpu.bmp");
+    SaveBMPFile(img, LEN_LINE, LEN_LINE, "jumpflood.bmp");
     free(img);
+}
 
-    return EXIT_SUCCESS ;
+__host__ int main()
+{
+    int numPoints = NUM_POINTS;
+    int Size = LEN_LINE;
+
+    jumpFlood(numPoints,Size);
+    return 0;
 }
