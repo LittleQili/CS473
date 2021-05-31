@@ -6,6 +6,7 @@
 
 #include <iterator>
 #include <vector>
+#include <algorithm>
 
 #define NTHREADS 128
 #define NUM_POINTS 500
@@ -182,7 +183,7 @@ __host__ void jumpFlood(int numPoints, int Size, std::vector<float2> &pointPos, 
         cudaDeviceSynchronize();
         clock_gettime(CLOCK_REALTIME, &intime_end);
         incostTime += (intime_end.tv_sec - intime_start.tv_sec) * 1000 * 1000 * 1000 + intime_end.tv_nsec - intime_start.tv_nsec;
-        
+
         CUDA_CALL(cudaMemcpy(Ping, Pong, BufferSize, cudaMemcpyDeviceToDevice));
         std::swap(Ping, Pong);
     }
@@ -208,9 +209,17 @@ __host__ void jumpFlood(int numPoints, int Size, std::vector<float2> &pointPos, 
             const int seed = seedVec[x + y * Size];
             if (seed != -1)
             {
+                if (seed < 250)
+                {
+                    img[x + y * Size].g = (unsigned char)(seed + 1);
+                    img[x + y * Size].b = 0;
+                }
+                else
+                {
+                    img[x + y * Size].g = 0;
+                    img[x + y * Size].b = (unsigned char)(seed - 249);
+                }
                 img[x + y * Size].r = 0;
-                img[x + y * Size].g = colorLinear[seed].x;
-                img[x + y * Size].b = 0;
             }
         }
     }
@@ -219,16 +228,18 @@ __host__ void jumpFlood(int numPoints, int Size, std::vector<float2> &pointPos, 
     free(img);
 }
 
-__global__ void draw(mypoint *img,float* px, float* py,int numPoints, int Size)
+__global__ void draw(mypoint *img, float *px, float *py, int numPoints, int Size)
 {
     int x = threadIdx.x;
     int y = blockIdx.x;
-    
+
     int minpos = 0;
-    float mind = (px[0] - x) * (px[0] - x) + (py[0] - y)*(py[0] - y);
-    for(int i  = 0;i < numPoints;++i){
-        float distance = (px[i] - x) * (px[i] - x) + (py[i] - y)*(py[i] - y);
-        if(distance < mind){
+    float mind = (px[0] - x) * (px[0] - x) + (py[0] - y) * (py[0] - y);
+    for (int i = 0; i < numPoints; ++i)
+    {
+        float distance = (px[i] - x) * (px[i] - x) + (py[i] - y) * (py[i] - y);
+        if (distance < mind)
+        {
             minpos = i;
             mind = distance;
         }
@@ -237,8 +248,126 @@ __global__ void draw(mypoint *img,float* px, float* py,int numPoints, int Size)
     // extern __shared__ mypoint smem[]
     // smem[]
     img[y * Size + x].r = 0;
-    img[y * Size + x].g = (float)(minpos) * 256.0 / (float)(numPoints);
-    img[y * Size + x].b = 0;
+    if (minpos < 250)
+    {
+        img[y * Size + x].g = (unsigned char)(minpos + 1);
+        img[x + y * Size].b = 0;
+    }
+    else
+    {
+        img[y * Size + x].g = 0;
+        img[x + y * Size].b = (unsigned char)(minpos - 249);
+    }
+}
+
+__host__ void drawline(int p1, int p2, std::vector<float2> &pointPos, mypoint *img, int size)
+{
+    int2 pointlow = (pointPos[p1].x < pointPos[p2].x ? make_int2((int)(pointPos[p1].x - 0.5), (int)(pointPos[p1].y - 0.5)) : make_int2((int)(pointPos[p2].x - 0.5), (int)(pointPos[p2].y - 0.5)));
+    int2 pointhigh = (pointPos[p1].x >= pointPos[p2].x ? make_int2((int)(pointPos[p1].x - 0.5), (int)(pointPos[p1].y - 0.5)) : make_int2((int)(pointPos[p2].x - 0.5), (int)(pointPos[p2].y - 0.5)));
+    // printf("low:(%d,%d),high(%d,%d) ", pointlow.x, pointlow.y, pointhigh.x, pointhigh.y);
+    float div = (float)(pointhigh.y - pointlow.y) / (float)(pointhigh.x - pointlow.x);
+    float offs = float(pointlow.y) - div * (float)(pointlow.x);
+    if (div < 4.0 && div > -4.0)
+    {
+        for (int i = pointlow.x; i < pointhigh.x - 1; ++i)
+        {
+            int tmpy = int(float(i) * div + offs);
+            img[tmpy * size + i].r = (unsigned char)(250);
+            img[tmpy * size + i].g = (unsigned char)(250);
+            img[tmpy * size + i].b = (unsigned char)(0);
+            if (i + 1 < size)
+            {
+                img[tmpy * size + i + 1].r = (unsigned char)(250);
+                img[tmpy * size + i + 1].g = (unsigned char)(250);
+                img[tmpy * size + i + 1].b = (unsigned char)(0);
+            }
+            if ((tmpy + 1) < size)
+            {
+                img[(tmpy + 1) * size + i].r = (unsigned char)(250);
+                img[(tmpy + 1) * size + i].g = (unsigned char)(250);
+                img[(tmpy + 1) * size + i].b = (unsigned char)(0);
+            }
+        }
+    }
+    else
+    {
+        div = (float)(pointhigh.x - pointlow.x) / (float)(pointhigh.y - pointlow.y);
+        offs = (float)(pointlow.x) - div * (float)(pointlow.y);
+        if (pointhigh.y < pointlow.y)
+            std::swap(pointhigh, pointlow);
+        if (pointhigh.y < pointlow.y)
+        {
+            printf("ERROR IN DRAW LINE!\n");
+            exit(0);
+        }
+        for (int i = pointlow.y; i < pointhigh.y - 1; ++i)
+        {
+            int tmpx = int(float(i) * div + offs);
+            img[tmpx + i * size].r = (unsigned char)(250);
+            img[tmpx + i * size].g = (unsigned char)(250);
+            img[tmpx + i * size].b = (unsigned char)(0);
+            if (tmpx + 1 < size)
+            {
+                img[tmpx + i * size + 1].r = (unsigned char)(250);
+                img[tmpx + i * size + 1].g = (unsigned char)(250);
+                img[tmpx + i * size + 1].b = (unsigned char)(0);
+            }
+            if (i + 1 < size)
+            {
+                img[tmpx + (i + 1) * size].r = (unsigned char)(250);
+                img[tmpx + (i + 1) * size].g = (unsigned char)(250);
+                img[tmpx + (i + 1) * size].b = (unsigned char)(0);
+            }
+        }
+    }
+}
+
+__host__ void drawTriangle(mypoint *img, int numPoints, int Size, std::vector<float2> &pointPos)
+{
+    int pairedpoint[numPoints][numPoints] = {{0}};
+    for (int x = 0; x < Size - 1; ++x)
+    {
+        for (int y = 0; y < Size - 1; ++y)
+        {
+            int pair1, pair2;
+            if (img[y * Size + x].g != img[y * Size + x + 1].g || img[y * Size + x].b != img[y * Size + x + 1].b)
+            {
+                if (img[y * Size + x].g == 0)
+                    pair1 = (int)(img[y * Size + x].b + 249);
+                else
+                    pair1 = (int)(img[y * Size + x].g - 1);
+                if (img[y * Size + x + 1].g == 0)
+                    pair2 = (int)(img[y * Size + x + 1].b + 249);
+                else
+                    pair2 = (int)(img[y * Size + x + 1].g - 1);
+                pairedpoint[pair1][pair2] = 1;
+                pairedpoint[pair2][pair1] = 1;
+            }
+            if (img[y * Size + x].g != img[(y + 1) * Size + x].g || img[y * Size + x].b != img[(y + 1) * Size + x].b)
+            {
+                if (img[y * Size + x].g == 0)
+                    pair1 = (int)(img[y * Size + x].b + 249);
+                else
+                    pair1 = (int)(img[y * Size + x].g - 1);
+                if (img[(y + 1) * Size + x].g == 0)
+                    pair2 = (int)(img[(y + 1) * Size + x].b + 249);
+                else
+                    pair2 = (int)(img[(y + 1) * Size + x].g - 1);
+                pairedpoint[pair1][pair2] = 1;
+                pairedpoint[pair2][pair1] = 1;
+            }
+        }
+    }
+    for (int i = 0; i < numPoints - 1; ++i)
+    {
+        for (int j = i + 1; j < numPoints; ++j)
+        {
+            // if(pairedpoint[i][j] == 1)printf("(%d,%d) ",i,j);
+            if (pairedpoint[i][j] == 1)
+                drawline(i, j, pointPos, img, Size);
+        }
+        // printf("\n");
+    }
 }
 
 __host__ void naive(int numPoints, int Size, std::vector<float2> &pointPos)
@@ -266,7 +395,7 @@ __host__ void naive(int numPoints, int Size, std::vector<float2> &pointPos)
     struct timespec time_start = {0, 0}, time_end = {0, 0};
     clock_gettime(CLOCK_REALTIME, &time_start);
 
-    draw<<<Size, Size>>>(cudaimg,pointX,pointY,numPoints,Size);
+    draw<<<Size, Size>>>(cudaimg, pointX, pointY, numPoints, Size);
     CUDA_CALL(cudaMemcpy(img, cudaimg, sizeofimg, cudaMemcpyDeviceToHost));
     // for(int i = 0;i < width * height;++i){
     //     printf("r%d g%d b%d, ",img[i].r,img[i].g,img[i].b);
@@ -274,6 +403,7 @@ __host__ void naive(int numPoints, int Size, std::vector<float2> &pointPos)
     clock_gettime(CLOCK_REALTIME, &time_end);
     double costTime = (time_end.tv_sec - time_start.tv_sec) * 1000 * 1000 * 1000 + time_end.tv_nsec - time_start.tv_nsec;
     printf("Naive cal cost:%.7lfms\n", costTime / 1000 / 1000);
+    drawTriangle(img, numPoints, Size, pointPos);
     SaveBMPFile(img, LEN_LINE, LEN_LINE, "naive.bmp");
 
     CUDA_CALL(cudaFree(cudaimg));
@@ -308,6 +438,6 @@ __host__ int main()
     }
 
     jumpFlood(numPoints, Size, pointPos, seedVec1, colorLinear);
-    naive(numPoints,Size, pointPos);
+    naive(numPoints, Size, pointPos);
     return 0;
 }
