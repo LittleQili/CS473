@@ -22,6 +22,10 @@ void main()
             minindex = i;
         }
     }
-    gl_FragColor = vec4(0,float(minindex)/500.0,0,float(minindex)/500.0);
+    if(minindex < 250)
+        gl_FragColor = vec4(0,float(minindex+1)/256.0,0,float(minindex)/500.0);
+    else
+        gl_FragColor = vec4(0,0,float(minindex-249)/256.0,float(minindex)/500.0);
+
     //     gl_FragColor = vec4(float(minindex)/32,1-float(minindex)/32,0.7*float(minindex)/32,1.0);
 }
