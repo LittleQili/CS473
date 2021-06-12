@@ -4,6 +4,8 @@
 
 开启debug https://github.com/tensorflow/graphics/blob/master/tensorflow_graphics/g3doc/debug_mode.md
 
+## 2
+
 ### 项目思路
 
 今天睡前目标：
@@ -22,7 +24,22 @@
 
 commit了。checkpoint和evaluation基本是同时发生的，所以evaluation的step基本是没用的。
 
+跑一下
+
+- [ ] 写一下对输出的绘图分析程序（重要）
+
 - [ ] 看一下残差网络应该怎样魔改。因为size不一样啊…………（可并行）
+
+resnet tensorflow[实现](https://github.com/raghakot/keras-resnet/blob/master/resnet.py) 可以看一下看一下。
+
+简单改了一下加入残差的部分，还没有跑出来结果。后续看一下resnet怎么实现的，改的更复杂一点。可能的关注点：
+
+- 残差中间应该封装什么网络？
+- 残差是否应该和network in network结合起来？
+- 如果要是修改原本的网络结构，需要对比跑一下。
+
+- [ ] 看一下network in network应该怎么加（重要）
+- [ ] 计算网络参数个数（必要）
 
 ### 项目Toturial
 
@@ -139,3 +156,6 @@ Bottleneck: 先用1\*1kernel降通道数，再正常卷积，再1\*1kernel升通
 
 还是[这篇博客](https://blog.csdn.net/qq_37555071/article/details/108377880?spm=1001.2014.3001.5502)讲得好。
 
+## 3
+
+开始了开始了
