@@ -6,7 +6,22 @@
 
 ### 项目思路
 
-- [ ] 学tf estimator（可并行）
+今天睡前目标：
+
+- [x] 学tf estimator（可并行）。也看一下tensor board能不能展示一下模型（最好是运行过程）
+
+[tensor board for mesh](https://www.tensorflow.org/graphics/tensorboard) [tf.estimator](https://tensorflow.google.cn/api_docs/python/tf/estimator/Estimator?hl=zh-cn) 可能有用的estimator[教程](https://www.cnblogs.com/marsggbo/p/11232897.html)
+
+失败：好像没有找到合适的方法去改项目的执行路径，只能在分配的环境里面执行，不能在drive里面执行。不知道为什么。如果有空的话，可以从如何在drive中pip install下手去看看怎么运行。感觉上再改不太可能，就把模型copy到drive中算了。
+
+找不到summary在哪，也不会打印。另外就是，总不能通过总是存模型来判断accuracy，这也太慢了吧。明天问问助教。
+
+目前先改一下，~~多存checkpoint，多存点~~。把不必要的代码删除不用。开始看怎样修改模型合适。
+
+发现了！进行test和checkpoint没有什么关系的。需要从evaluation的configuration部分进行更改，[API](https://tensorflow.google.cn/api_docs/python/tf/estimator/EvalSpec?hl=zh-cn)。
+
+commit了。checkpoint和evaluation基本是同时发生的，所以evaluation的step基本是没用的。
+
 - [ ] 看一下残差网络应该怎样魔改。因为size不一样啊…………（可并行）
 
 ### 项目Toturial
