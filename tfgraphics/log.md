@@ -4,9 +4,55 @@
 
 开启debug https://github.com/tensorflow/graphics/blob/master/tensorflow_graphics/g3doc/debug_mode.md
 
+### 项目思路
+
+- [ ] 学tf estimator（可并行）
+- [ ] 看一下残差网络应该怎样魔改。因为size不一样啊…………（可并行）
+
+### 项目Toturial
+
+3D mesh不太好处理。mesh可以被当作图来进行处理。图卷积？
+
+3D mesh的对角线需要非零，需要weighted adjadency matrix.矩阵的定义:
+
+```
+A[i, j] = w[i,j] if vertex i and vertex j share an edge,
+A[i, i] = w[i,i] for each vertex i,
+A[i, j] = 0 otherwise.
+where, w[i, j] = 1/(degree(vertex i)), and sum(j)(w[i,j]) = 1
+```
+
+每个mesh的基本信息：
+
+*   'num_vertices', V: Number of vertices in each mesh.
+*   'num_triangles', T: Number of triangles in each mesh.
+*   'vertices': A [V, 3] float tensor of vertex positions.
+*   'triangles': A [T, 3] integer tensor of vertex indices for each triangle.
+*   'labels': A [V] integer tensor with segmentation class label for each
+    vertex.
+
+python with语法（[ref](https://blog.csdn.net/jiaoyangwm/article/details/79243756)）：就是在语句块内创立一个上下文环境。with后面加一个context manager对象管理器，在with语句块执行之前执行`enter()`执行后执行`exit()`.with as: as后面语句被`enter()`返回值赋值。
+
+mesh encoder(vertices to C-dimensional logits, C is number of parts)
+
+TensorFlow接口知识
+
+[Conv1D](https://tensorflow.google.cn/api_docs/python/tf/keras/layers/Conv1D?hl=zh-cn)
+
+```python
+tf.keras.layers.Conv1D(
+    filters, kernel_size, strides=1, padding='valid',
+    data_format='channels_last', dilation_rate=1, groups=1,
+    activation=None, use_bias=True, kernel_initializer='glorot_uniform',
+    bias_initializer='zeros', kernel_regularizer=None,
+    bias_regularizer=None, activity_regularizer=None, kernel_constraint=None,
+    bias_constraint=None, **kwargs
+)
+```
+
 ### 基础知识
 
-贯穿始终的问题：减少训练的参数量。
+贯穿始终的问题：减少训练的参数量；让梯度有效下降。
 
 #### Convolution
 
