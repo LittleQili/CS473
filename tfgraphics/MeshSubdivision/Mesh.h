@@ -19,6 +19,7 @@ public:
 	vector<Vertex*> verts;
 
 	void loadOff(string path, bool quadToTri);
+	void saveOff(string path);
 
 	void addFace(size_t* vertices, size_t sideCount);
 	void addVertex(const Point& p);

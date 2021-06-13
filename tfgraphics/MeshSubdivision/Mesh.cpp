@@ -22,7 +22,7 @@ void Mesh::loadOff(string path, bool quadToTri)
 		}
 
 		size_t sideCount = 0;
-		size_t* vIds = NULL;
+		size_t *vIds = NULL;
 
 		if (quadToTri)
 		{
@@ -34,13 +34,15 @@ void Mesh::loadOff(string path, bool quadToTri)
 				if (sideCount != 4)
 				{
 					cout << path << " is not a quad mesh" << endl;
-					int in; cin >> in; exit(0);
+					int in;
+					cin >> in;
+					exit(0);
 				}
 
 				file >> vIds[0] >> vIds[1] >> vIds[2] >> vIds[3];
 
-				addFace(new size_t[3]{ vIds[0], vIds[1], vIds[2] }, 3);
-				addFace(new size_t[3]{ vIds[0], vIds[2], vIds[3] }, 3);
+				addFace(new size_t[3]{vIds[0], vIds[1], vIds[2]}, 3);
+				addFace(new size_t[3]{vIds[0], vIds[2], vIds[3]}, 3);
 			}
 		}
 		else
@@ -58,7 +60,7 @@ void Mesh::loadOff(string path, bool quadToTri)
 		}
 
 		cout << "Mesh has " << faces.size() << " faces, " << verts.size()
-			<< " verts, " << edges.size() << " edges\nInitialization done\n";
+			 << " verts, " << edges.size() << " edges\nInitialization done\n";
 	}
 	else
 	{
@@ -66,22 +68,44 @@ void Mesh::loadOff(string path, bool quadToTri)
 	}
 }
 
-void Mesh::addFace(size_t* vertices, size_t sideCount)
+void Mesh::saveOff(string path)
 {
-	Face* face = new Face(faces.size());
+	cout << "Mesh saving to " << path << endl;
+	ofstream file;
+	file.open(path, std::ofstream::out);
+	file << "OFF\n"
+		 << verts.size() << " " << faces.size() << " " << edges.size() << "\n";
+	for (size_t i = 0; i < verts.size(); ++i)
+	{
+		file << verts[i]->coords.x << " " << verts[i]->coords.y << " " << verts[i]->coords.z << "\n";
+	}
+	for (size_t i = 0; i < faces.size(); ++i)
+	{
+		file << faces[i]->verts.size();
+		for (size_t j = 0; j < faces[i]->verts.size(); ++j)
+		{
+			file << " " << faces[i]->verts[j]->id;
+		}
+		file << "\n";
+	}
+}
+
+void Mesh::addFace(size_t *vertices, size_t sideCount)
+{
+	Face *face = new Face(faces.size());
 	//TO DO: this will result in null face neighbors
 	//face->faces.resize(sideCount, NULL);
 	faces.push_back(face);
 
 	for (size_t i = 0; i < sideCount; i++)
 	{
-		Vertex* v = verts[vertices[i]];
-		Vertex* vNext = verts[vertices[i < sideCount - 1 ? i + 1 : 0]];
+		Vertex *v = verts[vertices[i]];
+		Vertex *vNext = verts[vertices[i < sideCount - 1 ? i + 1 : 0]];
 
 		face->verts.push_back(v); //sorted
 		v->faces.push_back(face); //not sorted
 
-		Edge* edge = NULL;
+		Edge *edge = NULL;
 		int vNextPos = v->getVertPos(vNext);
 
 		if (vNextPos == -1)
@@ -99,23 +123,25 @@ void Mesh::addFace(size_t* vertices, size_t sideCount)
 		face->edges.push_back(edge); //sorted
 		edge->faces.push_back(face); //sorted, left face is first
 
-		if (i > 0) edge->edges.push_back(face->edges[i - 1]); //not sorted
-		else face->edges[0]->edges.push_back(edge);
+		if (i > 0)
+			edge->edges.push_back(face->edges[i - 1]); //not sorted
+		else
+			face->edges[0]->edges.push_back(edge);
 	}
 }
 
-void Mesh::addVertex(const Point& p)
+void Mesh::addVertex(const Point &p)
 {
 	verts.push_back(new Vertex(verts.size(), p));
 }
 
-Edge* Mesh::addEdge(Vertex * v1, Vertex * v2)
+Edge *Mesh::addEdge(Vertex *v1, Vertex *v2)
 {
 	v1->verts.push_back(v2); // not sorted
 	v2->verts.push_back(v1); // not sorted
 
-	Edge* edge = new Edge(edges.size(),
-		Point::distance(v1->coords, v2->coords));
+	Edge *edge = new Edge(edges.size(),
+						  Point::distance(v1->coords, v2->coords));
 
 	edges.push_back(edge);
 
@@ -131,23 +157,25 @@ Edge* Mesh::addEdge(Vertex * v1, Vertex * v2)
 // TO DO: sort edge neighbors of an edge
 void Mesh::sortCounterClockwise()
 {
-	for each (Vertex* v in verts)
+	for each (Vertex *v in verts)
 	{
-		Face* f = v->faces[0];
-		Edge* edge = NULL;
+		Face *f = v->faces[0];
+		Edge *edge = NULL;
 		size_t eItr = 0;
 		int ePos = 0;
 
 		do
 		{
-			Edge* e1 = NULL;
-			Edge* e2 = NULL;
+			Edge *e1 = NULL;
+			Edge *e2 = NULL;
 
-			for each (Edge* e in f->edges)
+			for each (Edge *e in f->edges)
 				if (e->getVertPos(v) != -1)
 				{
-					if (e1 == NULL) e1 = e;
-					else e2 = e;
+					if (e1 == NULL)
+						e1 = e;
+					else
+						e2 = e;
 				}
 
 			edge = (f->getNextEdge(e1) == e2) ? e1 : e2;
@@ -169,4 +197,3 @@ void Mesh::sortCounterClockwise()
 		} while (f != v->faces[0]);
 	}
 }
-

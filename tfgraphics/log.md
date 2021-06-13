@@ -180,9 +180,13 @@ sudo apt-get install geomview
 geomview
 ```
 
-- [ ] 跑通github[实例代码](https://github.com/ozkanyumsak/mesh-subdivision)
+- [x] 跑通github[实例代码](https://github.com/ozkanyumsak/mesh-subdivision)
 
 他自己用的可视化工具好像是open inventor。open inventor好像用不成，读一下他写的类，看看能不能生成.obj文件. 代码结构看ipad上画的即可。
 
 .off文件格式[参考](https://zhuanlan.zhihu.com/p/148859062)；
+
+- [ ] 看懂其中的几种算法，然后改成自己的形式；
+
+- [ ] 写个脚本之类的东西，把程序发布出来，多跑一些模型写报告用。
 

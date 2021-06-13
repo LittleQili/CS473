@@ -15,6 +15,10 @@ void MyRunner::run()
 	for (size_t i = 0; i < iterations; i++)
 		schemeMesh = scheme->run(schemeMesh);
 	
+	string outfilename;
+	cout << "please enter the new .off file name (no need .off): ";
+	cin >> outfilename;
+	schemeMesh->saveOff(string("Meshes\\output\\")+outfilename+string(".off"));
 }
 
 void MyRunner::getFilePathInput(string* meshpath)
