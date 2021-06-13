@@ -1,0 +1,3171 @@
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 0...
+INFO:tensorflow:Saving checkpoints for 0 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 0...
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 1...
+INFO:tensorflow:Saving checkpoints for 1 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 1...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T18:52:46
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-1
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 5.48659s
+INFO:tensorflow:Finished evaluation at 2021-06-13-18:52:52
+INFO:tensorflow:Saving dict for global step 1: accuracy = 0.3124955, global_step = 1, loss = 2.7417464, mean_loss = 2.7417464
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 1: /root/.keras/datasets/model/retrain/model.ckpt-1
+INFO:tensorflow:loss = 2.777536, step = 0
+INFO:tensorflow:global_step/sec: 1.16892
+INFO:tensorflow:loss = 2.7087853, step = 2 (1.711 sec)
+INFO:tensorflow:global_step/sec: 3.07778
+INFO:tensorflow:loss = 2.6448052, step = 4 (0.650 sec)
+INFO:tensorflow:global_step/sec: 2.92459
+INFO:tensorflow:loss = 2.5842755, step = 6 (0.684 sec)
+INFO:tensorflow:global_step/sec: 3.33903
+INFO:tensorflow:loss = 2.5270224, step = 8 (0.601 sec)
+INFO:tensorflow:global_step/sec: 3.34148
+INFO:tensorflow:loss = 2.474981, step = 10 (0.597 sec)
+INFO:tensorflow:global_step/sec: 2.51039
+INFO:tensorflow:loss = 2.4326456, step = 12 (0.797 sec)
+INFO:tensorflow:global_step/sec: 3.89831
+INFO:tensorflow:loss = 2.407343, step = 14 (0.513 sec)
+INFO:tensorflow:global_step/sec: 3.73738
+INFO:tensorflow:loss = 2.3999176, step = 16 (0.535 sec)
+INFO:tensorflow:global_step/sec: 3.78014
+INFO:tensorflow:loss = 2.407369, step = 18 (0.529 sec)
+INFO:tensorflow:global_step/sec: 3.03938
+INFO:tensorflow:loss = 2.4191997, step = 20 (0.658 sec)
+INFO:tensorflow:global_step/sec: 3.96127
+INFO:tensorflow:loss = 2.4039862, step = 22 (0.505 sec)
+INFO:tensorflow:global_step/sec: 3.45573
+INFO:tensorflow:loss = 2.3874521, step = 24 (0.580 sec)
+INFO:tensorflow:global_step/sec: 3.82919
+INFO:tensorflow:loss = 2.3893268, step = 26 (0.521 sec)
+INFO:tensorflow:global_step/sec: 3.91893
+INFO:tensorflow:loss = 2.3790994, step = 28 (0.512 sec)
+INFO:tensorflow:global_step/sec: 4.02845
+INFO:tensorflow:loss = 2.3706524, step = 30 (0.495 sec)
+INFO:tensorflow:global_step/sec: 3.59783
+INFO:tensorflow:loss = 2.368183, step = 32 (0.556 sec)
+INFO:tensorflow:global_step/sec: 2.86496
+INFO:tensorflow:loss = 2.3682046, step = 34 (0.698 sec)
+INFO:tensorflow:global_step/sec: 3.90871
+INFO:tensorflow:loss = 2.3497279, step = 36 (0.511 sec)
+INFO:tensorflow:global_step/sec: 3.425
+INFO:tensorflow:loss = 2.346296, step = 38 (0.584 sec)
+INFO:tensorflow:global_step/sec: 3.07469
+INFO:tensorflow:loss = 2.3250325, step = 40 (0.651 sec)
+INFO:tensorflow:global_step/sec: 3.19017
+INFO:tensorflow:loss = 2.310824, step = 42 (0.627 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 44...
+INFO:tensorflow:Saving checkpoints for 44 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 44...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T18:53:06
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-44
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 3.68890s
+INFO:tensorflow:Finished evaluation at 2021-06-13-18:53:10
+INFO:tensorflow:Saving dict for global step 44: accuracy = 0.3124955, global_step = 44, loss = 2.2716432, mean_loss = 2.2716432
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 44: /root/.keras/datasets/model/retrain/model.ckpt-44
+INFO:tensorflow:global_step/sec: 0.380918
+INFO:tensorflow:loss = 2.309014, step = 44 (5.250 sec)
+INFO:tensorflow:global_step/sec: 3.94191
+INFO:tensorflow:loss = 2.266243, step = 46 (0.508 sec)
+INFO:tensorflow:global_step/sec: 4.03416
+INFO:tensorflow:loss = 2.2380779, step = 48 (0.496 sec)
+INFO:tensorflow:global_step/sec: 3.83482
+INFO:tensorflow:loss = 2.2240875, step = 50 (0.522 sec)
+INFO:tensorflow:global_step/sec: 3.96745
+INFO:tensorflow:loss = 2.1873777, step = 52 (0.504 sec)
+INFO:tensorflow:global_step/sec: 3.98582
+INFO:tensorflow:loss = 2.1482363, step = 54 (0.502 sec)
+INFO:tensorflow:global_step/sec: 3.8206
+INFO:tensorflow:loss = 2.1265364, step = 56 (0.523 sec)
+INFO:tensorflow:global_step/sec: 3.86842
+INFO:tensorflow:loss = 2.0689285, step = 58 (0.518 sec)
+INFO:tensorflow:global_step/sec: 3.76642
+INFO:tensorflow:loss = 2.0411417, step = 60 (0.530 sec)
+INFO:tensorflow:global_step/sec: 3.7673
+INFO:tensorflow:loss = 1.9884223, step = 62 (0.531 sec)
+INFO:tensorflow:global_step/sec: 3.71624
+INFO:tensorflow:loss = 1.9454801, step = 64 (0.538 sec)
+INFO:tensorflow:global_step/sec: 3.70979
+INFO:tensorflow:loss = 1.886382, step = 66 (0.539 sec)
+INFO:tensorflow:global_step/sec: 3.68773
+INFO:tensorflow:loss = 1.8693388, step = 68 (0.542 sec)
+INFO:tensorflow:global_step/sec: 3.78618
+INFO:tensorflow:loss = 1.8412501, step = 70 (0.528 sec)
+INFO:tensorflow:global_step/sec: 3.71657
+INFO:tensorflow:loss = 1.7923758, step = 72 (0.539 sec)
+INFO:tensorflow:global_step/sec: 3.67343
+INFO:tensorflow:loss = 1.8056129, step = 74 (0.544 sec)
+INFO:tensorflow:global_step/sec: 2.76871
+INFO:tensorflow:loss = 1.7511542, step = 76 (0.722 sec)
+INFO:tensorflow:global_step/sec: 3.88375
+INFO:tensorflow:loss = 1.719535, step = 78 (0.515 sec)
+INFO:tensorflow:global_step/sec: 3.84051
+INFO:tensorflow:loss = 1.703969, step = 80 (0.521 sec)
+INFO:tensorflow:global_step/sec: 3.87716
+INFO:tensorflow:loss = 1.6882741, step = 82 (0.516 sec)
+INFO:tensorflow:global_step/sec: 3.73809
+INFO:tensorflow:loss = 1.6700386, step = 84 (0.535 sec)
+INFO:tensorflow:global_step/sec: 4.00786
+INFO:tensorflow:loss = 1.659837, step = 86 (0.499 sec)
+INFO:tensorflow:global_step/sec: 3.69211
+INFO:tensorflow:loss = 1.6314512, step = 88 (0.542 sec)
+INFO:tensorflow:global_step/sec: 3.69204
+INFO:tensorflow:loss = 1.6477723, step = 90 (0.542 sec)
+INFO:tensorflow:global_step/sec: 2.97873
+INFO:tensorflow:loss = 1.573705, step = 92 (0.672 sec)
+INFO:tensorflow:global_step/sec: 3.08723
+INFO:tensorflow:loss = 1.5803955, step = 94 (0.648 sec)
+INFO:tensorflow:global_step/sec: 3.9815
+INFO:tensorflow:loss = 1.5567322, step = 96 (0.502 sec)
+INFO:tensorflow:global_step/sec: 4.02979
+INFO:tensorflow:loss = 1.5661192, step = 98 (0.496 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 101...
+INFO:tensorflow:Saving checkpoints for 101 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 101...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T18:53:26
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-101
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 5.48069s
+INFO:tensorflow:Finished evaluation at 2021-06-13-18:53:32
+INFO:tensorflow:Saving dict for global step 101: accuracy = 0.46128437, global_step = 101, loss = 1.4887333, mean_loss = 1.4887333
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 101: /root/.keras/datasets/model/retrain/model.ckpt-101
+INFO:tensorflow:global_step/sec: 0.292663
+INFO:tensorflow:loss = 1.5260013, step = 100 (6.835 sec)
+INFO:tensorflow:global_step/sec: 3.6344
+INFO:tensorflow:loss = 1.5162724, step = 102 (0.549 sec)
+INFO:tensorflow:global_step/sec: 3.44451
+INFO:tensorflow:loss = 1.5352155, step = 104 (0.581 sec)
+INFO:tensorflow:global_step/sec: 3.76174
+INFO:tensorflow:loss = 1.4975514, step = 106 (0.532 sec)
+INFO:tensorflow:global_step/sec: 3.7591
+INFO:tensorflow:loss = 1.4717225, step = 108 (0.532 sec)
+INFO:tensorflow:global_step/sec: 2.80251
+INFO:tensorflow:loss = 1.4113561, step = 110 (0.714 sec)
+INFO:tensorflow:global_step/sec: 3.82823
+INFO:tensorflow:loss = 1.4143987, step = 112 (0.522 sec)
+INFO:tensorflow:global_step/sec: 3.89282
+INFO:tensorflow:loss = 1.4365196, step = 114 (0.514 sec)
+INFO:tensorflow:global_step/sec: 3.02866
+INFO:tensorflow:loss = 1.3587512, step = 116 (0.660 sec)
+INFO:tensorflow:global_step/sec: 3.90261
+INFO:tensorflow:loss = 1.3479043, step = 118 (0.512 sec)
+INFO:tensorflow:global_step/sec: 3.89225
+INFO:tensorflow:loss = 1.4047365, step = 120 (0.514 sec)
+INFO:tensorflow:global_step/sec: 3.86372
+INFO:tensorflow:loss = 1.3062847, step = 122 (0.518 sec)
+INFO:tensorflow:global_step/sec: 3.87243
+INFO:tensorflow:loss = 1.2953866, step = 124 (0.517 sec)
+INFO:tensorflow:global_step/sec: 3.82297
+INFO:tensorflow:loss = 1.2449696, step = 126 (0.523 sec)
+INFO:tensorflow:global_step/sec: 3.78461
+INFO:tensorflow:loss = 1.3145442, step = 128 (0.528 sec)
+INFO:tensorflow:global_step/sec: 3.71318
+INFO:tensorflow:loss = 1.2301446, step = 130 (0.539 sec)
+INFO:tensorflow:global_step/sec: 3.64641
+INFO:tensorflow:loss = 1.2434212, step = 132 (0.549 sec)
+INFO:tensorflow:global_step/sec: 3.48807
+INFO:tensorflow:loss = 1.177615, step = 134 (0.573 sec)
+INFO:tensorflow:global_step/sec: 3.64816
+INFO:tensorflow:loss = 1.2028714, step = 136 (0.548 sec)
+INFO:tensorflow:global_step/sec: 3.73415
+INFO:tensorflow:loss = 1.233219, step = 138 (0.536 sec)
+INFO:tensorflow:global_step/sec: 3.80182
+INFO:tensorflow:loss = 1.1633141, step = 140 (0.526 sec)
+INFO:tensorflow:global_step/sec: 3.68566
+INFO:tensorflow:loss = 1.1813934, step = 142 (0.543 sec)
+INFO:tensorflow:global_step/sec: 3.62767
+INFO:tensorflow:loss = 1.1697555, step = 144 (0.551 sec)
+INFO:tensorflow:global_step/sec: 3.6188
+INFO:tensorflow:loss = 1.2976179, step = 146 (0.553 sec)
+INFO:tensorflow:global_step/sec: 3.70309
+INFO:tensorflow:loss = 1.0918788, step = 148 (0.540 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 151...
+INFO:tensorflow:Saving checkpoints for 151 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 151...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T18:53:46
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-151
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 3.67562s
+INFO:tensorflow:Finished evaluation at 2021-06-13-18:53:50
+INFO:tensorflow:Saving dict for global step 151: accuracy = 0.58001834, global_step = 151, loss = 1.0117934, mean_loss = 1.0117934
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 151: /root/.keras/datasets/model/retrain/model.ckpt-151
+INFO:tensorflow:global_step/sec: 0.397378
+INFO:tensorflow:loss = 1.2269888, step = 150 (5.034 sec)
+INFO:tensorflow:global_step/sec: 3.54079
+INFO:tensorflow:loss = 1.146248, step = 152 (0.564 sec)
+INFO:tensorflow:global_step/sec: 3.64858
+INFO:tensorflow:loss = 1.1103133, step = 154 (0.548 sec)
+INFO:tensorflow:global_step/sec: 3.62895
+INFO:tensorflow:loss = 1.0773842, step = 156 (0.551 sec)
+INFO:tensorflow:global_step/sec: 3.82692
+INFO:tensorflow:loss = 1.1849763, step = 158 (0.523 sec)
+INFO:tensorflow:global_step/sec: 3.76242
+INFO:tensorflow:loss = 1.0683968, step = 160 (0.532 sec)
+INFO:tensorflow:global_step/sec: 3.74417
+INFO:tensorflow:loss = 1.1058561, step = 162 (0.534 sec)
+INFO:tensorflow:global_step/sec: 3.82127
+INFO:tensorflow:loss = 1.1081302, step = 164 (0.523 sec)
+INFO:tensorflow:global_step/sec: 3.85599
+INFO:tensorflow:loss = 1.0726285, step = 166 (0.523 sec)
+INFO:tensorflow:global_step/sec: 3.72637
+INFO:tensorflow:loss = 1.0916294, step = 168 (0.532 sec)
+INFO:tensorflow:global_step/sec: 3.65685
+INFO:tensorflow:loss = 1.0704612, step = 170 (0.547 sec)
+INFO:tensorflow:global_step/sec: 3.68838
+INFO:tensorflow:loss = 1.0323439, step = 172 (0.542 sec)
+INFO:tensorflow:global_step/sec: 3.73226
+INFO:tensorflow:loss = 1.041343, step = 174 (0.536 sec)
+INFO:tensorflow:global_step/sec: 3.62683
+INFO:tensorflow:loss = 1.0177935, step = 176 (0.551 sec)
+INFO:tensorflow:global_step/sec: 3.77104
+INFO:tensorflow:loss = 1.0508093, step = 178 (0.531 sec)
+INFO:tensorflow:global_step/sec: 3.62757
+INFO:tensorflow:loss = 0.9891392, step = 180 (0.551 sec)
+INFO:tensorflow:global_step/sec: 3.70512
+INFO:tensorflow:loss = 1.038621, step = 182 (0.540 sec)
+INFO:tensorflow:global_step/sec: 3.63973
+INFO:tensorflow:loss = 0.9855659, step = 184 (0.549 sec)
+INFO:tensorflow:global_step/sec: 3.63272
+INFO:tensorflow:loss = 1.0516272, step = 186 (0.550 sec)
+INFO:tensorflow:global_step/sec: 3.72385
+INFO:tensorflow:loss = 0.9574909, step = 188 (0.537 sec)
+INFO:tensorflow:global_step/sec: 3.60259
+INFO:tensorflow:loss = 1.0922683, step = 190 (0.555 sec)
+INFO:tensorflow:global_step/sec: 3.70019
+INFO:tensorflow:loss = 1.1530436, step = 192 (0.540 sec)
+INFO:tensorflow:global_step/sec: 3.80618
+INFO:tensorflow:loss = 1.133879, step = 194 (0.526 sec)
+INFO:tensorflow:global_step/sec: 3.70998
+INFO:tensorflow:loss = 1.0236757, step = 196 (0.540 sec)
+INFO:tensorflow:global_step/sec: 3.80598
+INFO:tensorflow:loss = 0.9993271, step = 198 (0.525 sec)
+INFO:tensorflow:global_step/sec: 3.68925
+INFO:tensorflow:loss = 0.9542099, step = 200 (0.544 sec)
+INFO:tensorflow:global_step/sec: 3.78114
+INFO:tensorflow:loss = 1.0266008, step = 202 (0.526 sec)
+INFO:tensorflow:global_step/sec: 3.64483
+INFO:tensorflow:loss = 1.0074985, step = 204 (0.549 sec)
+INFO:tensorflow:global_step/sec: 3.6866
+INFO:tensorflow:loss = 1.00581, step = 206 (0.542 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 209...
+INFO:tensorflow:Saving checkpoints for 209 into /root/.keras/datasets/model/retrain/model.ckpt.
+WARNING:tensorflow:From /usr/local/lib/python3.7/dist-packages/tensorflow/python/training/saver.py:971: remove_checkpoint (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to delete files with this prefix.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 209...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T18:54:07
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-209
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 3.82044s
+INFO:tensorflow:Finished evaluation at 2021-06-13-18:54:11
+INFO:tensorflow:Saving dict for global step 209: accuracy = 0.6215875, global_step = 209, loss = 0.9023141, mean_loss = 0.9023141
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 209: /root/.keras/datasets/model/retrain/model.ckpt-209
+INFO:tensorflow:global_step/sec: 0.370957
+INFO:tensorflow:loss = 1.2385634, step = 208 (5.392 sec)
+INFO:tensorflow:global_step/sec: 3.46845
+INFO:tensorflow:loss = 1.0725734, step = 210 (0.576 sec)
+INFO:tensorflow:global_step/sec: 3.68046
+INFO:tensorflow:loss = 1.0779954, step = 212 (0.543 sec)
+INFO:tensorflow:global_step/sec: 3.49645
+INFO:tensorflow:loss = 1.0949624, step = 214 (0.572 sec)
+INFO:tensorflow:global_step/sec: 3.58561
+INFO:tensorflow:loss = 1.0148175, step = 216 (0.558 sec)
+INFO:tensorflow:global_step/sec: 3.66268
+INFO:tensorflow:loss = 0.9867491, step = 218 (0.546 sec)
+INFO:tensorflow:global_step/sec: 3.68886
+INFO:tensorflow:loss = 1.2867988, step = 220 (0.542 sec)
+INFO:tensorflow:global_step/sec: 3.76701
+INFO:tensorflow:loss = 1.1280439, step = 222 (0.532 sec)
+INFO:tensorflow:global_step/sec: 3.55955
+INFO:tensorflow:loss = 1.1283127, step = 224 (0.562 sec)
+INFO:tensorflow:global_step/sec: 3.53094
+INFO:tensorflow:loss = 1.1703417, step = 226 (0.565 sec)
+INFO:tensorflow:global_step/sec: 3.67081
+INFO:tensorflow:loss = 0.9741345, step = 228 (0.545 sec)
+INFO:tensorflow:global_step/sec: 3.6517
+INFO:tensorflow:loss = 1.0913371, step = 230 (0.548 sec)
+INFO:tensorflow:global_step/sec: 2.89762
+INFO:tensorflow:loss = 1.0969855, step = 232 (0.690 sec)
+INFO:tensorflow:global_step/sec: 3.84526
+INFO:tensorflow:loss = 1.2515274, step = 234 (0.520 sec)
+INFO:tensorflow:global_step/sec: 3.91892
+INFO:tensorflow:loss = 1.0999901, step = 236 (0.510 sec)
+INFO:tensorflow:global_step/sec: 3.86654
+INFO:tensorflow:loss = 1.0147672, step = 238 (0.517 sec)
+INFO:tensorflow:global_step/sec: 3.9322
+INFO:tensorflow:loss = 1.0919398, step = 240 (0.509 sec)
+INFO:tensorflow:global_step/sec: 3.88778
+INFO:tensorflow:loss = 1.1892952, step = 242 (0.516 sec)
+INFO:tensorflow:global_step/sec: 3.83244
+INFO:tensorflow:loss = 1.1421508, step = 244 (0.520 sec)
+INFO:tensorflow:global_step/sec: 3.69994
+INFO:tensorflow:loss = 0.9587814, step = 246 (0.541 sec)
+INFO:tensorflow:global_step/sec: 3.77843
+INFO:tensorflow:loss = 1.2065543, step = 248 (0.529 sec)
+INFO:tensorflow:global_step/sec: 3.56741
+INFO:tensorflow:loss = 1.0250466, step = 250 (0.560 sec)
+INFO:tensorflow:global_step/sec: 3.80268
+INFO:tensorflow:loss = 1.0508499, step = 252 (0.526 sec)
+INFO:tensorflow:global_step/sec: 3.72541
+INFO:tensorflow:loss = 1.0077492, step = 254 (0.537 sec)
+INFO:tensorflow:global_step/sec: 2.90718
+INFO:tensorflow:loss = 1.2150738, step = 256 (0.688 sec)
+INFO:tensorflow:global_step/sec: 3.81484
+INFO:tensorflow:loss = 0.99830616, step = 258 (0.524 sec)
+INFO:tensorflow:global_step/sec: 3.91833
+INFO:tensorflow:loss = 1.0143533, step = 260 (0.510 sec)
+INFO:tensorflow:global_step/sec: 3.83163
+INFO:tensorflow:loss = 1.0137432, step = 262 (0.522 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 265...
+INFO:tensorflow:Saving checkpoints for 265 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 265...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T18:54:27
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-265
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 5.50646s
+INFO:tensorflow:Finished evaluation at 2021-06-13-18:54:32
+INFO:tensorflow:Saving dict for global step 265: accuracy = 0.62416047, global_step = 265, loss = 0.91373223, mean_loss = 0.91373223
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 265: /root/.keras/datasets/model/retrain/model.ckpt-265
+INFO:tensorflow:global_step/sec: 0.292741
+INFO:tensorflow:loss = 1.0940305, step = 264 (6.833 sec)
+INFO:tensorflow:global_step/sec: 3.58852
+INFO:tensorflow:loss = 1.1103817, step = 266 (0.557 sec)
+INFO:tensorflow:global_step/sec: 3.43804
+INFO:tensorflow:loss = 1.1428137, step = 268 (0.582 sec)
+INFO:tensorflow:global_step/sec: 3.3646
+INFO:tensorflow:loss = 1.1672524, step = 270 (0.594 sec)
+INFO:tensorflow:global_step/sec: 3.54487
+INFO:tensorflow:loss = 1.0987868, step = 272 (0.564 sec)
+INFO:tensorflow:global_step/sec: 3.52707
+INFO:tensorflow:loss = 1.0702721, step = 274 (0.567 sec)
+INFO:tensorflow:global_step/sec: 3.4323
+INFO:tensorflow:loss = 1.0546994, step = 276 (0.584 sec)
+INFO:tensorflow:global_step/sec: 3.49189
+INFO:tensorflow:loss = 1.1728816, step = 278 (0.576 sec)
+INFO:tensorflow:global_step/sec: 3.57311
+INFO:tensorflow:loss = 1.1001312, step = 280 (0.555 sec)
+INFO:tensorflow:global_step/sec: 3.59477
+INFO:tensorflow:loss = 0.98625267, step = 282 (0.556 sec)
+INFO:tensorflow:global_step/sec: 3.68505
+INFO:tensorflow:loss = 1.152461, step = 284 (0.543 sec)
+INFO:tensorflow:global_step/sec: 3.41764
+INFO:tensorflow:loss = 1.0375274, step = 286 (0.586 sec)
+INFO:tensorflow:global_step/sec: 3.49826
+INFO:tensorflow:loss = 1.0989138, step = 288 (0.571 sec)
+INFO:tensorflow:global_step/sec: 3.50627
+INFO:tensorflow:loss = 1.0555885, step = 290 (0.570 sec)
+INFO:tensorflow:global_step/sec: 3.56183
+INFO:tensorflow:loss = 1.0493172, step = 292 (0.562 sec)
+INFO:tensorflow:global_step/sec: 3.51292
+INFO:tensorflow:loss = 1.1316452, step = 294 (0.569 sec)
+INFO:tensorflow:global_step/sec: 3.56474
+INFO:tensorflow:loss = 0.9759882, step = 296 (0.561 sec)
+INFO:tensorflow:global_step/sec: 3.51487
+INFO:tensorflow:loss = 0.9930326, step = 298 (0.569 sec)
+INFO:tensorflow:global_step/sec: 3.64228
+INFO:tensorflow:loss = 1.0714531, step = 300 (0.551 sec)
+INFO:tensorflow:global_step/sec: 3.54334
+INFO:tensorflow:loss = 1.0799602, step = 302 (0.563 sec)
+INFO:tensorflow:global_step/sec: 3.53479
+INFO:tensorflow:loss = 1.0638814, step = 304 (0.566 sec)
+INFO:tensorflow:global_step/sec: 3.50521
+INFO:tensorflow:loss = 1.0121654, step = 306 (0.571 sec)
+INFO:tensorflow:global_step/sec: 3.43887
+INFO:tensorflow:loss = 1.0302515, step = 308 (0.581 sec)
+INFO:tensorflow:global_step/sec: 3.51597
+INFO:tensorflow:loss = 0.9848513, step = 310 (0.569 sec)
+INFO:tensorflow:global_step/sec: 3.58742
+INFO:tensorflow:loss = 1.0223459, step = 312 (0.557 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 314...
+INFO:tensorflow:Saving checkpoints for 314 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 314...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T18:54:47
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-314
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 3.90210s
+INFO:tensorflow:Finished evaluation at 2021-06-13-18:54:51
+INFO:tensorflow:Saving dict for global step 314: accuracy = 0.6343647, global_step = 314, loss = 0.895089, mean_loss = 0.895089
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 314: /root/.keras/datasets/model/retrain/model.ckpt-314
+INFO:tensorflow:global_step/sec: 0.374913
+INFO:tensorflow:loss = 1.1812081, step = 314 (5.335 sec)
+INFO:tensorflow:global_step/sec: 3.54522
+INFO:tensorflow:loss = 1.0522468, step = 316 (0.564 sec)
+INFO:tensorflow:global_step/sec: 3.66197
+INFO:tensorflow:loss = 1.2872903, step = 318 (0.546 sec)
+INFO:tensorflow:global_step/sec: 3.70841
+INFO:tensorflow:loss = 1.0751685, step = 320 (0.539 sec)
+INFO:tensorflow:global_step/sec: 3.64143
+INFO:tensorflow:loss = 1.0142262, step = 322 (0.549 sec)
+INFO:tensorflow:global_step/sec: 3.58056
+INFO:tensorflow:loss = 1.0474687, step = 324 (0.558 sec)
+INFO:tensorflow:global_step/sec: 3.69288
+INFO:tensorflow:loss = 1.0416166, step = 326 (0.542 sec)
+INFO:tensorflow:global_step/sec: 3.57913
+INFO:tensorflow:loss = 1.0717323, step = 328 (0.559 sec)
+INFO:tensorflow:global_step/sec: 3.58854
+INFO:tensorflow:loss = 1.1646522, step = 330 (0.558 sec)
+INFO:tensorflow:global_step/sec: 3.50568
+INFO:tensorflow:loss = 1.2270721, step = 332 (0.570 sec)
+INFO:tensorflow:global_step/sec: 3.53088
+INFO:tensorflow:loss = 1.0396363, step = 334 (0.566 sec)
+INFO:tensorflow:global_step/sec: 3.56459
+INFO:tensorflow:loss = 1.1405795, step = 336 (0.561 sec)
+INFO:tensorflow:global_step/sec: 3.53584
+INFO:tensorflow:loss = 1.1403463, step = 338 (0.565 sec)
+INFO:tensorflow:global_step/sec: 3.54062
+INFO:tensorflow:loss = 1.0273403, step = 340 (0.565 sec)
+INFO:tensorflow:global_step/sec: 3.60133
+INFO:tensorflow:loss = 1.1194643, step = 342 (0.555 sec)
+INFO:tensorflow:global_step/sec: 3.57606
+INFO:tensorflow:loss = 1.0863855, step = 344 (0.559 sec)
+INFO:tensorflow:global_step/sec: 2.618
+INFO:tensorflow:loss = 1.0010805, step = 346 (0.764 sec)
+INFO:tensorflow:global_step/sec: 3.89107
+INFO:tensorflow:loss = 0.9766046, step = 348 (0.514 sec)
+INFO:tensorflow:global_step/sec: 3.71232
+INFO:tensorflow:loss = 1.0552046, step = 350 (0.539 sec)
+INFO:tensorflow:global_step/sec: 3.76185
+INFO:tensorflow:loss = 1.0157129, step = 352 (0.532 sec)
+INFO:tensorflow:global_step/sec: 3.74589
+INFO:tensorflow:loss = 0.9632121, step = 354 (0.535 sec)
+INFO:tensorflow:global_step/sec: 3.73266
+INFO:tensorflow:loss = 0.9520778, step = 356 (0.534 sec)
+INFO:tensorflow:global_step/sec: 3.72718
+INFO:tensorflow:loss = 1.0869918, step = 358 (0.537 sec)
+INFO:tensorflow:global_step/sec: 3.60028
+INFO:tensorflow:loss = 0.9771888, step = 360 (0.556 sec)
+INFO:tensorflow:global_step/sec: 3.61437
+INFO:tensorflow:loss = 1.053465, step = 362 (0.553 sec)
+INFO:tensorflow:global_step/sec: 3.57637
+INFO:tensorflow:loss = 1.1468141, step = 364 (0.559 sec)
+INFO:tensorflow:global_step/sec: 3.61048
+INFO:tensorflow:loss = 1.097383, step = 366 (0.554 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 369...
+INFO:tensorflow:Saving checkpoints for 369 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 369...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T18:55:07
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-369
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 5.54772s
+INFO:tensorflow:Finished evaluation at 2021-06-13-18:55:13
+INFO:tensorflow:Saving dict for global step 369: accuracy = 0.65746844, global_step = 369, loss = 0.9243677, mean_loss = 0.9243677
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 369: /root/.keras/datasets/model/retrain/model.ckpt-369
+INFO:tensorflow:global_step/sec: 0.286808
+INFO:tensorflow:loss = 1.0104088, step = 368 (6.973 sec)
+INFO:tensorflow:global_step/sec: 3.52388
+INFO:tensorflow:loss = 1.0879458, step = 370 (0.568 sec)
+INFO:tensorflow:global_step/sec: 3.49743
+INFO:tensorflow:loss = 0.95303774, step = 372 (0.572 sec)
+INFO:tensorflow:global_step/sec: 3.62537
+INFO:tensorflow:loss = 0.98037416, step = 374 (0.551 sec)
+INFO:tensorflow:global_step/sec: 3.59346
+INFO:tensorflow:loss = 1.1326194, step = 376 (0.557 sec)
+INFO:tensorflow:global_step/sec: 3.52234
+INFO:tensorflow:loss = 1.1266918, step = 378 (0.568 sec)
+INFO:tensorflow:global_step/sec: 3.61391
+INFO:tensorflow:loss = 1.0946251, step = 380 (0.553 sec)
+INFO:tensorflow:global_step/sec: 3.57175
+INFO:tensorflow:loss = 1.0302241, step = 382 (0.560 sec)
+INFO:tensorflow:global_step/sec: 3.7228
+INFO:tensorflow:loss = 1.0699663, step = 384 (0.537 sec)
+INFO:tensorflow:global_step/sec: 3.59065
+INFO:tensorflow:loss = 0.99432313, step = 386 (0.557 sec)
+INFO:tensorflow:global_step/sec: 3.63873
+INFO:tensorflow:loss = 1.1551476, step = 388 (0.550 sec)
+INFO:tensorflow:global_step/sec: 3.6439
+INFO:tensorflow:loss = 0.98315066, step = 390 (0.548 sec)
+INFO:tensorflow:global_step/sec: 3.64145
+INFO:tensorflow:loss = 0.914044, step = 392 (0.549 sec)
+INFO:tensorflow:global_step/sec: 3.6472
+INFO:tensorflow:loss = 1.1018215, step = 394 (0.549 sec)
+INFO:tensorflow:global_step/sec: 3.61934
+INFO:tensorflow:loss = 1.0286261, step = 396 (0.552 sec)
+INFO:tensorflow:global_step/sec: 3.72547
+INFO:tensorflow:loss = 1.0611982, step = 398 (0.537 sec)
+INFO:tensorflow:global_step/sec: 3.59217
+INFO:tensorflow:loss = 1.0345352, step = 400 (0.558 sec)
+INFO:tensorflow:global_step/sec: 3.62752
+INFO:tensorflow:loss = 1.0655098, step = 402 (0.550 sec)
+INFO:tensorflow:global_step/sec: 3.76083
+INFO:tensorflow:loss = 1.1285552, step = 404 (0.533 sec)
+INFO:tensorflow:global_step/sec: 3.6642
+INFO:tensorflow:loss = 1.2341802, step = 406 (0.545 sec)
+INFO:tensorflow:global_step/sec: 3.63137
+INFO:tensorflow:loss = 1.0095174, step = 408 (0.551 sec)
+INFO:tensorflow:global_step/sec: 3.71121
+INFO:tensorflow:loss = 1.0481634, step = 410 (0.539 sec)
+INFO:tensorflow:global_step/sec: 3.64715
+INFO:tensorflow:loss = 0.97773284, step = 412 (0.548 sec)
+INFO:tensorflow:global_step/sec: 3.70306
+INFO:tensorflow:loss = 0.95947087, step = 414 (0.540 sec)
+INFO:tensorflow:global_step/sec: 3.63541
+INFO:tensorflow:loss = 1.0939876, step = 416 (0.550 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 419...
+INFO:tensorflow:Saving checkpoints for 419 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 419...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T18:55:27
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-419
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 5.51137s
+INFO:tensorflow:Finished evaluation at 2021-06-13-18:55:33
+INFO:tensorflow:Saving dict for global step 419: accuracy = 0.70476645, global_step = 419, loss = 0.8682611, mean_loss = 0.8682611
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 419: /root/.keras/datasets/model/retrain/model.ckpt-419
+INFO:tensorflow:global_step/sec: 0.290084
+INFO:tensorflow:loss = 1.081543, step = 418 (6.895 sec)
+INFO:tensorflow:global_step/sec: 3.58596
+INFO:tensorflow:loss = 1.2491018, step = 420 (0.557 sec)
+INFO:tensorflow:global_step/sec: 3.71315
+INFO:tensorflow:loss = 1.2205336, step = 422 (0.539 sec)
+INFO:tensorflow:global_step/sec: 3.62009
+INFO:tensorflow:loss = 1.0632342, step = 424 (0.553 sec)
+INFO:tensorflow:global_step/sec: 3.72161
+INFO:tensorflow:loss = 0.9735636, step = 426 (0.538 sec)
+INFO:tensorflow:global_step/sec: 3.64913
+INFO:tensorflow:loss = 0.9446772, step = 428 (0.548 sec)
+INFO:tensorflow:global_step/sec: 3.69833
+INFO:tensorflow:loss = 0.9676384, step = 430 (0.542 sec)
+INFO:tensorflow:global_step/sec: 3.72579
+INFO:tensorflow:loss = 0.96275014, step = 432 (0.535 sec)
+INFO:tensorflow:global_step/sec: 3.76517
+INFO:tensorflow:loss = 1.1564248, step = 434 (0.532 sec)
+INFO:tensorflow:global_step/sec: 3.60888
+INFO:tensorflow:loss = 0.94805896, step = 436 (0.553 sec)
+INFO:tensorflow:global_step/sec: 3.65668
+INFO:tensorflow:loss = 0.9597521, step = 438 (0.547 sec)
+INFO:tensorflow:global_step/sec: 3.6405
+INFO:tensorflow:loss = 1.1783221, step = 440 (0.549 sec)
+INFO:tensorflow:global_step/sec: 3.5968
+INFO:tensorflow:loss = 1.219334, step = 442 (0.556 sec)
+INFO:tensorflow:global_step/sec: 3.74373
+INFO:tensorflow:loss = 0.97537756, step = 444 (0.534 sec)
+INFO:tensorflow:global_step/sec: 3.67498
+INFO:tensorflow:loss = 0.9529114, step = 446 (0.544 sec)
+INFO:tensorflow:global_step/sec: 3.72721
+INFO:tensorflow:loss = 1.1235534, step = 448 (0.536 sec)
+INFO:tensorflow:global_step/sec: 3.71586
+INFO:tensorflow:loss = 1.0293117, step = 450 (0.538 sec)
+INFO:tensorflow:global_step/sec: 3.64442
+INFO:tensorflow:loss = 1.0705559, step = 452 (0.549 sec)
+INFO:tensorflow:global_step/sec: 3.79294
+INFO:tensorflow:loss = 1.0831515, step = 454 (0.528 sec)
+INFO:tensorflow:global_step/sec: 3.55483
+INFO:tensorflow:loss = 1.0077078, step = 456 (0.562 sec)
+INFO:tensorflow:global_step/sec: 3.64701
+INFO:tensorflow:loss = 0.9961466, step = 458 (0.549 sec)
+INFO:tensorflow:global_step/sec: 3.58678
+INFO:tensorflow:loss = 0.99431854, step = 460 (0.558 sec)
+INFO:tensorflow:global_step/sec: 3.63615
+INFO:tensorflow:loss = 0.92770153, step = 462 (0.550 sec)
+INFO:tensorflow:global_step/sec: 3.69032
+INFO:tensorflow:loss = 0.97750896, step = 464 (0.542 sec)
+INFO:tensorflow:global_step/sec: 3.64318
+INFO:tensorflow:loss = 1.0192449, step = 466 (0.549 sec)
+INFO:tensorflow:global_step/sec: 3.73031
+INFO:tensorflow:loss = 1.0102118, step = 468 (0.536 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 470...
+INFO:tensorflow:Saving checkpoints for 470 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 470...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T18:55:48
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-470
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 3.77644s
+INFO:tensorflow:Finished evaluation at 2021-06-13-18:55:52
+INFO:tensorflow:Saving dict for global step 470: accuracy = 0.73786134, global_step = 470, loss = 0.8511813, mean_loss = 0.8511813
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 470: /root/.keras/datasets/model/retrain/model.ckpt-470
+INFO:tensorflow:global_step/sec: 0.37014
+INFO:tensorflow:loss = 1.0209721, step = 470 (5.404 sec)
+INFO:tensorflow:global_step/sec: 3.59036
+INFO:tensorflow:loss = 1.0045366, step = 472 (0.559 sec)
+INFO:tensorflow:global_step/sec: 3.55571
+INFO:tensorflow:loss = 0.93356043, step = 474 (0.560 sec)
+INFO:tensorflow:global_step/sec: 3.74832
+INFO:tensorflow:loss = 1.080577, step = 476 (0.534 sec)
+INFO:tensorflow:global_step/sec: 3.62549
+INFO:tensorflow:loss = 0.85337514, step = 478 (0.552 sec)
+INFO:tensorflow:global_step/sec: 3.72533
+INFO:tensorflow:loss = 0.8497705, step = 480 (0.537 sec)
+INFO:tensorflow:global_step/sec: 3.62261
+INFO:tensorflow:loss = 0.95147485, step = 482 (0.552 sec)
+INFO:tensorflow:global_step/sec: 3.62647
+INFO:tensorflow:loss = 0.9397245, step = 484 (0.551 sec)
+INFO:tensorflow:global_step/sec: 3.7634
+INFO:tensorflow:loss = 0.73769003, step = 486 (0.531 sec)
+INFO:tensorflow:global_step/sec: 3.76519
+INFO:tensorflow:loss = 0.9406454, step = 488 (0.532 sec)
+INFO:tensorflow:global_step/sec: 3.78466
+INFO:tensorflow:loss = 0.8151329, step = 490 (0.528 sec)
+INFO:tensorflow:global_step/sec: 3.67665
+INFO:tensorflow:loss = 0.8950931, step = 492 (0.544 sec)
+INFO:tensorflow:global_step/sec: 3.58157
+INFO:tensorflow:loss = 0.7972469, step = 494 (0.558 sec)
+INFO:tensorflow:global_step/sec: 3.72144
+INFO:tensorflow:loss = 0.9275886, step = 496 (0.537 sec)
+INFO:tensorflow:global_step/sec: 3.62934
+INFO:tensorflow:loss = 0.9309058, step = 498 (0.551 sec)
+INFO:tensorflow:global_step/sec: 3.79864
+INFO:tensorflow:loss = 0.8555511, step = 500 (0.530 sec)
+INFO:tensorflow:global_step/sec: 3.70347
+INFO:tensorflow:loss = 0.8005177, step = 502 (0.537 sec)
+INFO:tensorflow:global_step/sec: 3.54854
+INFO:tensorflow:loss = 0.6768948, step = 504 (0.564 sec)
+INFO:tensorflow:global_step/sec: 3.65224
+INFO:tensorflow:loss = 0.8804143, step = 506 (0.548 sec)
+INFO:tensorflow:global_step/sec: 3.70127
+INFO:tensorflow:loss = 0.71591234, step = 508 (0.540 sec)
+INFO:tensorflow:global_step/sec: 3.70282
+INFO:tensorflow:loss = 0.7967648, step = 510 (0.540 sec)
+INFO:tensorflow:global_step/sec: 3.63334
+INFO:tensorflow:loss = 0.95444506, step = 512 (0.550 sec)
+INFO:tensorflow:global_step/sec: 3.62367
+INFO:tensorflow:loss = 0.78227526, step = 514 (0.552 sec)
+INFO:tensorflow:global_step/sec: 3.70068
+INFO:tensorflow:loss = 0.7508526, step = 516 (0.540 sec)
+INFO:tensorflow:global_step/sec: 3.6389
+INFO:tensorflow:loss = 0.73970765, step = 518 (0.553 sec)
+INFO:tensorflow:global_step/sec: 3.62826
+INFO:tensorflow:loss = 0.7931533, step = 520 (0.548 sec)
+INFO:tensorflow:global_step/sec: 3.5135
+INFO:tensorflow:loss = 0.8141721, step = 522 (0.570 sec)
+INFO:tensorflow:global_step/sec: 3.6843
+INFO:tensorflow:loss = 0.8953056, step = 524 (0.542 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 526...
+INFO:tensorflow:Saving checkpoints for 526 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 526...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T18:56:08
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-526
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 5.51482s
+INFO:tensorflow:Finished evaluation at 2021-06-13-18:56:13
+INFO:tensorflow:Saving dict for global step 526: accuracy = 0.78595227, global_step = 526, loss = 0.6319426, mean_loss = 0.6319426
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 526: /root/.keras/datasets/model/retrain/model.ckpt-526
+INFO:tensorflow:global_step/sec: 0.288882
+INFO:tensorflow:loss = 0.84402996, step = 526 (6.923 sec)
+INFO:tensorflow:global_step/sec: 2.74114
+INFO:tensorflow:loss = 0.88400143, step = 528 (0.730 sec)
+INFO:tensorflow:global_step/sec: 4.06347
+INFO:tensorflow:loss = 0.7371934, step = 530 (0.493 sec)
+INFO:tensorflow:global_step/sec: 4.06322
+INFO:tensorflow:loss = 0.99598545, step = 532 (0.492 sec)
+INFO:tensorflow:global_step/sec: 3.89326
+INFO:tensorflow:loss = 0.8379297, step = 534 (0.514 sec)
+INFO:tensorflow:global_step/sec: 3.92163
+INFO:tensorflow:loss = 0.84646916, step = 536 (0.510 sec)
+INFO:tensorflow:global_step/sec: 3.94061
+INFO:tensorflow:loss = 1.0418265, step = 538 (0.508 sec)
+INFO:tensorflow:global_step/sec: 3.76263
+INFO:tensorflow:loss = 0.77650166, step = 540 (0.532 sec)
+INFO:tensorflow:global_step/sec: 3.64456
+INFO:tensorflow:loss = 0.85637665, step = 542 (0.549 sec)
+INFO:tensorflow:global_step/sec: 3.66282
+INFO:tensorflow:loss = 0.8227489, step = 544 (0.546 sec)
+INFO:tensorflow:global_step/sec: 3.75148
+INFO:tensorflow:loss = 0.8139657, step = 546 (0.533 sec)
+INFO:tensorflow:global_step/sec: 3.60763
+INFO:tensorflow:loss = 0.7124248, step = 548 (0.554 sec)
+INFO:tensorflow:global_step/sec: 3.56113
+INFO:tensorflow:loss = 0.88718444, step = 550 (0.562 sec)
+INFO:tensorflow:global_step/sec: 3.75712
+INFO:tensorflow:loss = 0.8444772, step = 552 (0.533 sec)
+INFO:tensorflow:global_step/sec: 3.65816
+INFO:tensorflow:loss = 0.94444865, step = 554 (0.551 sec)
+INFO:tensorflow:global_step/sec: 3.65432
+INFO:tensorflow:loss = 0.66756, step = 556 (0.542 sec)
+INFO:tensorflow:global_step/sec: 3.68601
+INFO:tensorflow:loss = 0.7752414, step = 558 (0.542 sec)
+INFO:tensorflow:global_step/sec: 3.54902
+INFO:tensorflow:loss = 0.8147376, step = 560 (0.564 sec)
+INFO:tensorflow:global_step/sec: 3.85098
+INFO:tensorflow:loss = 0.7531448, step = 562 (0.519 sec)
+INFO:tensorflow:global_step/sec: 3.75405
+INFO:tensorflow:loss = 0.9860139, step = 564 (0.533 sec)
+INFO:tensorflow:global_step/sec: 3.60641
+INFO:tensorflow:loss = 0.76877123, step = 566 (0.555 sec)
+INFO:tensorflow:global_step/sec: 3.6656
+INFO:tensorflow:loss = 0.6990181, step = 568 (0.545 sec)
+INFO:tensorflow:global_step/sec: 3.69847
+INFO:tensorflow:loss = 1.079523, step = 570 (0.541 sec)
+INFO:tensorflow:global_step/sec: 3.65831
+INFO:tensorflow:loss = 0.74697214, step = 572 (0.547 sec)
+INFO:tensorflow:global_step/sec: 3.63364
+INFO:tensorflow:loss = 0.8510411, step = 574 (0.550 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 577...
+INFO:tensorflow:Saving checkpoints for 577 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 577...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T18:56:28
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-577
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 5.51609s
+INFO:tensorflow:Finished evaluation at 2021-06-13-18:56:33
+INFO:tensorflow:Saving dict for global step 577: accuracy = 0.8246099, global_step = 577, loss = 0.52627975, mean_loss = 0.52627975
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 577: /root/.keras/datasets/model/retrain/model.ckpt-577
+INFO:tensorflow:global_step/sec: 0.289066
+INFO:tensorflow:loss = 0.7597746, step = 576 (6.921 sec)
+INFO:tensorflow:global_step/sec: 3.52945
+INFO:tensorflow:loss = 0.8055749, step = 578 (0.565 sec)
+INFO:tensorflow:global_step/sec: 3.60193
+INFO:tensorflow:loss = 0.7440114, step = 580 (0.555 sec)
+INFO:tensorflow:global_step/sec: 3.614
+INFO:tensorflow:loss = 0.76442623, step = 582 (0.554 sec)
+INFO:tensorflow:global_step/sec: 3.64957
+INFO:tensorflow:loss = 0.79097104, step = 584 (0.548 sec)
+INFO:tensorflow:global_step/sec: 3.64367
+INFO:tensorflow:loss = 0.7939689, step = 586 (0.549 sec)
+INFO:tensorflow:global_step/sec: 3.72486
+INFO:tensorflow:loss = 0.96349466, step = 588 (0.537 sec)
+INFO:tensorflow:global_step/sec: 3.71568
+INFO:tensorflow:loss = 0.9434265, step = 590 (0.538 sec)
+INFO:tensorflow:global_step/sec: 3.75163
+INFO:tensorflow:loss = 0.7696246, step = 592 (0.533 sec)
+INFO:tensorflow:global_step/sec: 3.62063
+INFO:tensorflow:loss = 0.9652867, step = 594 (0.552 sec)
+INFO:tensorflow:global_step/sec: 3.8598
+INFO:tensorflow:loss = 0.7091975, step = 596 (0.518 sec)
+INFO:tensorflow:global_step/sec: 3.67694
+INFO:tensorflow:loss = 0.72171074, step = 598 (0.544 sec)
+INFO:tensorflow:global_step/sec: 3.62592
+INFO:tensorflow:loss = 0.942258, step = 600 (0.552 sec)
+INFO:tensorflow:global_step/sec: 3.83248
+INFO:tensorflow:loss = 0.79544234, step = 602 (0.522 sec)
+INFO:tensorflow:global_step/sec: 3.78436
+INFO:tensorflow:loss = 0.8919038, step = 604 (0.528 sec)
+INFO:tensorflow:global_step/sec: 3.81279
+INFO:tensorflow:loss = 1.049297, step = 606 (0.526 sec)
+INFO:tensorflow:global_step/sec: 3.77668
+INFO:tensorflow:loss = 0.78983295, step = 608 (0.528 sec)
+INFO:tensorflow:global_step/sec: 3.80907
+INFO:tensorflow:loss = 0.8080401, step = 610 (0.525 sec)
+INFO:tensorflow:global_step/sec: 3.65037
+INFO:tensorflow:loss = 0.7511687, step = 612 (0.548 sec)
+INFO:tensorflow:global_step/sec: 3.58885
+INFO:tensorflow:loss = 0.8157712, step = 614 (0.557 sec)
+INFO:tensorflow:global_step/sec: 3.68194
+INFO:tensorflow:loss = 0.8579603, step = 616 (0.543 sec)
+INFO:tensorflow:global_step/sec: 3.62725
+INFO:tensorflow:loss = 0.79602337, step = 618 (0.551 sec)
+INFO:tensorflow:global_step/sec: 3.65668
+INFO:tensorflow:loss = 0.8818939, step = 620 (0.547 sec)
+INFO:tensorflow:global_step/sec: 3.75997
+INFO:tensorflow:loss = 0.88277376, step = 622 (0.532 sec)
+INFO:tensorflow:global_step/sec: 3.60151
+INFO:tensorflow:loss = 0.74963325, step = 624 (0.555 sec)
+INFO:tensorflow:global_step/sec: 3.56481
+INFO:tensorflow:loss = 0.81682897, step = 626 (0.561 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 628...
+INFO:tensorflow:Saving checkpoints for 628 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 628...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T18:56:48
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-628
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 5.52496s
+INFO:tensorflow:Finished evaluation at 2021-06-13-18:56:54
+INFO:tensorflow:Saving dict for global step 628: accuracy = 0.8259951, global_step = 628, loss = 0.5339364, mean_loss = 0.5339364
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 628: /root/.keras/datasets/model/retrain/model.ckpt-628
+INFO:tensorflow:global_step/sec: 0.288497
+INFO:tensorflow:loss = 0.804911, step = 628 (6.932 sec)
+INFO:tensorflow:global_step/sec: 3.59935
+INFO:tensorflow:loss = 0.90963924, step = 630 (0.556 sec)
+INFO:tensorflow:global_step/sec: 3.66853
+INFO:tensorflow:loss = 0.75120646, step = 632 (0.545 sec)
+INFO:tensorflow:global_step/sec: 3.61256
+INFO:tensorflow:loss = 0.77000743, step = 634 (0.554 sec)
+INFO:tensorflow:global_step/sec: 3.76266
+INFO:tensorflow:loss = 0.81263506, step = 636 (0.531 sec)
+INFO:tensorflow:global_step/sec: 3.71566
+INFO:tensorflow:loss = 0.69830096, step = 638 (0.538 sec)
+INFO:tensorflow:global_step/sec: 3.81248
+INFO:tensorflow:loss = 0.69807386, step = 640 (0.526 sec)
+INFO:tensorflow:global_step/sec: 3.68988
+INFO:tensorflow:loss = 0.68131477, step = 642 (0.541 sec)
+INFO:tensorflow:global_step/sec: 3.50365
+INFO:tensorflow:loss = 0.63170457, step = 644 (0.571 sec)
+INFO:tensorflow:global_step/sec: 3.63665
+INFO:tensorflow:loss = 0.7570425, step = 646 (0.550 sec)
+INFO:tensorflow:global_step/sec: 3.69985
+INFO:tensorflow:loss = 0.7679015, step = 648 (0.541 sec)
+INFO:tensorflow:global_step/sec: 3.45912
+INFO:tensorflow:loss = 0.70657545, step = 650 (0.583 sec)
+INFO:tensorflow:global_step/sec: 3.68309
+INFO:tensorflow:loss = 0.89247066, step = 652 (0.541 sec)
+INFO:tensorflow:global_step/sec: 3.82235
+INFO:tensorflow:loss = 0.8412026, step = 654 (0.520 sec)
+INFO:tensorflow:global_step/sec: 3.7368
+INFO:tensorflow:loss = 0.7660779, step = 656 (0.538 sec)
+INFO:tensorflow:global_step/sec: 3.6816
+INFO:tensorflow:loss = 0.76452583, step = 658 (0.541 sec)
+INFO:tensorflow:global_step/sec: 3.67311
+INFO:tensorflow:loss = 0.63724494, step = 660 (0.545 sec)
+INFO:tensorflow:global_step/sec: 3.69874
+INFO:tensorflow:loss = 0.87607056, step = 662 (0.540 sec)
+INFO:tensorflow:global_step/sec: 3.66498
+INFO:tensorflow:loss = 0.84722555, step = 664 (0.546 sec)
+INFO:tensorflow:global_step/sec: 3.67004
+INFO:tensorflow:loss = 0.77802426, step = 666 (0.545 sec)
+INFO:tensorflow:global_step/sec: 3.71771
+INFO:tensorflow:loss = 0.6918627, step = 668 (0.538 sec)
+INFO:tensorflow:global_step/sec: 3.78067
+INFO:tensorflow:loss = 0.8521752, step = 670 (0.529 sec)
+INFO:tensorflow:global_step/sec: 3.76889
+INFO:tensorflow:loss = 0.7709616, step = 672 (0.533 sec)
+INFO:tensorflow:global_step/sec: 3.61869
+INFO:tensorflow:loss = 0.8831394, step = 674 (0.551 sec)
+INFO:tensorflow:global_step/sec: 3.62414
+INFO:tensorflow:loss = 0.91073483, step = 676 (0.552 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 679...
+INFO:tensorflow:Saving checkpoints for 679 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 679...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T18:57:08
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-679
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 5.52743s
+INFO:tensorflow:Finished evaluation at 2021-06-13-18:57:14
+INFO:tensorflow:Saving dict for global step 679: accuracy = 0.78348583, global_step = 679, loss = 0.61398983, mean_loss = 0.61398983
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 679: /root/.keras/datasets/model/retrain/model.ckpt-679
+INFO:tensorflow:global_step/sec: 0.290287
+INFO:tensorflow:loss = 0.8687788, step = 678 (6.892 sec)
+INFO:tensorflow:global_step/sec: 3.50732
+INFO:tensorflow:loss = 0.77258366, step = 680 (0.568 sec)
+INFO:tensorflow:global_step/sec: 3.73579
+INFO:tensorflow:loss = 0.8900053, step = 682 (0.535 sec)
+INFO:tensorflow:global_step/sec: 3.73871
+INFO:tensorflow:loss = 0.7520688, step = 684 (0.535 sec)
+INFO:tensorflow:global_step/sec: 3.58618
+INFO:tensorflow:loss = 0.791268, step = 686 (0.558 sec)
+INFO:tensorflow:global_step/sec: 3.63013
+INFO:tensorflow:loss = 0.7768023, step = 688 (0.553 sec)
+INFO:tensorflow:global_step/sec: 2.81906
+INFO:tensorflow:loss = 0.76655304, step = 690 (0.708 sec)
+INFO:tensorflow:global_step/sec: 3.8753
+INFO:tensorflow:loss = 0.7752962, step = 692 (0.516 sec)
+INFO:tensorflow:global_step/sec: 3.89725
+INFO:tensorflow:loss = 0.74871135, step = 694 (0.513 sec)
+INFO:tensorflow:global_step/sec: 3.81262
+INFO:tensorflow:loss = 0.76790684, step = 696 (0.525 sec)
+INFO:tensorflow:global_step/sec: 3.75084
+INFO:tensorflow:loss = 0.6816718, step = 698 (0.533 sec)
+INFO:tensorflow:global_step/sec: 3.94026
+INFO:tensorflow:loss = 0.7754852, step = 700 (0.508 sec)
+INFO:tensorflow:global_step/sec: 3.74993
+INFO:tensorflow:loss = 0.6069613, step = 702 (0.533 sec)
+INFO:tensorflow:global_step/sec: 3.94496
+INFO:tensorflow:loss = 0.672957, step = 704 (0.507 sec)
+INFO:tensorflow:global_step/sec: 3.66119
+INFO:tensorflow:loss = 0.9004504, step = 706 (0.546 sec)
+INFO:tensorflow:global_step/sec: 3.56326
+INFO:tensorflow:loss = 0.650808, step = 708 (0.561 sec)
+INFO:tensorflow:global_step/sec: 3.64703
+INFO:tensorflow:loss = 0.6160971, step = 710 (0.549 sec)
+INFO:tensorflow:global_step/sec: 3.7315
+INFO:tensorflow:loss = 0.70145714, step = 712 (0.536 sec)
+INFO:tensorflow:global_step/sec: 3.67547
+INFO:tensorflow:loss = 0.89272624, step = 714 (0.544 sec)
+INFO:tensorflow:global_step/sec: 3.65019
+INFO:tensorflow:loss = 0.72779566, step = 716 (0.548 sec)
+INFO:tensorflow:global_step/sec: 3.61128
+INFO:tensorflow:loss = 0.92547464, step = 718 (0.554 sec)
+INFO:tensorflow:global_step/sec: 3.65847
+INFO:tensorflow:loss = 0.5949381, step = 720 (0.547 sec)
+INFO:tensorflow:global_step/sec: 3.50296
+INFO:tensorflow:loss = 0.8539954, step = 722 (0.573 sec)
+INFO:tensorflow:global_step/sec: 3.70564
+INFO:tensorflow:loss = 0.81760794, step = 724 (0.538 sec)
+INFO:tensorflow:global_step/sec: 3.29007
+INFO:tensorflow:loss = 0.7424764, step = 726 (0.609 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 729...
+INFO:tensorflow:Saving checkpoints for 729 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 729...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T18:57:29
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-729
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 3.96337s
+INFO:tensorflow:Finished evaluation at 2021-06-13-18:57:32
+INFO:tensorflow:Saving dict for global step 729: accuracy = 0.8444167, global_step = 729, loss = 0.4853926, mean_loss = 0.4853926
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 729: /root/.keras/datasets/model/retrain/model.ckpt-729
+INFO:tensorflow:global_step/sec: 0.372318
+INFO:tensorflow:loss = 0.87684005, step = 728 (5.373 sec)
+INFO:tensorflow:global_step/sec: 3.3904
+INFO:tensorflow:loss = 0.7918585, step = 730 (0.589 sec)
+INFO:tensorflow:global_step/sec: 3.55873
+INFO:tensorflow:loss = 0.5706353, step = 732 (0.564 sec)
+INFO:tensorflow:global_step/sec: 3.54235
+INFO:tensorflow:loss = 0.7169068, step = 734 (0.562 sec)
+INFO:tensorflow:global_step/sec: 3.56583
+INFO:tensorflow:loss = 0.74348336, step = 736 (0.561 sec)
+INFO:tensorflow:global_step/sec: 3.70234
+INFO:tensorflow:loss = 0.7122367, step = 738 (0.540 sec)
+INFO:tensorflow:global_step/sec: 3.63938
+INFO:tensorflow:loss = 0.71420443, step = 740 (0.550 sec)
+INFO:tensorflow:global_step/sec: 3.63131
+INFO:tensorflow:loss = 0.8690503, step = 742 (0.551 sec)
+INFO:tensorflow:global_step/sec: 3.59722
+INFO:tensorflow:loss = 0.7156891, step = 744 (0.556 sec)
+INFO:tensorflow:global_step/sec: 3.7566
+INFO:tensorflow:loss = 0.76419216, step = 746 (0.532 sec)
+INFO:tensorflow:global_step/sec: 3.64421
+INFO:tensorflow:loss = 0.809955, step = 748 (0.549 sec)
+INFO:tensorflow:global_step/sec: 3.61362
+INFO:tensorflow:loss = 0.7405902, step = 750 (0.553 sec)
+INFO:tensorflow:global_step/sec: 3.56297
+INFO:tensorflow:loss = 0.74256253, step = 752 (0.561 sec)
+INFO:tensorflow:global_step/sec: 3.65754
+INFO:tensorflow:loss = 0.89751273, step = 754 (0.547 sec)
+INFO:tensorflow:global_step/sec: 3.741
+INFO:tensorflow:loss = 0.6636407, step = 756 (0.535 sec)
+INFO:tensorflow:global_step/sec: 3.63713
+INFO:tensorflow:loss = 0.8600458, step = 758 (0.550 sec)
+INFO:tensorflow:global_step/sec: 3.84952
+INFO:tensorflow:loss = 0.7249767, step = 760 (0.520 sec)
+INFO:tensorflow:global_step/sec: 3.63388
+INFO:tensorflow:loss = 0.78541017, step = 762 (0.550 sec)
+INFO:tensorflow:global_step/sec: 3.64902
+INFO:tensorflow:loss = 0.6403749, step = 764 (0.548 sec)
+INFO:tensorflow:global_step/sec: 3.81726
+INFO:tensorflow:loss = 0.7865532, step = 766 (0.524 sec)
+INFO:tensorflow:global_step/sec: 3.70703
+INFO:tensorflow:loss = 0.69679904, step = 768 (0.540 sec)
+INFO:tensorflow:global_step/sec: 3.58578
+INFO:tensorflow:loss = 0.90900105, step = 770 (0.558 sec)
+INFO:tensorflow:global_step/sec: 3.67457
+INFO:tensorflow:loss = 0.7516718, step = 772 (0.544 sec)
+INFO:tensorflow:global_step/sec: 3.68766
+INFO:tensorflow:loss = 0.69771475, step = 774 (0.543 sec)
+INFO:tensorflow:global_step/sec: 3.67556
+INFO:tensorflow:loss = 0.6646291, step = 776 (0.544 sec)
+INFO:tensorflow:global_step/sec: 3.6278
+INFO:tensorflow:loss = 0.7088422, step = 778 (0.552 sec)
+INFO:tensorflow:global_step/sec: 3.52274
+INFO:tensorflow:loss = 0.70613015, step = 780 (0.568 sec)
+INFO:tensorflow:global_step/sec: 3.83819
+INFO:tensorflow:loss = 0.89629567, step = 782 (0.521 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 785...
+INFO:tensorflow:Saving checkpoints for 785 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 785...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T18:57:49
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-785
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 5.51820s
+INFO:tensorflow:Finished evaluation at 2021-06-13-18:57:54
+INFO:tensorflow:Saving dict for global step 785: accuracy = 0.849735, global_step = 785, loss = 0.47279632, mean_loss = 0.47279632
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 785: /root/.keras/datasets/model/retrain/model.ckpt-785
+INFO:tensorflow:global_step/sec: 0.279817
+INFO:tensorflow:loss = 0.57430226, step = 784 (7.153 sec)
+INFO:tensorflow:global_step/sec: 3.67192
+INFO:tensorflow:loss = 0.89913744, step = 786 (0.540 sec)
+INFO:tensorflow:global_step/sec: 3.58371
+INFO:tensorflow:loss = 0.6421443, step = 788 (0.558 sec)
+INFO:tensorflow:global_step/sec: 3.61985
+INFO:tensorflow:loss = 0.7030014, step = 790 (0.553 sec)
+INFO:tensorflow:global_step/sec: 3.62974
+INFO:tensorflow:loss = 0.64665174, step = 792 (0.551 sec)
+INFO:tensorflow:global_step/sec: 3.67473
+INFO:tensorflow:loss = 0.7294363, step = 794 (0.544 sec)
+INFO:tensorflow:global_step/sec: 3.58184
+INFO:tensorflow:loss = 0.6088999, step = 796 (0.558 sec)
+INFO:tensorflow:global_step/sec: 3.70069
+INFO:tensorflow:loss = 0.89793587, step = 798 (0.541 sec)
+INFO:tensorflow:global_step/sec: 3.70115
+INFO:tensorflow:loss = 0.7223612, step = 800 (0.544 sec)
+INFO:tensorflow:global_step/sec: 3.62043
+INFO:tensorflow:loss = 0.694853, step = 802 (0.549 sec)
+INFO:tensorflow:global_step/sec: 3.643
+INFO:tensorflow:loss = 0.7661846, step = 804 (0.549 sec)
+INFO:tensorflow:global_step/sec: 3.66125
+INFO:tensorflow:loss = 0.9095953, step = 806 (0.546 sec)
+INFO:tensorflow:global_step/sec: 3.74695
+INFO:tensorflow:loss = 0.6938943, step = 808 (0.534 sec)
+INFO:tensorflow:global_step/sec: 3.63296
+INFO:tensorflow:loss = 0.8883996, step = 810 (0.550 sec)
+INFO:tensorflow:global_step/sec: 3.73696
+INFO:tensorflow:loss = 0.9301099, step = 812 (0.535 sec)
+INFO:tensorflow:global_step/sec: 3.64568
+INFO:tensorflow:loss = 0.713673, step = 814 (0.549 sec)
+INFO:tensorflow:global_step/sec: 3.58297
+INFO:tensorflow:loss = 0.9692246, step = 816 (0.558 sec)
+INFO:tensorflow:global_step/sec: 3.61726
+INFO:tensorflow:loss = 0.7200904, step = 818 (0.553 sec)
+INFO:tensorflow:global_step/sec: 3.68081
+INFO:tensorflow:loss = 0.95852035, step = 820 (0.545 sec)
+INFO:tensorflow:global_step/sec: 3.65159
+INFO:tensorflow:loss = 0.8786239, step = 822 (0.547 sec)
+INFO:tensorflow:global_step/sec: 3.63257
+INFO:tensorflow:loss = 0.70192343, step = 824 (0.551 sec)
+INFO:tensorflow:global_step/sec: 3.65188
+INFO:tensorflow:loss = 0.81928384, step = 826 (0.548 sec)
+INFO:tensorflow:global_step/sec: 3.57474
+INFO:tensorflow:loss = 0.72211677, step = 828 (0.560 sec)
+INFO:tensorflow:global_step/sec: 3.5637
+INFO:tensorflow:loss = 0.8716283, step = 830 (0.562 sec)
+INFO:tensorflow:global_step/sec: 3.62673
+INFO:tensorflow:loss = 0.81914604, step = 832 (0.553 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 834...
+INFO:tensorflow:Saving checkpoints for 834 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 834...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T18:58:09
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-834
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 3.82557s
+INFO:tensorflow:Finished evaluation at 2021-06-13-18:58:13
+INFO:tensorflow:Saving dict for global step 834: accuracy = 0.8449808, global_step = 834, loss = 0.4852486, mean_loss = 0.4852486
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 834: /root/.keras/datasets/model/retrain/model.ckpt-834
+INFO:tensorflow:global_step/sec: 0.381374
+INFO:tensorflow:loss = 0.8523033, step = 834 (5.243 sec)
+INFO:tensorflow:global_step/sec: 3.63848
+INFO:tensorflow:loss = 0.69705606, step = 836 (0.549 sec)
+INFO:tensorflow:global_step/sec: 3.52876
+INFO:tensorflow:loss = 0.6893763, step = 838 (0.566 sec)
+INFO:tensorflow:global_step/sec: 3.65412
+INFO:tensorflow:loss = 0.6327885, step = 840 (0.548 sec)
+INFO:tensorflow:global_step/sec: 3.63505
+INFO:tensorflow:loss = 0.8746219, step = 842 (0.550 sec)
+INFO:tensorflow:global_step/sec: 3.64148
+INFO:tensorflow:loss = 0.70699644, step = 844 (0.551 sec)
+INFO:tensorflow:global_step/sec: 3.66147
+INFO:tensorflow:loss = 0.68408036, step = 846 (0.544 sec)
+INFO:tensorflow:global_step/sec: 3.66425
+INFO:tensorflow:loss = 0.65595376, step = 848 (0.546 sec)
+INFO:tensorflow:global_step/sec: 3.60482
+INFO:tensorflow:loss = 0.75226134, step = 850 (0.555 sec)
+INFO:tensorflow:global_step/sec: 3.47555
+INFO:tensorflow:loss = 0.9102818, step = 852 (0.575 sec)
+INFO:tensorflow:global_step/sec: 3.69406
+INFO:tensorflow:loss = 0.7969803, step = 854 (0.542 sec)
+INFO:tensorflow:global_step/sec: 3.77689
+INFO:tensorflow:loss = 0.796064, step = 856 (0.529 sec)
+INFO:tensorflow:global_step/sec: 3.68592
+INFO:tensorflow:loss = 0.69072604, step = 858 (0.543 sec)
+INFO:tensorflow:global_step/sec: 3.73102
+INFO:tensorflow:loss = 0.7944709, step = 860 (0.536 sec)
+INFO:tensorflow:global_step/sec: 3.69463
+INFO:tensorflow:loss = 0.6916846, step = 862 (0.541 sec)
+INFO:tensorflow:global_step/sec: 3.69002
+INFO:tensorflow:loss = 0.58026356, step = 864 (0.542 sec)
+INFO:tensorflow:global_step/sec: 3.60565
+INFO:tensorflow:loss = 0.661864, step = 866 (0.555 sec)
+INFO:tensorflow:global_step/sec: 3.62877
+INFO:tensorflow:loss = 0.74429417, step = 868 (0.551 sec)
+INFO:tensorflow:global_step/sec: 3.68293
+INFO:tensorflow:loss = 0.81814307, step = 870 (0.543 sec)
+INFO:tensorflow:global_step/sec: 3.67562
+INFO:tensorflow:loss = 0.73370916, step = 872 (0.544 sec)
+INFO:tensorflow:global_step/sec: 3.69716
+INFO:tensorflow:loss = 0.5950336, step = 874 (0.541 sec)
+INFO:tensorflow:global_step/sec: 3.61834
+INFO:tensorflow:loss = 0.6616486, step = 876 (0.553 sec)
+INFO:tensorflow:global_step/sec: 3.50756
+INFO:tensorflow:loss = 0.66379654, step = 878 (0.570 sec)
+INFO:tensorflow:global_step/sec: 3.49346
+INFO:tensorflow:loss = 0.74091417, step = 880 (0.572 sec)
+INFO:tensorflow:global_step/sec: 3.71961
+INFO:tensorflow:loss = 0.7290512, step = 882 (0.538 sec)
+INFO:tensorflow:global_step/sec: 3.60636
+INFO:tensorflow:loss = 0.81645405, step = 884 (0.555 sec)
+INFO:tensorflow:global_step/sec: 3.53805
+INFO:tensorflow:loss = 0.6684224, step = 886 (0.565 sec)
+INFO:tensorflow:global_step/sec: 3.61715
+INFO:tensorflow:loss = 0.87382, step = 888 (0.553 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 890...
+INFO:tensorflow:Saving checkpoints for 890 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 890...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T18:58:29
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-890
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 3.91910s
+INFO:tensorflow:Finished evaluation at 2021-06-13-18:58:33
+INFO:tensorflow:Saving dict for global step 890: accuracy = 0.84663236, global_step = 890, loss = 0.46773976, mean_loss = 0.46773976
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 890: /root/.keras/datasets/model/retrain/model.ckpt-890
+INFO:tensorflow:global_step/sec: 0.372242
+INFO:tensorflow:loss = 0.602776, step = 890 (5.375 sec)
+INFO:tensorflow:global_step/sec: 3.4847
+INFO:tensorflow:loss = 0.8872433, step = 892 (0.572 sec)
+INFO:tensorflow:global_step/sec: 3.50235
+INFO:tensorflow:loss = 0.6559791, step = 894 (0.570 sec)
+INFO:tensorflow:global_step/sec: 3.52206
+INFO:tensorflow:loss = 0.8618646, step = 896 (0.568 sec)
+INFO:tensorflow:global_step/sec: 3.58159
+INFO:tensorflow:loss = 0.83338624, step = 898 (0.558 sec)
+INFO:tensorflow:global_step/sec: 3.57296
+INFO:tensorflow:loss = 0.66001105, step = 900 (0.562 sec)
+INFO:tensorflow:global_step/sec: 3.47922
+INFO:tensorflow:loss = 0.64395607, step = 902 (0.574 sec)
+INFO:tensorflow:global_step/sec: 3.46317
+INFO:tensorflow:loss = 0.79833984, step = 904 (0.576 sec)
+INFO:tensorflow:global_step/sec: 3.32085
+INFO:tensorflow:loss = 0.74552894, step = 906 (0.605 sec)
+INFO:tensorflow:global_step/sec: 3.40185
+INFO:tensorflow:loss = 0.60790074, step = 908 (0.586 sec)
+INFO:tensorflow:global_step/sec: 3.71599
+INFO:tensorflow:loss = 0.84944266, step = 910 (0.538 sec)
+INFO:tensorflow:global_step/sec: 3.53957
+INFO:tensorflow:loss = 0.66485256, step = 912 (0.565 sec)
+INFO:tensorflow:global_step/sec: 3.27608
+INFO:tensorflow:loss = 0.6418263, step = 914 (0.611 sec)
+INFO:tensorflow:global_step/sec: 3.57866
+INFO:tensorflow:loss = 0.66304624, step = 916 (0.559 sec)
+INFO:tensorflow:global_step/sec: 3.48422
+INFO:tensorflow:loss = 0.97677964, step = 918 (0.574 sec)
+INFO:tensorflow:global_step/sec: 3.54222
+INFO:tensorflow:loss = 0.6689571, step = 920 (0.565 sec)
+INFO:tensorflow:global_step/sec: 3.50449
+INFO:tensorflow:loss = 0.6647523, step = 922 (0.571 sec)
+INFO:tensorflow:global_step/sec: 3.61173
+INFO:tensorflow:loss = 0.9717521, step = 924 (0.554 sec)
+INFO:tensorflow:global_step/sec: 3.61572
+INFO:tensorflow:loss = 0.59899116, step = 926 (0.553 sec)
+INFO:tensorflow:global_step/sec: 3.55797
+INFO:tensorflow:loss = 0.632191, step = 928 (0.562 sec)
+INFO:tensorflow:global_step/sec: 3.68593
+INFO:tensorflow:loss = 0.8397399, step = 930 (0.543 sec)
+INFO:tensorflow:global_step/sec: 3.59348
+INFO:tensorflow:loss = 0.7931787, step = 932 (0.556 sec)
+INFO:tensorflow:global_step/sec: 3.62975
+INFO:tensorflow:loss = 0.7807582, step = 934 (0.551 sec)
+INFO:tensorflow:global_step/sec: 3.69988
+INFO:tensorflow:loss = 0.8527074, step = 936 (0.541 sec)
+INFO:tensorflow:global_step/sec: 3.64611
+INFO:tensorflow:loss = 0.8820346, step = 938 (0.548 sec)
+INFO:tensorflow:global_step/sec: 3.66161
+INFO:tensorflow:loss = 0.68930423, step = 940 (0.546 sec)
+INFO:tensorflow:global_step/sec: 3.62047
+INFO:tensorflow:loss = 0.71728456, step = 942 (0.553 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 944...
+INFO:tensorflow:Saving checkpoints for 944 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 944...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T18:58:49
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-944
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 5.54554s
+INFO:tensorflow:Finished evaluation at 2021-06-13-18:58:54
+INFO:tensorflow:Saving dict for global step 944: accuracy = 0.8436739, global_step = 944, loss = 0.4711325, mean_loss = 0.4711325
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 944: /root/.keras/datasets/model/retrain/model.ckpt-944
+INFO:tensorflow:global_step/sec: 0.285693
+INFO:tensorflow:loss = 0.65695745, step = 944 (7.000 sec)
+INFO:tensorflow:global_step/sec: 3.55492
+INFO:tensorflow:loss = 0.6808324, step = 946 (0.563 sec)
+INFO:tensorflow:global_step/sec: 3.58501
+INFO:tensorflow:loss = 0.8953425, step = 948 (0.558 sec)
+INFO:tensorflow:global_step/sec: 3.48154
+INFO:tensorflow:loss = 0.74763304, step = 950 (0.574 sec)
+INFO:tensorflow:global_step/sec: 3.64368
+INFO:tensorflow:loss = 0.65302616, step = 952 (0.552 sec)
+INFO:tensorflow:global_step/sec: 3.71543
+INFO:tensorflow:loss = 1.0299948, step = 954 (0.535 sec)
+INFO:tensorflow:global_step/sec: 3.54912
+INFO:tensorflow:loss = 0.5896069, step = 956 (0.564 sec)
+INFO:tensorflow:global_step/sec: 3.68104
+INFO:tensorflow:loss = 0.877528, step = 958 (0.544 sec)
+INFO:tensorflow:global_step/sec: 3.59007
+INFO:tensorflow:loss = 0.66882014, step = 960 (0.558 sec)
+INFO:tensorflow:global_step/sec: 3.50384
+INFO:tensorflow:loss = 0.61663824, step = 962 (0.569 sec)
+INFO:tensorflow:global_step/sec: 3.69484
+INFO:tensorflow:loss = 0.70354676, step = 964 (0.541 sec)
+INFO:tensorflow:global_step/sec: 3.68277
+INFO:tensorflow:loss = 0.816582, step = 966 (0.543 sec)
+INFO:tensorflow:global_step/sec: 3.76186
+INFO:tensorflow:loss = 0.81465805, step = 968 (0.532 sec)
+INFO:tensorflow:global_step/sec: 3.65668
+INFO:tensorflow:loss = 0.6704604, step = 970 (0.547 sec)
+INFO:tensorflow:global_step/sec: 3.89607
+INFO:tensorflow:loss = 0.62473655, step = 972 (0.513 sec)
+INFO:tensorflow:global_step/sec: 3.68726
+INFO:tensorflow:loss = 0.6529346, step = 974 (0.543 sec)
+INFO:tensorflow:global_step/sec: 3.55156
+INFO:tensorflow:loss = 0.67011344, step = 976 (0.563 sec)
+INFO:tensorflow:global_step/sec: 3.71216
+INFO:tensorflow:loss = 0.8595412, step = 978 (0.539 sec)
+INFO:tensorflow:global_step/sec: 3.5983
+INFO:tensorflow:loss = 0.79705554, step = 980 (0.556 sec)
+INFO:tensorflow:global_step/sec: 3.48892
+INFO:tensorflow:loss = 0.8885243, step = 982 (0.573 sec)
+INFO:tensorflow:global_step/sec: 3.62589
+INFO:tensorflow:loss = 0.784488, step = 984 (0.552 sec)
+INFO:tensorflow:global_step/sec: 3.65359
+INFO:tensorflow:loss = 0.7741747, step = 986 (0.548 sec)
+INFO:tensorflow:global_step/sec: 3.58623
+INFO:tensorflow:loss = 0.51970446, step = 988 (0.558 sec)
+INFO:tensorflow:global_step/sec: 3.47731
+INFO:tensorflow:loss = 0.63955796, step = 990 (0.575 sec)
+INFO:tensorflow:global_step/sec: 3.60781
+INFO:tensorflow:loss = 0.5733105, step = 992 (0.554 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 994...
+INFO:tensorflow:Saving checkpoints for 994 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 994...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T18:59:09
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-994
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 5.55047s
+INFO:tensorflow:Finished evaluation at 2021-06-13-18:59:15
+INFO:tensorflow:Saving dict for global step 994: accuracy = 0.844799, global_step = 994, loss = 0.46590382, mean_loss = 0.46590382
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 994: /root/.keras/datasets/model/retrain/model.ckpt-994
+INFO:tensorflow:global_step/sec: 0.285881
+INFO:tensorflow:loss = 0.8618498, step = 994 (6.996 sec)
+INFO:tensorflow:global_step/sec: 3.51065
+INFO:tensorflow:loss = 0.67991954, step = 996 (0.570 sec)
+INFO:tensorflow:global_step/sec: 3.53984
+INFO:tensorflow:loss = 0.68539804, step = 998 (0.565 sec)
+INFO:tensorflow:global_step/sec: 3.71376
+INFO:tensorflow:loss = 0.9504253, step = 1000 (0.544 sec)
+INFO:tensorflow:global_step/sec: 3.63128
+INFO:tensorflow:loss = 0.5620015, step = 1002 (0.545 sec)
+INFO:tensorflow:global_step/sec: 3.68997
+INFO:tensorflow:loss = 0.6144224, step = 1004 (0.542 sec)
+INFO:tensorflow:global_step/sec: 3.46229
+INFO:tensorflow:loss = 0.6398498, step = 1006 (0.578 sec)
+INFO:tensorflow:global_step/sec: 3.64929
+INFO:tensorflow:loss = 0.82371485, step = 1008 (0.548 sec)
+INFO:tensorflow:global_step/sec: 3.69901
+INFO:tensorflow:loss = 0.8619348, step = 1010 (0.541 sec)
+INFO:tensorflow:global_step/sec: 3.48688
+INFO:tensorflow:loss = 0.7438492, step = 1012 (0.574 sec)
+INFO:tensorflow:global_step/sec: 3.55278
+INFO:tensorflow:loss = 0.6595141, step = 1014 (0.563 sec)
+INFO:tensorflow:global_step/sec: 3.70778
+INFO:tensorflow:loss = 0.8842317, step = 1016 (0.540 sec)
+INFO:tensorflow:global_step/sec: 3.65759
+INFO:tensorflow:loss = 0.6621191, step = 1018 (0.548 sec)
+INFO:tensorflow:global_step/sec: 3.68315
+INFO:tensorflow:loss = 0.728998, step = 1020 (0.541 sec)
+INFO:tensorflow:global_step/sec: 3.71664
+INFO:tensorflow:loss = 0.65837395, step = 1022 (0.538 sec)
+INFO:tensorflow:global_step/sec: 3.6118
+INFO:tensorflow:loss = 0.6602152, step = 1024 (0.554 sec)
+INFO:tensorflow:global_step/sec: 3.62934
+INFO:tensorflow:loss = 0.6779038, step = 1026 (0.551 sec)
+INFO:tensorflow:global_step/sec: 3.67771
+INFO:tensorflow:loss = 0.8999807, step = 1028 (0.544 sec)
+INFO:tensorflow:global_step/sec: 3.65102
+INFO:tensorflow:loss = 0.5271081, step = 1030 (0.548 sec)
+INFO:tensorflow:global_step/sec: 3.65498
+INFO:tensorflow:loss = 0.6245126, step = 1032 (0.549 sec)
+INFO:tensorflow:global_step/sec: 3.64941
+INFO:tensorflow:loss = 0.73360413, step = 1034 (0.546 sec)
+INFO:tensorflow:global_step/sec: 3.68811
+INFO:tensorflow:loss = 0.8316762, step = 1036 (0.543 sec)
+INFO:tensorflow:global_step/sec: 3.66257
+INFO:tensorflow:loss = 0.68505746, step = 1038 (0.548 sec)
+INFO:tensorflow:global_step/sec: 3.6513
+INFO:tensorflow:loss = 0.7661201, step = 1040 (0.546 sec)
+INFO:tensorflow:global_step/sec: 3.60897
+INFO:tensorflow:loss = 0.7709828, step = 1042 (0.554 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 1044...
+INFO:tensorflow:Saving checkpoints for 1044 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 1044...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T18:59:29
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-1044
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 5.52759s
+INFO:tensorflow:Finished evaluation at 2021-06-13-18:59:35
+INFO:tensorflow:Saving dict for global step 1044: accuracy = 0.85190374, global_step = 1044, loss = 0.45467684, mean_loss = 0.45467684
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 1044: /root/.keras/datasets/model/retrain/model.ckpt-1044
+INFO:tensorflow:global_step/sec: 0.285984
+INFO:tensorflow:loss = 0.5798837, step = 1044 (6.993 sec)
+INFO:tensorflow:global_step/sec: 3.47759
+INFO:tensorflow:loss = 0.61659396, step = 1046 (0.575 sec)
+INFO:tensorflow:global_step/sec: 3.65711
+INFO:tensorflow:loss = 0.8695301, step = 1048 (0.549 sec)
+INFO:tensorflow:global_step/sec: 3.59492
+INFO:tensorflow:loss = 0.6251007, step = 1050 (0.554 sec)
+INFO:tensorflow:global_step/sec: 3.63908
+INFO:tensorflow:loss = 0.737411, step = 1052 (0.550 sec)
+INFO:tensorflow:global_step/sec: 3.63549
+INFO:tensorflow:loss = 0.85111797, step = 1054 (0.550 sec)
+INFO:tensorflow:global_step/sec: 3.48027
+INFO:tensorflow:loss = 0.7102787, step = 1056 (0.575 sec)
+INFO:tensorflow:global_step/sec: 3.80682
+INFO:tensorflow:loss = 0.7475585, step = 1058 (0.526 sec)
+INFO:tensorflow:global_step/sec: 3.54325
+INFO:tensorflow:loss = 0.56037104, step = 1060 (0.564 sec)
+INFO:tensorflow:global_step/sec: 3.73601
+INFO:tensorflow:loss = 0.83818257, step = 1062 (0.537 sec)
+INFO:tensorflow:global_step/sec: 3.62557
+INFO:tensorflow:loss = 0.65579873, step = 1064 (0.552 sec)
+INFO:tensorflow:global_step/sec: 3.60082
+INFO:tensorflow:loss = 0.69737583, step = 1066 (0.553 sec)
+INFO:tensorflow:global_step/sec: 3.64331
+INFO:tensorflow:loss = 0.7449998, step = 1068 (0.549 sec)
+INFO:tensorflow:global_step/sec: 3.66465
+INFO:tensorflow:loss = 0.78469133, step = 1070 (0.545 sec)
+INFO:tensorflow:global_step/sec: 3.54101
+INFO:tensorflow:loss = 0.7688409, step = 1072 (0.565 sec)
+INFO:tensorflow:global_step/sec: 3.58573
+INFO:tensorflow:loss = 0.6634178, step = 1074 (0.560 sec)
+INFO:tensorflow:global_step/sec: 3.54222
+INFO:tensorflow:loss = 0.7887227, step = 1076 (0.563 sec)
+INFO:tensorflow:global_step/sec: 3.66994
+INFO:tensorflow:loss = 0.72705704, step = 1078 (0.545 sec)
+INFO:tensorflow:global_step/sec: 3.62378
+INFO:tensorflow:loss = 0.6304838, step = 1080 (0.552 sec)
+INFO:tensorflow:global_step/sec: 3.63053
+INFO:tensorflow:loss = 0.6263573, step = 1082 (0.551 sec)
+INFO:tensorflow:global_step/sec: 3.60528
+INFO:tensorflow:loss = 0.87650836, step = 1084 (0.555 sec)
+INFO:tensorflow:global_step/sec: 3.544
+INFO:tensorflow:loss = 0.8194139, step = 1086 (0.566 sec)
+INFO:tensorflow:global_step/sec: 3.68627
+INFO:tensorflow:loss = 0.5998351, step = 1088 (0.541 sec)
+INFO:tensorflow:global_step/sec: 3.61957
+INFO:tensorflow:loss = 0.8289795, step = 1090 (0.552 sec)
+INFO:tensorflow:global_step/sec: 3.72131
+INFO:tensorflow:loss = 0.7974255, step = 1092 (0.537 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 1094...
+INFO:tensorflow:Saving checkpoints for 1094 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 1094...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T18:59:50
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-1094
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 3.78858s
+INFO:tensorflow:Finished evaluation at 2021-06-13-18:59:54
+INFO:tensorflow:Saving dict for global step 1094: accuracy = 0.84787655, global_step = 1094, loss = 0.4623021, mean_loss = 0.4623021
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 1094: /root/.keras/datasets/model/retrain/model.ckpt-1094
+INFO:tensorflow:global_step/sec: 0.36516
+INFO:tensorflow:loss = 0.60320574, step = 1094 (5.477 sec)
+INFO:tensorflow:global_step/sec: 3.6327
+INFO:tensorflow:loss = 0.6132789, step = 1096 (0.551 sec)
+INFO:tensorflow:global_step/sec: 3.57137
+INFO:tensorflow:loss = 0.65973186, step = 1098 (0.560 sec)
+INFO:tensorflow:global_step/sec: 3.59742
+INFO:tensorflow:loss = 0.7675447, step = 1100 (0.558 sec)
+INFO:tensorflow:global_step/sec: 3.59065
+INFO:tensorflow:loss = 0.7891191, step = 1102 (0.555 sec)
+INFO:tensorflow:global_step/sec: 3.53188
+INFO:tensorflow:loss = 0.66089857, step = 1104 (0.566 sec)
+INFO:tensorflow:global_step/sec: 3.51523
+INFO:tensorflow:loss = 0.63827276, step = 1106 (0.571 sec)
+INFO:tensorflow:global_step/sec: 3.53991
+INFO:tensorflow:loss = 0.6551952, step = 1108 (0.563 sec)
+INFO:tensorflow:global_step/sec: 3.68634
+INFO:tensorflow:loss = 0.71138287, step = 1110 (0.543 sec)
+INFO:tensorflow:global_step/sec: 3.71441
+INFO:tensorflow:loss = 0.9579463, step = 1112 (0.538 sec)
+INFO:tensorflow:global_step/sec: 3.7358
+INFO:tensorflow:loss = 0.88504, step = 1114 (0.535 sec)
+INFO:tensorflow:global_step/sec: 3.49409
+INFO:tensorflow:loss = 0.5923232, step = 1116 (0.572 sec)
+INFO:tensorflow:global_step/sec: 3.71689
+INFO:tensorflow:loss = 0.6962651, step = 1118 (0.538 sec)
+INFO:tensorflow:global_step/sec: 3.50539
+INFO:tensorflow:loss = 0.9276571, step = 1120 (0.570 sec)
+INFO:tensorflow:global_step/sec: 3.95615
+INFO:tensorflow:loss = 0.81947863, step = 1122 (0.506 sec)
+INFO:tensorflow:global_step/sec: 3.70041
+INFO:tensorflow:loss = 0.737782, step = 1124 (0.540 sec)
+INFO:tensorflow:global_step/sec: 3.69597
+INFO:tensorflow:loss = 0.8454257, step = 1126 (0.541 sec)
+INFO:tensorflow:global_step/sec: 3.64667
+INFO:tensorflow:loss = 0.62909734, step = 1128 (0.548 sec)
+INFO:tensorflow:global_step/sec: 3.85219
+INFO:tensorflow:loss = 0.69496727, step = 1130 (0.519 sec)
+INFO:tensorflow:global_step/sec: 3.73272
+INFO:tensorflow:loss = 0.66571593, step = 1132 (0.536 sec)
+INFO:tensorflow:global_step/sec: 3.57731
+INFO:tensorflow:loss = 0.6984652, step = 1134 (0.559 sec)
+INFO:tensorflow:global_step/sec: 3.73766
+INFO:tensorflow:loss = 0.7035843, step = 1136 (0.536 sec)
+INFO:tensorflow:global_step/sec: 3.55495
+INFO:tensorflow:loss = 0.85340405, step = 1138 (0.562 sec)
+INFO:tensorflow:global_step/sec: 3.62439
+INFO:tensorflow:loss = 1.0227159, step = 1140 (0.552 sec)
+INFO:tensorflow:global_step/sec: 3.65148
+INFO:tensorflow:loss = 0.79486376, step = 1142 (0.548 sec)
+INFO:tensorflow:global_step/sec: 3.60654
+INFO:tensorflow:loss = 1.0652084, step = 1144 (0.555 sec)
+INFO:tensorflow:global_step/sec: 3.58029
+INFO:tensorflow:loss = 0.7193418, step = 1146 (0.559 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 1149...
+INFO:tensorflow:Saving checkpoints for 1149 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 1149...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T19:00:10
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-1149
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 3.84491s
+INFO:tensorflow:Finished evaluation at 2021-06-13-19:00:14
+INFO:tensorflow:Saving dict for global step 1149: accuracy = 0.85598415, global_step = 1149, loss = 0.4560618, mean_loss = 0.4560618
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 1149: /root/.keras/datasets/model/retrain/model.ckpt-1149
+INFO:tensorflow:global_step/sec: 0.379525
+INFO:tensorflow:loss = 0.9233591, step = 1148 (5.271 sec)
+INFO:tensorflow:global_step/sec: 3.41692
+INFO:tensorflow:loss = 0.7563098, step = 1150 (0.584 sec)
+INFO:tensorflow:global_step/sec: 3.69111
+INFO:tensorflow:loss = 0.8803923, step = 1152 (0.542 sec)
+INFO:tensorflow:global_step/sec: 3.66324
+INFO:tensorflow:loss = 0.6086758, step = 1154 (0.546 sec)
+INFO:tensorflow:global_step/sec: 3.67023
+INFO:tensorflow:loss = 0.64649373, step = 1156 (0.545 sec)
+INFO:tensorflow:global_step/sec: 3.59308
+INFO:tensorflow:loss = 0.76312894, step = 1158 (0.558 sec)
+INFO:tensorflow:global_step/sec: 3.77935
+INFO:tensorflow:loss = 0.70194465, step = 1160 (0.528 sec)
+INFO:tensorflow:global_step/sec: 3.56322
+INFO:tensorflow:loss = 0.7801402, step = 1162 (0.562 sec)
+INFO:tensorflow:global_step/sec: 3.64716
+INFO:tensorflow:loss = 0.71173245, step = 1164 (0.548 sec)
+INFO:tensorflow:global_step/sec: 3.67416
+INFO:tensorflow:loss = 0.6348394, step = 1166 (0.544 sec)
+INFO:tensorflow:global_step/sec: 3.55815
+INFO:tensorflow:loss = 0.5743804, step = 1168 (0.562 sec)
+INFO:tensorflow:global_step/sec: 3.74684
+INFO:tensorflow:loss = 0.8556809, step = 1170 (0.535 sec)
+INFO:tensorflow:global_step/sec: 3.68465
+INFO:tensorflow:loss = 0.74706274, step = 1172 (0.541 sec)
+INFO:tensorflow:global_step/sec: 3.63492
+INFO:tensorflow:loss = 0.5783301, step = 1174 (0.550 sec)
+INFO:tensorflow:global_step/sec: 3.66401
+INFO:tensorflow:loss = 0.7761418, step = 1176 (0.546 sec)
+INFO:tensorflow:global_step/sec: 3.79055
+INFO:tensorflow:loss = 0.6189877, step = 1178 (0.528 sec)
+INFO:tensorflow:global_step/sec: 3.69487
+INFO:tensorflow:loss = 0.8051907, step = 1180 (0.541 sec)
+INFO:tensorflow:global_step/sec: 3.62836
+INFO:tensorflow:loss = 0.8391947, step = 1182 (0.555 sec)
+INFO:tensorflow:global_step/sec: 3.71231
+INFO:tensorflow:loss = 0.68919116, step = 1184 (0.536 sec)
+INFO:tensorflow:global_step/sec: 3.69143
+INFO:tensorflow:loss = 0.7021766, step = 1186 (0.542 sec)
+INFO:tensorflow:global_step/sec: 3.63635
+INFO:tensorflow:loss = 0.6461118, step = 1188 (0.550 sec)
+INFO:tensorflow:global_step/sec: 3.67163
+INFO:tensorflow:loss = 0.67027736, step = 1190 (0.545 sec)
+INFO:tensorflow:global_step/sec: 3.65591
+INFO:tensorflow:loss = 0.66803515, step = 1192 (0.546 sec)
+INFO:tensorflow:global_step/sec: 3.59067
+INFO:tensorflow:loss = 0.7152273, step = 1194 (0.557 sec)
+INFO:tensorflow:global_step/sec: 3.64952
+INFO:tensorflow:loss = 0.6839777, step = 1196 (0.548 sec)
+INFO:tensorflow:global_step/sec: 3.61438
+INFO:tensorflow:loss = 0.66007394, step = 1198 (0.553 sec)
+INFO:tensorflow:global_step/sec: 3.79519
+INFO:tensorflow:loss = 0.6577537, step = 1200 (0.530 sec)
+INFO:tensorflow:global_step/sec: 3.68115
+INFO:tensorflow:loss = 0.7892667, step = 1202 (0.540 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 1205...
+INFO:tensorflow:Saving checkpoints for 1205 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 1205...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T19:00:30
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-1205
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 3.83012s
+INFO:tensorflow:Finished evaluation at 2021-06-13-19:00:33
+INFO:tensorflow:Saving dict for global step 1205: accuracy = 0.8510858, global_step = 1205, loss = 0.46592426, mean_loss = 0.46592426
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 1205: /root/.keras/datasets/model/retrain/model.ckpt-1205
+INFO:tensorflow:global_step/sec: 0.383924
+INFO:tensorflow:loss = 0.78010917, step = 1204 (5.212 sec)
+INFO:tensorflow:global_step/sec: 3.44501
+INFO:tensorflow:loss = 0.70316106, step = 1206 (0.578 sec)
+INFO:tensorflow:global_step/sec: 3.54577
+INFO:tensorflow:loss = 0.68887186, step = 1208 (0.564 sec)
+INFO:tensorflow:global_step/sec: 3.65998
+INFO:tensorflow:loss = 0.7064507, step = 1210 (0.547 sec)
+INFO:tensorflow:global_step/sec: 3.74188
+INFO:tensorflow:loss = 0.90911865, step = 1212 (0.535 sec)
+INFO:tensorflow:global_step/sec: 3.69847
+INFO:tensorflow:loss = 0.6705809, step = 1214 (0.540 sec)
+INFO:tensorflow:global_step/sec: 3.71124
+INFO:tensorflow:loss = 0.7695908, step = 1216 (0.539 sec)
+INFO:tensorflow:global_step/sec: 3.67346
+INFO:tensorflow:loss = 0.8753751, step = 1218 (0.544 sec)
+INFO:tensorflow:global_step/sec: 3.52216
+INFO:tensorflow:loss = 0.6566813, step = 1220 (0.568 sec)
+INFO:tensorflow:global_step/sec: 3.6769
+INFO:tensorflow:loss = 0.8033302, step = 1222 (0.544 sec)
+INFO:tensorflow:global_step/sec: 3.68598
+INFO:tensorflow:loss = 0.68324625, step = 1224 (0.543 sec)
+INFO:tensorflow:global_step/sec: 3.61749
+INFO:tensorflow:loss = 0.70275384, step = 1226 (0.553 sec)
+INFO:tensorflow:global_step/sec: 3.6948
+INFO:tensorflow:loss = 0.5748773, step = 1228 (0.541 sec)
+INFO:tensorflow:global_step/sec: 3.6317
+INFO:tensorflow:loss = 0.7124644, step = 1230 (0.551 sec)
+INFO:tensorflow:global_step/sec: 3.63559
+INFO:tensorflow:loss = 0.78885126, step = 1232 (0.550 sec)
+INFO:tensorflow:global_step/sec: 3.60596
+INFO:tensorflow:loss = 0.77046883, step = 1234 (0.555 sec)
+INFO:tensorflow:global_step/sec: 3.55108
+INFO:tensorflow:loss = 0.74053967, step = 1236 (0.563 sec)
+INFO:tensorflow:global_step/sec: 3.58975
+INFO:tensorflow:loss = 0.74593323, step = 1238 (0.557 sec)
+INFO:tensorflow:global_step/sec: 3.65937
+INFO:tensorflow:loss = 0.70631206, step = 1240 (0.546 sec)
+INFO:tensorflow:global_step/sec: 3.59396
+INFO:tensorflow:loss = 0.7508826, step = 1242 (0.556 sec)
+INFO:tensorflow:global_step/sec: 3.57539
+INFO:tensorflow:loss = 0.85594857, step = 1244 (0.559 sec)
+INFO:tensorflow:global_step/sec: 3.57899
+INFO:tensorflow:loss = 0.78911656, step = 1246 (0.559 sec)
+INFO:tensorflow:global_step/sec: 3.68221
+INFO:tensorflow:loss = 0.7079686, step = 1248 (0.543 sec)
+INFO:tensorflow:global_step/sec: 3.48522
+INFO:tensorflow:loss = 0.7430517, step = 1250 (0.574 sec)
+INFO:tensorflow:global_step/sec: 3.51853
+INFO:tensorflow:loss = 0.7749787, step = 1252 (0.568 sec)
+INFO:tensorflow:global_step/sec: 3.51477
+INFO:tensorflow:loss = 0.6938069, step = 1254 (0.569 sec)
+INFO:tensorflow:global_step/sec: 3.64745
+INFO:tensorflow:loss = 0.78357124, step = 1256 (0.548 sec)
+INFO:tensorflow:global_step/sec: 3.6341
+INFO:tensorflow:loss = 0.7142332, step = 1258 (0.550 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 1261...
+INFO:tensorflow:Saving checkpoints for 1261 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 1261...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T19:00:50
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-1261
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 3.82747s
+INFO:tensorflow:Finished evaluation at 2021-06-13-19:00:54
+INFO:tensorflow:Saving dict for global step 1261: accuracy = 0.8434075, global_step = 1261, loss = 0.48829573, mean_loss = 0.48829573
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 1261: /root/.keras/datasets/model/retrain/model.ckpt-1261
+INFO:tensorflow:global_step/sec: 0.383258
+INFO:tensorflow:loss = 0.83493733, step = 1260 (5.218 sec)
+INFO:tensorflow:global_step/sec: 3.41354
+INFO:tensorflow:loss = 0.80486584, step = 1262 (0.586 sec)
+INFO:tensorflow:global_step/sec: 3.53232
+INFO:tensorflow:loss = 0.73002535, step = 1264 (0.566 sec)
+INFO:tensorflow:global_step/sec: 3.63536
+INFO:tensorflow:loss = 0.8165022, step = 1266 (0.550 sec)
+INFO:tensorflow:global_step/sec: 3.81223
+INFO:tensorflow:loss = 0.88497907, step = 1268 (0.525 sec)
+INFO:tensorflow:global_step/sec: 3.574
+INFO:tensorflow:loss = 0.6060101, step = 1270 (0.560 sec)
+INFO:tensorflow:global_step/sec: 3.64177
+INFO:tensorflow:loss = 0.6515617, step = 1272 (0.549 sec)
+INFO:tensorflow:global_step/sec: 3.69685
+INFO:tensorflow:loss = 0.68871987, step = 1274 (0.541 sec)
+INFO:tensorflow:global_step/sec: 3.84853
+INFO:tensorflow:loss = 0.6644176, step = 1276 (0.521 sec)
+INFO:tensorflow:global_step/sec: 3.70302
+INFO:tensorflow:loss = 0.66072696, step = 1278 (0.539 sec)
+INFO:tensorflow:global_step/sec: 3.73396
+INFO:tensorflow:loss = 0.8211328, step = 1280 (0.535 sec)
+INFO:tensorflow:global_step/sec: 3.66311
+INFO:tensorflow:loss = 0.7802882, step = 1282 (0.546 sec)
+INFO:tensorflow:global_step/sec: 3.69852
+INFO:tensorflow:loss = 0.6574129, step = 1284 (0.541 sec)
+INFO:tensorflow:global_step/sec: 3.57847
+INFO:tensorflow:loss = 0.7743524, step = 1286 (0.560 sec)
+INFO:tensorflow:global_step/sec: 3.63346
+INFO:tensorflow:loss = 0.73775697, step = 1288 (0.550 sec)
+INFO:tensorflow:global_step/sec: 3.55979
+INFO:tensorflow:loss = 0.56837296, step = 1290 (0.562 sec)
+INFO:tensorflow:global_step/sec: 3.59382
+INFO:tensorflow:loss = 0.6791237, step = 1292 (0.557 sec)
+INFO:tensorflow:global_step/sec: 3.5897
+INFO:tensorflow:loss = 0.7302938, step = 1294 (0.557 sec)
+INFO:tensorflow:global_step/sec: 3.59874
+INFO:tensorflow:loss = 0.63058096, step = 1296 (0.557 sec)
+INFO:tensorflow:global_step/sec: 3.72252
+INFO:tensorflow:loss = 0.7192723, step = 1298 (0.536 sec)
+INFO:tensorflow:global_step/sec: 3.5707
+INFO:tensorflow:loss = 0.6883583, step = 1300 (0.564 sec)
+INFO:tensorflow:global_step/sec: 3.59205
+INFO:tensorflow:loss = 0.60261905, step = 1302 (0.554 sec)
+INFO:tensorflow:global_step/sec: 3.60047
+INFO:tensorflow:loss = 0.67003745, step = 1304 (0.555 sec)
+INFO:tensorflow:global_step/sec: 3.61759
+INFO:tensorflow:loss = 0.70044374, step = 1306 (0.553 sec)
+INFO:tensorflow:global_step/sec: 3.64319
+INFO:tensorflow:loss = 0.86078095, step = 1308 (0.549 sec)
+INFO:tensorflow:global_step/sec: 3.68339
+INFO:tensorflow:loss = 0.612159, step = 1310 (0.543 sec)
+INFO:tensorflow:global_step/sec: 3.75037
+INFO:tensorflow:loss = 0.8383843, step = 1312 (0.533 sec)
+INFO:tensorflow:global_step/sec: 3.78908
+INFO:tensorflow:loss = 0.71220094, step = 1314 (0.528 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 1317...
+INFO:tensorflow:Saving checkpoints for 1317 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 1317...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T19:01:10
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-1317
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 5.51361s
+INFO:tensorflow:Finished evaluation at 2021-06-13-19:01:15
+INFO:tensorflow:Saving dict for global step 1317: accuracy = 0.84822446, global_step = 1317, loss = 0.4600477, mean_loss = 0.4600477
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 1317: /root/.keras/datasets/model/retrain/model.ckpt-1317
+INFO:tensorflow:global_step/sec: 0.289343
+INFO:tensorflow:loss = 0.69381404, step = 1316 (6.913 sec)
+INFO:tensorflow:global_step/sec: 3.59807
+INFO:tensorflow:loss = 1.0700412, step = 1318 (0.555 sec)
+INFO:tensorflow:global_step/sec: 3.60294
+INFO:tensorflow:loss = 0.68806916, step = 1320 (0.555 sec)
+INFO:tensorflow:global_step/sec: 3.72567
+INFO:tensorflow:loss = 0.7629994, step = 1322 (0.537 sec)
+INFO:tensorflow:global_step/sec: 3.52844
+INFO:tensorflow:loss = 0.7797571, step = 1324 (0.567 sec)
+INFO:tensorflow:global_step/sec: 3.55183
+INFO:tensorflow:loss = 0.8642786, step = 1326 (0.563 sec)
+INFO:tensorflow:global_step/sec: 2.84391
+INFO:tensorflow:loss = 0.8020094, step = 1328 (0.703 sec)
+INFO:tensorflow:global_step/sec: 3.95916
+INFO:tensorflow:loss = 0.71142954, step = 1330 (0.505 sec)
+INFO:tensorflow:global_step/sec: 3.84145
+INFO:tensorflow:loss = 0.8270675, step = 1332 (0.521 sec)
+INFO:tensorflow:global_step/sec: 3.91162
+INFO:tensorflow:loss = 0.8515612, step = 1334 (0.511 sec)
+INFO:tensorflow:global_step/sec: 3.80421
+INFO:tensorflow:loss = 0.6693961, step = 1336 (0.526 sec)
+INFO:tensorflow:global_step/sec: 3.78088
+INFO:tensorflow:loss = 1.0375811, step = 1338 (0.529 sec)
+INFO:tensorflow:global_step/sec: 3.87577
+INFO:tensorflow:loss = 0.75869477, step = 1340 (0.516 sec)
+INFO:tensorflow:global_step/sec: 3.75645
+INFO:tensorflow:loss = 0.7799231, step = 1342 (0.532 sec)
+INFO:tensorflow:global_step/sec: 3.63667
+INFO:tensorflow:loss = 0.9784248, step = 1344 (0.550 sec)
+INFO:tensorflow:global_step/sec: 3.50619
+INFO:tensorflow:loss = 0.7234644, step = 1346 (0.570 sec)
+INFO:tensorflow:global_step/sec: 3.65253
+INFO:tensorflow:loss = 0.7377792, step = 1348 (0.548 sec)
+INFO:tensorflow:global_step/sec: 3.64527
+INFO:tensorflow:loss = 0.7169158, step = 1350 (0.549 sec)
+INFO:tensorflow:global_step/sec: 3.79329
+INFO:tensorflow:loss = 0.8740017, step = 1352 (0.527 sec)
+INFO:tensorflow:global_step/sec: 3.68925
+INFO:tensorflow:loss = 0.7470467, step = 1354 (0.542 sec)
+INFO:tensorflow:global_step/sec: 3.76167
+INFO:tensorflow:loss = 0.7654362, step = 1356 (0.533 sec)
+INFO:tensorflow:global_step/sec: 3.60622
+INFO:tensorflow:loss = 0.67234176, step = 1358 (0.553 sec)
+INFO:tensorflow:global_step/sec: 3.8463
+INFO:tensorflow:loss = 0.6528159, step = 1360 (0.520 sec)
+INFO:tensorflow:global_step/sec: 3.51337
+INFO:tensorflow:loss = 0.6086169, step = 1362 (0.569 sec)
+INFO:tensorflow:global_step/sec: 3.67911
+INFO:tensorflow:loss = 0.70757073, step = 1364 (0.544 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 1367...
+INFO:tensorflow:Saving checkpoints for 1367 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 1367...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T19:01:30
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-1367
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 3.92180s
+INFO:tensorflow:Finished evaluation at 2021-06-13-19:01:34
+INFO:tensorflow:Saving dict for global step 1367: accuracy = 0.8583409, global_step = 1367, loss = 0.45348775, mean_loss = 0.45348775
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 1367: /root/.keras/datasets/model/retrain/model.ckpt-1367
+INFO:tensorflow:global_step/sec: 0.354576
+INFO:tensorflow:loss = 0.8312086, step = 1366 (5.641 sec)
+INFO:tensorflow:global_step/sec: 3.44917
+INFO:tensorflow:loss = 0.8326696, step = 1368 (0.581 sec)
+INFO:tensorflow:global_step/sec: 3.52473
+INFO:tensorflow:loss = 0.7905076, step = 1370 (0.566 sec)
+INFO:tensorflow:global_step/sec: 3.69608
+INFO:tensorflow:loss = 0.6653059, step = 1372 (0.541 sec)
+INFO:tensorflow:global_step/sec: 3.71684
+INFO:tensorflow:loss = 0.7813195, step = 1374 (0.538 sec)
+INFO:tensorflow:global_step/sec: 3.6976
+INFO:tensorflow:loss = 0.64417, step = 1376 (0.542 sec)
+INFO:tensorflow:global_step/sec: 3.62022
+INFO:tensorflow:loss = 0.85465306, step = 1378 (0.552 sec)
+INFO:tensorflow:global_step/sec: 3.74522
+INFO:tensorflow:loss = 0.8122646, step = 1380 (0.534 sec)
+INFO:tensorflow:global_step/sec: 3.63041
+INFO:tensorflow:loss = 0.8969352, step = 1382 (0.551 sec)
+INFO:tensorflow:global_step/sec: 3.63385
+INFO:tensorflow:loss = 0.771903, step = 1384 (0.550 sec)
+INFO:tensorflow:global_step/sec: 3.71588
+INFO:tensorflow:loss = 0.7599092, step = 1386 (0.538 sec)
+INFO:tensorflow:global_step/sec: 3.56732
+INFO:tensorflow:loss = 0.55755544, step = 1388 (0.560 sec)
+INFO:tensorflow:global_step/sec: 3.83412
+INFO:tensorflow:loss = 0.5589458, step = 1390 (0.522 sec)
+INFO:tensorflow:global_step/sec: 3.66603
+INFO:tensorflow:loss = 0.85482055, step = 1392 (0.546 sec)
+INFO:tensorflow:global_step/sec: 3.66306
+INFO:tensorflow:loss = 0.6987707, step = 1394 (0.546 sec)
+INFO:tensorflow:global_step/sec: 3.6009
+INFO:tensorflow:loss = 0.73023653, step = 1396 (0.556 sec)
+INFO:tensorflow:global_step/sec: 3.73909
+INFO:tensorflow:loss = 0.5834697, step = 1398 (0.535 sec)
+INFO:tensorflow:global_step/sec: 3.39323
+INFO:tensorflow:loss = 0.63473594, step = 1400 (0.591 sec)
+INFO:tensorflow:global_step/sec: 3.53653
+INFO:tensorflow:loss = 0.67145705, step = 1402 (0.564 sec)
+INFO:tensorflow:global_step/sec: 3.7357
+INFO:tensorflow:loss = 0.6618695, step = 1404 (0.535 sec)
+INFO:tensorflow:global_step/sec: 3.72735
+INFO:tensorflow:loss = 0.7000137, step = 1406 (0.537 sec)
+INFO:tensorflow:global_step/sec: 3.62332
+INFO:tensorflow:loss = 0.83758265, step = 1408 (0.552 sec)
+INFO:tensorflow:global_step/sec: 3.55206
+INFO:tensorflow:loss = 0.71667045, step = 1410 (0.563 sec)
+INFO:tensorflow:global_step/sec: 3.52787
+INFO:tensorflow:loss = 0.80617744, step = 1412 (0.567 sec)
+INFO:tensorflow:global_step/sec: 3.57716
+INFO:tensorflow:loss = 0.72822905, step = 1414 (0.559 sec)
+INFO:tensorflow:global_step/sec: 3.73774
+INFO:tensorflow:loss = 0.80294967, step = 1416 (0.535 sec)
+INFO:tensorflow:global_step/sec: 3.5224
+INFO:tensorflow:loss = 0.6992336, step = 1418 (0.568 sec)
+INFO:tensorflow:global_step/sec: 3.54713
+INFO:tensorflow:loss = 0.79381734, step = 1420 (0.564 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 1422...
+INFO:tensorflow:Saving checkpoints for 1422 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 1422...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T19:01:50
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-1422
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 3.87839s
+INFO:tensorflow:Finished evaluation at 2021-06-13-19:01:54
+INFO:tensorflow:Saving dict for global step 1422: accuracy = 0.8588142, global_step = 1422, loss = 0.4464978, mean_loss = 0.4464978
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 1422: /root/.keras/datasets/model/retrain/model.ckpt-1422
+INFO:tensorflow:global_step/sec: 0.37162
+INFO:tensorflow:loss = 0.6508688, step = 1422 (5.382 sec)
+INFO:tensorflow:global_step/sec: 3.33681
+INFO:tensorflow:loss = 0.648258, step = 1424 (0.604 sec)
+INFO:tensorflow:global_step/sec: 3.48602
+INFO:tensorflow:loss = 0.7614446, step = 1426 (0.569 sec)
+INFO:tensorflow:global_step/sec: 3.44292
+INFO:tensorflow:loss = 0.84789175, step = 1428 (0.581 sec)
+INFO:tensorflow:global_step/sec: 3.4933
+INFO:tensorflow:loss = 0.6396917, step = 1430 (0.572 sec)
+INFO:tensorflow:global_step/sec: 3.408
+INFO:tensorflow:loss = 0.68078893, step = 1432 (0.587 sec)
+INFO:tensorflow:global_step/sec: 3.55928
+INFO:tensorflow:loss = 0.64976054, step = 1434 (0.562 sec)
+INFO:tensorflow:global_step/sec: 3.70599
+INFO:tensorflow:loss = 0.63690317, step = 1436 (0.540 sec)
+INFO:tensorflow:global_step/sec: 3.61222
+INFO:tensorflow:loss = 0.6930088, step = 1438 (0.555 sec)
+INFO:tensorflow:global_step/sec: 3.40708
+INFO:tensorflow:loss = 0.70849115, step = 1440 (0.585 sec)
+INFO:tensorflow:global_step/sec: 3.41004
+INFO:tensorflow:loss = 0.738898, step = 1442 (0.586 sec)
+INFO:tensorflow:global_step/sec: 3.58143
+INFO:tensorflow:loss = 0.6655767, step = 1444 (0.559 sec)
+INFO:tensorflow:global_step/sec: 3.45487
+INFO:tensorflow:loss = 0.7214029, step = 1446 (0.579 sec)
+INFO:tensorflow:global_step/sec: 3.54077
+INFO:tensorflow:loss = 0.6701913, step = 1448 (0.565 sec)
+INFO:tensorflow:global_step/sec: 3.48355
+INFO:tensorflow:loss = 0.60876477, step = 1450 (0.574 sec)
+INFO:tensorflow:global_step/sec: 3.44096
+INFO:tensorflow:loss = 0.5845999, step = 1452 (0.581 sec)
+INFO:tensorflow:global_step/sec: 3.55718
+INFO:tensorflow:loss = 0.80651504, step = 1454 (0.562 sec)
+INFO:tensorflow:global_step/sec: 3.58187
+INFO:tensorflow:loss = 0.6631433, step = 1456 (0.559 sec)
+INFO:tensorflow:global_step/sec: 3.57949
+INFO:tensorflow:loss = 0.61042696, step = 1458 (0.559 sec)
+INFO:tensorflow:global_step/sec: 3.50038
+INFO:tensorflow:loss = 0.6852525, step = 1460 (0.571 sec)
+INFO:tensorflow:global_step/sec: 3.5306
+INFO:tensorflow:loss = 0.7496319, step = 1462 (0.568 sec)
+INFO:tensorflow:global_step/sec: 3.59156
+INFO:tensorflow:loss = 0.67667806, step = 1464 (0.555 sec)
+INFO:tensorflow:global_step/sec: 3.64489
+INFO:tensorflow:loss = 0.6888988, step = 1466 (0.549 sec)
+INFO:tensorflow:global_step/sec: 3.64248
+INFO:tensorflow:loss = 0.56057805, step = 1468 (0.549 sec)
+INFO:tensorflow:global_step/sec: 3.62076
+INFO:tensorflow:loss = 0.6319709, step = 1470 (0.552 sec)
+INFO:tensorflow:global_step/sec: 3.58924
+INFO:tensorflow:loss = 0.6988226, step = 1472 (0.557 sec)
+INFO:tensorflow:global_step/sec: 3.50204
+INFO:tensorflow:loss = 0.738994, step = 1474 (0.571 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 1476...
+INFO:tensorflow:Saving checkpoints for 1476 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 1476...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T19:02:10
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-1476
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 5.55594s
+INFO:tensorflow:Finished evaluation at 2021-06-13-19:02:16
+INFO:tensorflow:Saving dict for global step 1476: accuracy = 0.86063814, global_step = 1476, loss = 0.4110935, mean_loss = 0.4110935
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 1476: /root/.keras/datasets/model/retrain/model.ckpt-1476
+INFO:tensorflow:global_step/sec: 0.283072
+INFO:tensorflow:loss = 0.7621183, step = 1476 (7.065 sec)
+INFO:tensorflow:global_step/sec: 3.42316
+INFO:tensorflow:loss = 0.6379717, step = 1478 (0.584 sec)
+INFO:tensorflow:global_step/sec: 3.47502
+INFO:tensorflow:loss = 0.6913288, step = 1480 (0.576 sec)
+INFO:tensorflow:global_step/sec: 3.52888
+INFO:tensorflow:loss = 0.71062666, step = 1482 (0.566 sec)
+INFO:tensorflow:global_step/sec: 3.57946
+INFO:tensorflow:loss = 0.7528498, step = 1484 (0.559 sec)
+INFO:tensorflow:global_step/sec: 3.57636
+INFO:tensorflow:loss = 0.58875036, step = 1486 (0.559 sec)
+INFO:tensorflow:global_step/sec: 3.54996
+INFO:tensorflow:loss = 0.6947943, step = 1488 (0.563 sec)
+INFO:tensorflow:global_step/sec: 3.53159
+INFO:tensorflow:loss = 0.5464737, step = 1490 (0.566 sec)
+INFO:tensorflow:global_step/sec: 3.63541
+INFO:tensorflow:loss = 0.60759526, step = 1492 (0.550 sec)
+INFO:tensorflow:global_step/sec: 3.50601
+INFO:tensorflow:loss = 0.8064106, step = 1494 (0.570 sec)
+INFO:tensorflow:global_step/sec: 3.60443
+INFO:tensorflow:loss = 0.5386433, step = 1496 (0.555 sec)
+INFO:tensorflow:global_step/sec: 3.6148
+INFO:tensorflow:loss = 0.60452145, step = 1498 (0.554 sec)
+INFO:tensorflow:global_step/sec: 3.60138
+INFO:tensorflow:loss = 0.6007066, step = 1500 (0.557 sec)
+INFO:tensorflow:global_step/sec: 3.48477
+INFO:tensorflow:loss = 0.5208784, step = 1502 (0.571 sec)
+INFO:tensorflow:global_step/sec: 3.52739
+INFO:tensorflow:loss = 0.624673, step = 1504 (0.567 sec)
+INFO:tensorflow:global_step/sec: 3.65794
+INFO:tensorflow:loss = 0.6925646, step = 1506 (0.547 sec)
+INFO:tensorflow:global_step/sec: 3.51889
+INFO:tensorflow:loss = 0.7707111, step = 1508 (0.568 sec)
+INFO:tensorflow:global_step/sec: 3.49477
+INFO:tensorflow:loss = 0.640595, step = 1510 (0.572 sec)
+INFO:tensorflow:global_step/sec: 3.61299
+INFO:tensorflow:loss = 0.55703425, step = 1512 (0.554 sec)
+INFO:tensorflow:global_step/sec: 3.54977
+INFO:tensorflow:loss = 0.5954944, step = 1514 (0.563 sec)
+INFO:tensorflow:global_step/sec: 3.59048
+INFO:tensorflow:loss = 0.56889474, step = 1516 (0.557 sec)
+INFO:tensorflow:global_step/sec: 3.60015
+INFO:tensorflow:loss = 0.6363136, step = 1518 (0.555 sec)
+INFO:tensorflow:global_step/sec: 3.58148
+INFO:tensorflow:loss = 0.77065486, step = 1520 (0.559 sec)
+INFO:tensorflow:global_step/sec: 3.40443
+INFO:tensorflow:loss = 0.63842684, step = 1522 (0.590 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 1524...
+INFO:tensorflow:Saving checkpoints for 1524 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 1524...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T19:02:30
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-1524
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 3.87354s
+INFO:tensorflow:Finished evaluation at 2021-06-13-19:02:34
+INFO:tensorflow:Saving dict for global step 1524: accuracy = 0.8402203, global_step = 1524, loss = 0.4683563, mean_loss = 0.4683563
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 1524: /root/.keras/datasets/model/retrain/model.ckpt-1524
+INFO:tensorflow:global_step/sec: 0.373238
+INFO:tensorflow:loss = 0.68471134, step = 1524 (5.356 sec)
+INFO:tensorflow:global_step/sec: 3.49106
+INFO:tensorflow:loss = 0.584643, step = 1526 (0.573 sec)
+INFO:tensorflow:global_step/sec: 3.43046
+INFO:tensorflow:loss = 0.54303616, step = 1528 (0.583 sec)
+INFO:tensorflow:global_step/sec: 3.53692
+INFO:tensorflow:loss = 0.6161807, step = 1530 (0.565 sec)
+INFO:tensorflow:global_step/sec: 3.5274
+INFO:tensorflow:loss = 0.6134392, step = 1532 (0.567 sec)
+INFO:tensorflow:global_step/sec: 3.60966
+INFO:tensorflow:loss = 0.5636262, step = 1534 (0.557 sec)
+INFO:tensorflow:global_step/sec: 3.59617
+INFO:tensorflow:loss = 0.6617922, step = 1536 (0.554 sec)
+INFO:tensorflow:global_step/sec: 3.77307
+INFO:tensorflow:loss = 0.56865287, step = 1538 (0.530 sec)
+INFO:tensorflow:global_step/sec: 3.66138
+INFO:tensorflow:loss = 0.8679018, step = 1540 (0.547 sec)
+INFO:tensorflow:global_step/sec: 3.74778
+INFO:tensorflow:loss = 0.74845725, step = 1542 (0.533 sec)
+INFO:tensorflow:global_step/sec: 3.60391
+INFO:tensorflow:loss = 0.6539881, step = 1544 (0.555 sec)
+INFO:tensorflow:global_step/sec: 3.59498
+INFO:tensorflow:loss = 0.5961246, step = 1546 (0.556 sec)
+INFO:tensorflow:global_step/sec: 3.65895
+INFO:tensorflow:loss = 0.8568171, step = 1548 (0.547 sec)
+INFO:tensorflow:global_step/sec: 3.60742
+INFO:tensorflow:loss = 0.6598005, step = 1550 (0.555 sec)
+INFO:tensorflow:global_step/sec: 3.6399
+INFO:tensorflow:loss = 0.7643826, step = 1552 (0.549 sec)
+INFO:tensorflow:global_step/sec: 3.55244
+INFO:tensorflow:loss = 0.6723452, step = 1554 (0.563 sec)
+INFO:tensorflow:global_step/sec: 3.64606
+INFO:tensorflow:loss = 0.70591706, step = 1556 (0.549 sec)
+INFO:tensorflow:global_step/sec: 3.71029
+INFO:tensorflow:loss = 0.6426566, step = 1558 (0.539 sec)
+INFO:tensorflow:global_step/sec: 3.671
+INFO:tensorflow:loss = 0.81365603, step = 1560 (0.545 sec)
+INFO:tensorflow:global_step/sec: 3.63866
+INFO:tensorflow:loss = 0.561838, step = 1562 (0.550 sec)
+INFO:tensorflow:global_step/sec: 3.56384
+INFO:tensorflow:loss = 0.72637653, step = 1564 (0.561 sec)
+INFO:tensorflow:global_step/sec: 3.52104
+INFO:tensorflow:loss = 0.77786535, step = 1566 (0.568 sec)
+INFO:tensorflow:global_step/sec: 3.48408
+INFO:tensorflow:loss = 0.8270182, step = 1568 (0.574 sec)
+INFO:tensorflow:global_step/sec: 3.7271
+INFO:tensorflow:loss = 0.63477254, step = 1570 (0.537 sec)
+INFO:tensorflow:global_step/sec: 3.71442
+INFO:tensorflow:loss = 0.9659765, step = 1572 (0.538 sec)
+INFO:tensorflow:global_step/sec: 3.52938
+INFO:tensorflow:loss = 0.7532887, step = 1574 (0.567 sec)
+INFO:tensorflow:global_step/sec: 3.51654
+INFO:tensorflow:loss = 0.676152, step = 1576 (0.569 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 1579...
+INFO:tensorflow:Saving checkpoints for 1579 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 1579...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T19:02:50
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-1579
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 5.54762s
+INFO:tensorflow:Finished evaluation at 2021-06-13-19:02:56
+INFO:tensorflow:Saving dict for global step 1579: accuracy = 0.86390686, global_step = 1579, loss = 0.43910918, mean_loss = 0.43910918
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 1579: /root/.keras/datasets/model/retrain/model.ckpt-1579
+INFO:tensorflow:global_step/sec: 0.285555
+INFO:tensorflow:loss = 0.76031566, step = 1578 (7.004 sec)
+INFO:tensorflow:global_step/sec: 3.39001
+INFO:tensorflow:loss = 0.8066329, step = 1580 (0.589 sec)
+INFO:tensorflow:global_step/sec: 3.75924
+INFO:tensorflow:loss = 0.8668677, step = 1582 (0.532 sec)
+INFO:tensorflow:global_step/sec: 3.62612
+INFO:tensorflow:loss = 0.64921373, step = 1584 (0.552 sec)
+INFO:tensorflow:global_step/sec: 3.68643
+INFO:tensorflow:loss = 0.7137363, step = 1586 (0.543 sec)
+INFO:tensorflow:global_step/sec: 3.65169
+INFO:tensorflow:loss = 0.650852, step = 1588 (0.547 sec)
+INFO:tensorflow:global_step/sec: 3.73501
+INFO:tensorflow:loss = 0.7349866, step = 1590 (0.535 sec)
+INFO:tensorflow:global_step/sec: 3.71833
+INFO:tensorflow:loss = 0.73868966, step = 1592 (0.538 sec)
+INFO:tensorflow:global_step/sec: 3.69904
+INFO:tensorflow:loss = 0.6360066, step = 1594 (0.541 sec)
+INFO:tensorflow:global_step/sec: 3.60514
+INFO:tensorflow:loss = 0.5870763, step = 1596 (0.555 sec)
+INFO:tensorflow:global_step/sec: 3.60465
+INFO:tensorflow:loss = 0.92807966, step = 1598 (0.555 sec)
+INFO:tensorflow:global_step/sec: 3.59965
+INFO:tensorflow:loss = 0.74746275, step = 1600 (0.557 sec)
+INFO:tensorflow:global_step/sec: 3.54205
+INFO:tensorflow:loss = 0.62752026, step = 1602 (0.564 sec)
+INFO:tensorflow:global_step/sec: 3.74991
+INFO:tensorflow:loss = 0.774871, step = 1604 (0.533 sec)
+INFO:tensorflow:global_step/sec: 3.87065
+INFO:tensorflow:loss = 0.6381956, step = 1606 (0.517 sec)
+INFO:tensorflow:global_step/sec: 3.55681
+INFO:tensorflow:loss = 0.7947483, step = 1608 (0.562 sec)
+INFO:tensorflow:global_step/sec: 3.64195
+INFO:tensorflow:loss = 0.7900637, step = 1610 (0.549 sec)
+INFO:tensorflow:global_step/sec: 3.59653
+INFO:tensorflow:loss = 0.86609226, step = 1612 (0.556 sec)
+INFO:tensorflow:global_step/sec: 3.70172
+INFO:tensorflow:loss = 0.8287307, step = 1614 (0.540 sec)
+INFO:tensorflow:global_step/sec: 3.59897
+INFO:tensorflow:loss = 0.7043792, step = 1616 (0.556 sec)
+INFO:tensorflow:global_step/sec: 3.67101
+INFO:tensorflow:loss = 0.714479, step = 1618 (0.546 sec)
+INFO:tensorflow:global_step/sec: 3.69107
+INFO:tensorflow:loss = 0.6140222, step = 1620 (0.541 sec)
+INFO:tensorflow:global_step/sec: 3.64087
+INFO:tensorflow:loss = 0.72347695, step = 1622 (0.550 sec)
+INFO:tensorflow:global_step/sec: 3.63183
+INFO:tensorflow:loss = 0.7645708, step = 1624 (0.550 sec)
+INFO:tensorflow:global_step/sec: 3.60824
+INFO:tensorflow:loss = 0.81858003, step = 1626 (0.554 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 1629...
+INFO:tensorflow:Saving checkpoints for 1629 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 1629...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T19:03:11
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-1629
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 5.54378s
+INFO:tensorflow:Finished evaluation at 2021-06-13-19:03:16
+INFO:tensorflow:Saving dict for global step 1629: accuracy = 0.85853213, global_step = 1629, loss = 0.45393547, mean_loss = 0.45393547
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 1629: /root/.keras/datasets/model/retrain/model.ckpt-1629
+INFO:tensorflow:global_step/sec: 0.287369
+INFO:tensorflow:loss = 0.62813795, step = 1628 (6.960 sec)
+INFO:tensorflow:global_step/sec: 3.41199
+INFO:tensorflow:loss = 0.6181696, step = 1630 (0.586 sec)
+INFO:tensorflow:global_step/sec: 3.5488
+INFO:tensorflow:loss = 0.7363539, step = 1632 (0.564 sec)
+INFO:tensorflow:global_step/sec: 3.59416
+INFO:tensorflow:loss = 0.6062345, step = 1634 (0.556 sec)
+INFO:tensorflow:global_step/sec: 3.70696
+INFO:tensorflow:loss = 0.7687287, step = 1636 (0.539 sec)
+INFO:tensorflow:global_step/sec: 3.6794
+INFO:tensorflow:loss = 0.56224, step = 1638 (0.544 sec)
+INFO:tensorflow:global_step/sec: 3.51123
+INFO:tensorflow:loss = 0.5741607, step = 1640 (0.570 sec)
+INFO:tensorflow:global_step/sec: 3.6665
+INFO:tensorflow:loss = 0.8049629, step = 1642 (0.545 sec)
+INFO:tensorflow:global_step/sec: 3.52341
+INFO:tensorflow:loss = 0.69562787, step = 1644 (0.568 sec)
+INFO:tensorflow:global_step/sec: 3.73619
+INFO:tensorflow:loss = 0.79358006, step = 1646 (0.535 sec)
+INFO:tensorflow:global_step/sec: 3.55697
+INFO:tensorflow:loss = 0.60536057, step = 1648 (0.563 sec)
+INFO:tensorflow:global_step/sec: 3.66638
+INFO:tensorflow:loss = 0.72046244, step = 1650 (0.545 sec)
+INFO:tensorflow:global_step/sec: 3.50574
+INFO:tensorflow:loss = 0.8607803, step = 1652 (0.570 sec)
+INFO:tensorflow:global_step/sec: 3.57661
+INFO:tensorflow:loss = 0.6759616, step = 1654 (0.559 sec)
+INFO:tensorflow:global_step/sec: 3.6845
+INFO:tensorflow:loss = 0.6920867, step = 1656 (0.543 sec)
+INFO:tensorflow:global_step/sec: 3.70343
+INFO:tensorflow:loss = 0.69040394, step = 1658 (0.540 sec)
+INFO:tensorflow:global_step/sec: 3.30106
+INFO:tensorflow:loss = 0.7018291, step = 1660 (0.608 sec)
+INFO:tensorflow:global_step/sec: 3.66177
+INFO:tensorflow:loss = 0.7712004, step = 1662 (0.544 sec)
+INFO:tensorflow:global_step/sec: 3.60861
+INFO:tensorflow:loss = 0.78845716, step = 1664 (0.554 sec)
+INFO:tensorflow:global_step/sec: 3.58936
+INFO:tensorflow:loss = 0.7360905, step = 1666 (0.557 sec)
+INFO:tensorflow:global_step/sec: 3.6901
+INFO:tensorflow:loss = 0.82328844, step = 1668 (0.542 sec)
+INFO:tensorflow:global_step/sec: 3.61818
+INFO:tensorflow:loss = 0.657957, step = 1670 (0.553 sec)
+INFO:tensorflow:global_step/sec: 3.55484
+INFO:tensorflow:loss = 0.65864044, step = 1672 (0.563 sec)
+INFO:tensorflow:global_step/sec: 3.66599
+INFO:tensorflow:loss = 0.73235756, step = 1674 (0.547 sec)
+INFO:tensorflow:global_step/sec: 3.64042
+INFO:tensorflow:loss = 0.7905988, step = 1676 (0.548 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 1678...
+INFO:tensorflow:Saving checkpoints for 1678 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 1678...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T19:03:31
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-1678
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 5.55250s
+INFO:tensorflow:Finished evaluation at 2021-06-13-19:03:36
+INFO:tensorflow:Saving dict for global step 1678: accuracy = 0.8526277, global_step = 1678, loss = 0.44398865, mean_loss = 0.44398865
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 1678: /root/.keras/datasets/model/retrain/model.ckpt-1678
+INFO:tensorflow:global_step/sec: 0.277024
+INFO:tensorflow:loss = 0.7526194, step = 1678 (7.222 sec)
+INFO:tensorflow:global_step/sec: 3.51749
+INFO:tensorflow:loss = 0.7519778, step = 1680 (0.566 sec)
+INFO:tensorflow:global_step/sec: 3.55307
+INFO:tensorflow:loss = 0.7046638, step = 1682 (0.563 sec)
+INFO:tensorflow:global_step/sec: 3.67217
+INFO:tensorflow:loss = 0.79355276, step = 1684 (0.545 sec)
+INFO:tensorflow:global_step/sec: 3.52769
+INFO:tensorflow:loss = 0.6374073, step = 1686 (0.569 sec)
+INFO:tensorflow:global_step/sec: 3.56201
+INFO:tensorflow:loss = 0.6862132, step = 1688 (0.560 sec)
+INFO:tensorflow:global_step/sec: 3.60719
+INFO:tensorflow:loss = 0.7282425, step = 1690 (0.554 sec)
+INFO:tensorflow:global_step/sec: 3.59206
+INFO:tensorflow:loss = 0.6111859, step = 1692 (0.557 sec)
+INFO:tensorflow:global_step/sec: 3.68205
+INFO:tensorflow:loss = 0.6754534, step = 1694 (0.543 sec)
+INFO:tensorflow:global_step/sec: 3.59085
+INFO:tensorflow:loss = 0.7579551, step = 1696 (0.557 sec)
+INFO:tensorflow:global_step/sec: 3.65684
+INFO:tensorflow:loss = 0.81996924, step = 1698 (0.547 sec)
+INFO:tensorflow:global_step/sec: 3.59554
+INFO:tensorflow:loss = 0.77211344, step = 1700 (0.559 sec)
+INFO:tensorflow:global_step/sec: 3.79922
+INFO:tensorflow:loss = 0.6420827, step = 1702 (0.524 sec)
+INFO:tensorflow:global_step/sec: 3.63497
+INFO:tensorflow:loss = 0.7859904, step = 1704 (0.550 sec)
+INFO:tensorflow:global_step/sec: 3.66641
+INFO:tensorflow:loss = 0.68210113, step = 1706 (0.545 sec)
+INFO:tensorflow:global_step/sec: 3.72276
+INFO:tensorflow:loss = 0.57522535, step = 1708 (0.537 sec)
+INFO:tensorflow:global_step/sec: 3.54143
+INFO:tensorflow:loss = 0.70520717, step = 1710 (0.565 sec)
+INFO:tensorflow:global_step/sec: 3.74092
+INFO:tensorflow:loss = 0.84144753, step = 1712 (0.536 sec)
+INFO:tensorflow:global_step/sec: 3.57166
+INFO:tensorflow:loss = 0.66305524, step = 1714 (0.558 sec)
+INFO:tensorflow:global_step/sec: 3.64929
+INFO:tensorflow:loss = 0.6632243, step = 1716 (0.548 sec)
+INFO:tensorflow:global_step/sec: 3.59182
+INFO:tensorflow:loss = 0.65647167, step = 1718 (0.557 sec)
+INFO:tensorflow:global_step/sec: 3.58627
+INFO:tensorflow:loss = 0.604388, step = 1720 (0.558 sec)
+INFO:tensorflow:global_step/sec: 3.52985
+INFO:tensorflow:loss = 0.575628, step = 1722 (0.567 sec)
+INFO:tensorflow:global_step/sec: 3.57922
+INFO:tensorflow:loss = 0.7528641, step = 1724 (0.559 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 1727...
+INFO:tensorflow:Saving checkpoints for 1727 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 1727...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T19:03:51
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-1727
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 5.52759s
+INFO:tensorflow:Finished evaluation at 2021-06-13-19:03:56
+INFO:tensorflow:Saving dict for global step 1727: accuracy = 0.86962014, global_step = 1727, loss = 0.41340032, mean_loss = 0.41340032
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 1727: /root/.keras/datasets/model/retrain/model.ckpt-1727
+INFO:tensorflow:global_step/sec: 0.288519
+INFO:tensorflow:loss = 0.63681054, step = 1726 (6.934 sec)
+INFO:tensorflow:global_step/sec: 3.45257
+INFO:tensorflow:loss = 0.5320289, step = 1728 (0.577 sec)
+INFO:tensorflow:global_step/sec: 3.59003
+INFO:tensorflow:loss = 0.8437627, step = 1730 (0.557 sec)
+INFO:tensorflow:global_step/sec: 3.56515
+INFO:tensorflow:loss = 0.70894325, step = 1732 (0.561 sec)
+INFO:tensorflow:global_step/sec: 3.70127
+INFO:tensorflow:loss = 0.6696955, step = 1734 (0.540 sec)
+INFO:tensorflow:global_step/sec: 3.72674
+INFO:tensorflow:loss = 0.64488846, step = 1736 (0.537 sec)
+INFO:tensorflow:global_step/sec: 3.66425
+INFO:tensorflow:loss = 0.63460225, step = 1738 (0.546 sec)
+INFO:tensorflow:global_step/sec: 3.63266
+INFO:tensorflow:loss = 0.65737605, step = 1740 (0.551 sec)
+INFO:tensorflow:global_step/sec: 3.57703
+INFO:tensorflow:loss = 0.67239064, step = 1742 (0.559 sec)
+INFO:tensorflow:global_step/sec: 3.64676
+INFO:tensorflow:loss = 0.6914667, step = 1744 (0.549 sec)
+INFO:tensorflow:global_step/sec: 3.55635
+INFO:tensorflow:loss = 0.61763686, step = 1746 (0.562 sec)
+INFO:tensorflow:global_step/sec: 3.92072
+INFO:tensorflow:loss = 0.78185344, step = 1748 (0.510 sec)
+INFO:tensorflow:global_step/sec: 3.64245
+INFO:tensorflow:loss = 0.6797908, step = 1750 (0.549 sec)
+INFO:tensorflow:global_step/sec: 3.67293
+INFO:tensorflow:loss = 0.7347306, step = 1752 (0.545 sec)
+INFO:tensorflow:global_step/sec: 3.61371
+INFO:tensorflow:loss = 0.63025206, step = 1754 (0.553 sec)
+INFO:tensorflow:global_step/sec: 3.67245
+INFO:tensorflow:loss = 0.76280904, step = 1756 (0.545 sec)
+INFO:tensorflow:global_step/sec: 3.59258
+INFO:tensorflow:loss = 0.97539, step = 1758 (0.557 sec)
+INFO:tensorflow:global_step/sec: 3.55623
+INFO:tensorflow:loss = 0.91288245, step = 1760 (0.562 sec)
+INFO:tensorflow:global_step/sec: 3.82707
+INFO:tensorflow:loss = 0.7647481, step = 1762 (0.523 sec)
+INFO:tensorflow:global_step/sec: 3.58698
+INFO:tensorflow:loss = 0.6996727, step = 1764 (0.558 sec)
+INFO:tensorflow:global_step/sec: 3.68401
+INFO:tensorflow:loss = 0.78704274, step = 1766 (0.542 sec)
+INFO:tensorflow:global_step/sec: 3.68288
+INFO:tensorflow:loss = 0.66769975, step = 1768 (0.543 sec)
+INFO:tensorflow:global_step/sec: 3.63822
+INFO:tensorflow:loss = 0.85641456, step = 1770 (0.550 sec)
+INFO:tensorflow:global_step/sec: 3.59199
+INFO:tensorflow:loss = 0.74623305, step = 1772 (0.559 sec)
+INFO:tensorflow:global_step/sec: 3.63231
+INFO:tensorflow:loss = 0.64933646, step = 1774 (0.549 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 1777...
+INFO:tensorflow:Saving checkpoints for 1777 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 1777...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T19:04:11
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-1777
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 5.51292s
+INFO:tensorflow:Finished evaluation at 2021-06-13-19:04:16
+INFO:tensorflow:Saving dict for global step 1777: accuracy = 0.8672352, global_step = 1777, loss = 0.41544852, mean_loss = 0.41544852
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 1777: /root/.keras/datasets/model/retrain/model.ckpt-1777
+INFO:tensorflow:global_step/sec: 0.287629
+INFO:tensorflow:loss = 0.75140375, step = 1776 (6.959 sec)
+INFO:tensorflow:global_step/sec: 3.4766
+INFO:tensorflow:loss = 0.62716424, step = 1778 (0.570 sec)
+INFO:tensorflow:global_step/sec: 3.56753
+INFO:tensorflow:loss = 0.80022365, step = 1780 (0.561 sec)
+INFO:tensorflow:global_step/sec: 3.53384
+INFO:tensorflow:loss = 0.7619867, step = 1782 (0.566 sec)
+INFO:tensorflow:global_step/sec: 3.63757
+INFO:tensorflow:loss = 0.543437, step = 1784 (0.550 sec)
+INFO:tensorflow:global_step/sec: 3.62777
+INFO:tensorflow:loss = 0.6924616, step = 1786 (0.551 sec)
+INFO:tensorflow:global_step/sec: 3.62657
+INFO:tensorflow:loss = 0.8473758, step = 1788 (0.552 sec)
+INFO:tensorflow:global_step/sec: 3.47052
+INFO:tensorflow:loss = 0.6450824, step = 1790 (0.576 sec)
+INFO:tensorflow:global_step/sec: 3.61564
+INFO:tensorflow:loss = 0.6906964, step = 1792 (0.553 sec)
+INFO:tensorflow:global_step/sec: 3.66591
+INFO:tensorflow:loss = 0.61337125, step = 1794 (0.545 sec)
+INFO:tensorflow:global_step/sec: 3.6134
+INFO:tensorflow:loss = 0.6305152, step = 1796 (0.554 sec)
+INFO:tensorflow:global_step/sec: 3.62138
+INFO:tensorflow:loss = 0.564649, step = 1798 (0.552 sec)
+INFO:tensorflow:global_step/sec: 3.67433
+INFO:tensorflow:loss = 0.7431114, step = 1800 (0.551 sec)
+INFO:tensorflow:global_step/sec: 3.80711
+INFO:tensorflow:loss = 0.70067894, step = 1802 (0.519 sec)
+INFO:tensorflow:global_step/sec: 3.55822
+INFO:tensorflow:loss = 0.7798293, step = 1804 (0.562 sec)
+INFO:tensorflow:global_step/sec: 3.90545
+INFO:tensorflow:loss = 0.6311963, step = 1806 (0.512 sec)
+INFO:tensorflow:global_step/sec: 3.56525
+INFO:tensorflow:loss = 0.7441996, step = 1808 (0.561 sec)
+INFO:tensorflow:global_step/sec: 3.62924
+INFO:tensorflow:loss = 0.74432397, step = 1810 (0.551 sec)
+INFO:tensorflow:global_step/sec: 3.55757
+INFO:tensorflow:loss = 0.7531028, step = 1812 (0.562 sec)
+INFO:tensorflow:global_step/sec: 3.77778
+INFO:tensorflow:loss = 0.81984234, step = 1814 (0.529 sec)
+INFO:tensorflow:global_step/sec: 3.72283
+INFO:tensorflow:loss = 0.7978942, step = 1816 (0.537 sec)
+INFO:tensorflow:global_step/sec: 3.73918
+INFO:tensorflow:loss = 0.6539487, step = 1818 (0.538 sec)
+INFO:tensorflow:global_step/sec: 3.68626
+INFO:tensorflow:loss = 0.70811534, step = 1820 (0.539 sec)
+INFO:tensorflow:global_step/sec: 3.62705
+INFO:tensorflow:loss = 0.64443827, step = 1822 (0.551 sec)
+INFO:tensorflow:global_step/sec: 3.65962
+INFO:tensorflow:loss = 0.61622536, step = 1824 (0.546 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 1827...
+INFO:tensorflow:Saving checkpoints for 1827 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 1827...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T19:04:31
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-1827
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 5.53779s
+INFO:tensorflow:Finished evaluation at 2021-06-13-19:04:37
+INFO:tensorflow:Saving dict for global step 1827: accuracy = 0.8700432, global_step = 1827, loss = 0.43319002, mean_loss = 0.43319002
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 1827: /root/.keras/datasets/model/retrain/model.ckpt-1827
+INFO:tensorflow:global_step/sec: 0.286586
+INFO:tensorflow:loss = 0.6598017, step = 1826 (6.980 sec)
+INFO:tensorflow:global_step/sec: 3.37222
+INFO:tensorflow:loss = 0.60765743, step = 1828 (0.592 sec)
+INFO:tensorflow:global_step/sec: 3.47811
+INFO:tensorflow:loss = 0.6870601, step = 1830 (0.575 sec)
+INFO:tensorflow:global_step/sec: 3.5278
+INFO:tensorflow:loss = 0.7181328, step = 1832 (0.567 sec)
+INFO:tensorflow:global_step/sec: 3.62555
+INFO:tensorflow:loss = 0.77512896, step = 1834 (0.552 sec)
+INFO:tensorflow:global_step/sec: 3.67055
+INFO:tensorflow:loss = 0.8850664, step = 1836 (0.545 sec)
+INFO:tensorflow:global_step/sec: 3.67588
+INFO:tensorflow:loss = 0.7881602, step = 1838 (0.544 sec)
+INFO:tensorflow:global_step/sec: 3.73565
+INFO:tensorflow:loss = 0.7601009, step = 1840 (0.535 sec)
+INFO:tensorflow:global_step/sec: 3.62201
+INFO:tensorflow:loss = 0.8665558, step = 1842 (0.552 sec)
+INFO:tensorflow:global_step/sec: 3.46037
+INFO:tensorflow:loss = 0.61665565, step = 1844 (0.580 sec)
+INFO:tensorflow:global_step/sec: 3.73724
+INFO:tensorflow:loss = 0.79705447, step = 1846 (0.533 sec)
+INFO:tensorflow:global_step/sec: 3.6888
+INFO:tensorflow:loss = 0.56963676, step = 1848 (0.542 sec)
+INFO:tensorflow:global_step/sec: 3.75083
+INFO:tensorflow:loss = 0.7479593, step = 1850 (0.536 sec)
+INFO:tensorflow:global_step/sec: 3.58831
+INFO:tensorflow:loss = 0.712324, step = 1852 (0.555 sec)
+INFO:tensorflow:global_step/sec: 3.63614
+INFO:tensorflow:loss = 0.77098006, step = 1854 (0.550 sec)
+INFO:tensorflow:global_step/sec: 3.60131
+INFO:tensorflow:loss = 0.65019757, step = 1856 (0.558 sec)
+INFO:tensorflow:global_step/sec: 3.72376
+INFO:tensorflow:loss = 0.56201696, step = 1858 (0.536 sec)
+INFO:tensorflow:global_step/sec: 3.68912
+INFO:tensorflow:loss = 0.6986043, step = 1860 (0.543 sec)
+INFO:tensorflow:global_step/sec: 3.65762
+INFO:tensorflow:loss = 0.70101243, step = 1862 (0.546 sec)
+INFO:tensorflow:global_step/sec: 3.77761
+INFO:tensorflow:loss = 0.59118843, step = 1864 (0.529 sec)
+INFO:tensorflow:global_step/sec: 3.60765
+INFO:tensorflow:loss = 0.6531451, step = 1866 (0.554 sec)
+INFO:tensorflow:global_step/sec: 3.6659
+INFO:tensorflow:loss = 0.5706354, step = 1868 (0.545 sec)
+INFO:tensorflow:global_step/sec: 3.77533
+INFO:tensorflow:loss = 0.7559311, step = 1870 (0.530 sec)
+INFO:tensorflow:global_step/sec: 3.7534
+INFO:tensorflow:loss = 0.6017744, step = 1872 (0.534 sec)
+INFO:tensorflow:global_step/sec: 3.58232
+INFO:tensorflow:loss = 0.7796039, step = 1874 (0.558 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 1877...
+INFO:tensorflow:Saving checkpoints for 1877 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 1877...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T19:04:51
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-1877
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 5.53402s
+INFO:tensorflow:Finished evaluation at 2021-06-13-19:04:57
+INFO:tensorflow:Saving dict for global step 1877: accuracy = 0.8758066, global_step = 1877, loss = 0.38714734, mean_loss = 0.38714734
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 1877: /root/.keras/datasets/model/retrain/model.ckpt-1877
+INFO:tensorflow:global_step/sec: 0.288289
+INFO:tensorflow:loss = 0.6246722, step = 1876 (6.937 sec)
+INFO:tensorflow:global_step/sec: 3.55663
+INFO:tensorflow:loss = 0.6771136, step = 1878 (0.562 sec)
+INFO:tensorflow:global_step/sec: 3.50833
+INFO:tensorflow:loss = 0.61954904, step = 1880 (0.570 sec)
+INFO:tensorflow:global_step/sec: 3.51862
+INFO:tensorflow:loss = 0.686931, step = 1882 (0.569 sec)
+INFO:tensorflow:global_step/sec: 3.58838
+INFO:tensorflow:loss = 0.5880183, step = 1884 (0.557 sec)
+INFO:tensorflow:global_step/sec: 3.7238
+INFO:tensorflow:loss = 0.60357577, step = 1886 (0.538 sec)
+INFO:tensorflow:global_step/sec: 3.73369
+INFO:tensorflow:loss = 0.6120453, step = 1888 (0.535 sec)
+INFO:tensorflow:global_step/sec: 3.70981
+INFO:tensorflow:loss = 0.6993065, step = 1890 (0.539 sec)
+INFO:tensorflow:global_step/sec: 3.66299
+INFO:tensorflow:loss = 0.55300206, step = 1892 (0.546 sec)
+INFO:tensorflow:global_step/sec: 3.60664
+INFO:tensorflow:loss = 0.6939785, step = 1894 (0.555 sec)
+INFO:tensorflow:global_step/sec: 3.72077
+INFO:tensorflow:loss = 0.82587355, step = 1896 (0.537 sec)
+INFO:tensorflow:global_step/sec: 3.74974
+INFO:tensorflow:loss = 0.5203289, step = 1898 (0.533 sec)
+INFO:tensorflow:global_step/sec: 3.65068
+INFO:tensorflow:loss = 0.6767693, step = 1900 (0.555 sec)
+INFO:tensorflow:global_step/sec: 3.62451
+INFO:tensorflow:loss = 0.79868174, step = 1902 (0.545 sec)
+INFO:tensorflow:global_step/sec: 3.6656
+INFO:tensorflow:loss = 0.64878374, step = 1904 (0.545 sec)
+INFO:tensorflow:global_step/sec: 3.67336
+INFO:tensorflow:loss = 0.6862304, step = 1906 (0.544 sec)
+INFO:tensorflow:global_step/sec: 3.66221
+INFO:tensorflow:loss = 0.68477964, step = 1908 (0.547 sec)
+INFO:tensorflow:global_step/sec: 3.63743
+INFO:tensorflow:loss = 0.60296345, step = 1910 (0.549 sec)
+INFO:tensorflow:global_step/sec: 3.65581
+INFO:tensorflow:loss = 0.67525256, step = 1912 (0.547 sec)
+INFO:tensorflow:global_step/sec: 3.77014
+INFO:tensorflow:loss = 0.64036155, step = 1914 (0.531 sec)
+INFO:tensorflow:global_step/sec: 3.68989
+INFO:tensorflow:loss = 0.5435237, step = 1916 (0.542 sec)
+INFO:tensorflow:global_step/sec: 3.68531
+INFO:tensorflow:loss = 0.7983135, step = 1918 (0.543 sec)
+INFO:tensorflow:global_step/sec: 3.60829
+INFO:tensorflow:loss = 0.57696176, step = 1920 (0.554 sec)
+INFO:tensorflow:global_step/sec: 3.49038
+INFO:tensorflow:loss = 0.61290574, step = 1922 (0.574 sec)
+INFO:tensorflow:global_step/sec: 3.69231
+INFO:tensorflow:loss = 0.78104556, step = 1924 (0.542 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 1927...
+INFO:tensorflow:Saving checkpoints for 1927 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 1927...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T19:05:12
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-1927
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 3.83255s
+INFO:tensorflow:Finished evaluation at 2021-06-13-19:05:15
+INFO:tensorflow:Saving dict for global step 1927: accuracy = 0.8717105, global_step = 1927, loss = 0.39174777, mean_loss = 0.39174777
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 1927: /root/.keras/datasets/model/retrain/model.ckpt-1927
+INFO:tensorflow:global_step/sec: 0.367363
+INFO:tensorflow:loss = 0.7373086, step = 1926 (5.442 sec)
+INFO:tensorflow:global_step/sec: 3.45664
+INFO:tensorflow:loss = 0.56064004, step = 1928 (0.579 sec)
+INFO:tensorflow:global_step/sec: 3.54919
+INFO:tensorflow:loss = 0.72123766, step = 1930 (0.564 sec)
+INFO:tensorflow:global_step/sec: 3.69227
+INFO:tensorflow:loss = 0.7283713, step = 1932 (0.542 sec)
+INFO:tensorflow:global_step/sec: 3.63984
+INFO:tensorflow:loss = 0.65981895, step = 1934 (0.549 sec)
+INFO:tensorflow:global_step/sec: 3.78091
+INFO:tensorflow:loss = 0.7897304, step = 1936 (0.529 sec)
+INFO:tensorflow:global_step/sec: 3.545
+INFO:tensorflow:loss = 0.71876466, step = 1938 (0.564 sec)
+INFO:tensorflow:global_step/sec: 3.90871
+INFO:tensorflow:loss = 0.6067205, step = 1940 (0.513 sec)
+INFO:tensorflow:global_step/sec: 3.59368
+INFO:tensorflow:loss = 0.50443333, step = 1942 (0.555 sec)
+INFO:tensorflow:global_step/sec: 3.6294
+INFO:tensorflow:loss = 0.7174041, step = 1944 (0.551 sec)
+INFO:tensorflow:global_step/sec: 3.5978
+INFO:tensorflow:loss = 0.64843273, step = 1946 (0.556 sec)
+INFO:tensorflow:global_step/sec: 3.78268
+INFO:tensorflow:loss = 0.83467776, step = 1948 (0.529 sec)
+INFO:tensorflow:global_step/sec: 3.54283
+INFO:tensorflow:loss = 0.6881996, step = 1950 (0.565 sec)
+INFO:tensorflow:global_step/sec: 3.70574
+INFO:tensorflow:loss = 0.6234931, step = 1952 (0.540 sec)
+INFO:tensorflow:global_step/sec: 3.68296
+INFO:tensorflow:loss = 0.67624956, step = 1954 (0.543 sec)
+INFO:tensorflow:global_step/sec: 3.79921
+INFO:tensorflow:loss = 0.7644183, step = 1956 (0.526 sec)
+INFO:tensorflow:global_step/sec: 3.65741
+INFO:tensorflow:loss = 0.5698954, step = 1958 (0.547 sec)
+INFO:tensorflow:global_step/sec: 3.70779
+INFO:tensorflow:loss = 0.6573852, step = 1960 (0.540 sec)
+INFO:tensorflow:global_step/sec: 3.6251
+INFO:tensorflow:loss = 0.6347286, step = 1962 (0.551 sec)
+INFO:tensorflow:global_step/sec: 3.62825
+INFO:tensorflow:loss = 0.64206344, step = 1964 (0.551 sec)
+INFO:tensorflow:global_step/sec: 3.70319
+INFO:tensorflow:loss = 0.76406896, step = 1966 (0.540 sec)
+INFO:tensorflow:global_step/sec: 3.59623
+INFO:tensorflow:loss = 0.9785576, step = 1968 (0.556 sec)
+INFO:tensorflow:global_step/sec: 3.59522
+INFO:tensorflow:loss = 0.68078876, step = 1970 (0.557 sec)
+INFO:tensorflow:global_step/sec: 3.5492
+INFO:tensorflow:loss = 0.55437124, step = 1972 (0.564 sec)
+INFO:tensorflow:global_step/sec: 3.69272
+INFO:tensorflow:loss = 0.6658611, step = 1974 (0.541 sec)
+INFO:tensorflow:global_step/sec: 3.627
+INFO:tensorflow:loss = 0.7276015, step = 1976 (0.551 sec)
+INFO:tensorflow:global_step/sec: 3.64117
+INFO:tensorflow:loss = 0.62379587, step = 1978 (0.549 sec)
+INFO:tensorflow:global_step/sec: 3.5617
+INFO:tensorflow:loss = 0.6625942, step = 1980 (0.562 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 1983...
+INFO:tensorflow:Saving checkpoints for 1983 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 1983...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T19:05:32
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-1983
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 5.51463s
+INFO:tensorflow:Finished evaluation at 2021-06-13-19:05:37
+INFO:tensorflow:Saving dict for global step 1983: accuracy = 0.86207664, global_step = 1983, loss = 0.40298173, mean_loss = 0.40298173
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 1983: /root/.keras/datasets/model/retrain/model.ckpt-1983
+INFO:tensorflow:global_step/sec: 0.286879
+INFO:tensorflow:loss = 0.6904166, step = 1982 (6.972 sec)
+INFO:tensorflow:global_step/sec: 3.43363
+INFO:tensorflow:loss = 0.63944125, step = 1984 (0.584 sec)
+INFO:tensorflow:global_step/sec: 3.54462
+INFO:tensorflow:loss = 0.7944819, step = 1986 (0.562 sec)
+INFO:tensorflow:global_step/sec: 3.74744
+INFO:tensorflow:loss = 0.6696108, step = 1988 (0.534 sec)
+INFO:tensorflow:global_step/sec: 3.68061
+INFO:tensorflow:loss = 0.7853027, step = 1990 (0.543 sec)
+INFO:tensorflow:global_step/sec: 3.54407
+INFO:tensorflow:loss = 0.5953448, step = 1992 (0.564 sec)
+INFO:tensorflow:global_step/sec: 3.70404
+INFO:tensorflow:loss = 0.63077396, step = 1994 (0.540 sec)
+INFO:tensorflow:global_step/sec: 3.5954
+INFO:tensorflow:loss = 0.54139733, step = 1996 (0.556 sec)
+INFO:tensorflow:global_step/sec: 3.73912
+INFO:tensorflow:loss = 0.73000646, step = 1998 (0.535 sec)
+INFO:tensorflow:Calling checkpoint listeners before saving checkpoint 2000...
+INFO:tensorflow:Saving checkpoints for 2000 into /root/.keras/datasets/model/retrain/model.ckpt.
+INFO:tensorflow:Calling checkpoint listeners after saving checkpoint 2000...
+INFO:tensorflow:Calling model_fn.
+INFO:tensorflow:Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2021-06-13T19:05:43
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Restoring parameters from /root/.keras/datasets/model/retrain/model.ckpt-2000
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Evaluation [1/15]
+INFO:tensorflow:Evaluation [2/15]
+INFO:tensorflow:Evaluation [3/15]
+INFO:tensorflow:Evaluation [4/15]
+INFO:tensorflow:Evaluation [5/15]
+INFO:tensorflow:Evaluation [6/15]
+INFO:tensorflow:Evaluation [7/15]
+INFO:tensorflow:Evaluation [8/15]
+INFO:tensorflow:Evaluation [9/15]
+INFO:tensorflow:Evaluation [10/15]
+INFO:tensorflow:Evaluation [11/15]
+INFO:tensorflow:Evaluation [12/15]
+INFO:tensorflow:Evaluation [13/15]
+INFO:tensorflow:Evaluation [14/15]
+INFO:tensorflow:Evaluation [15/15]
+INFO:tensorflow:Inference Time : 5.55259s
+INFO:tensorflow:Finished evaluation at 2021-06-13-19:05:48
+INFO:tensorflow:Saving dict for global step 2000: accuracy = 0.8828706, global_step = 2000, loss = 0.39167404, mean_loss = 0.39167404
+INFO:tensorflow:Saving 'checkpoint_path' summary for global step 2000: /root/.keras/datasets/model/retrain/model.ckpt-2000
+INFO:tensorflow:Loss for final step: 0.66411.
