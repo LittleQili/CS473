@@ -164,3 +164,25 @@ Bottleneck: 先用1\*1kernel降通道数，再正常卷积，再1\*1kernel升通
 ## 3
 
 开始了开始了
+
+用OpenGL Assimp 读取off文件可视化即可。所以是两个任务：
+
+~~opengl assimp环境配置以及文件读取和可视化，着色。官方[文档](https://assimp-docs.readthedocs.io/en/latest/about/index.html)，[learnOpenGL](https://learnopengl-cn.github.io/03%20Model%20Loading/01%20Assimp/)~~
+
+- [x] 用linux系统下的geomview来可视化。
+
+需要注意的大问题：win下生成的off文件不能在linux虚拟机上运行。所以需要用linux本身的文件，然后把内容co进去。直接copy是可以的。
+
+安装运行：
+
+```shell
+sudo apt-get install geomview
+geomview
+```
+
+- [ ] 跑通github[实例代码](https://github.com/ozkanyumsak/mesh-subdivision)
+
+他自己用的可视化工具好像是open inventor。open inventor好像用不成，读一下他写的类，看看能不能生成.obj文件. 代码结构看ipad上画的即可。
+
+.off文件格式[参考](https://zhuanlan.zhihu.com/p/148859062)；
+
