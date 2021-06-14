@@ -33,7 +33,7 @@ commit了。checkpoint和evaluation基本是同时发生的，所以evaluation�
 
 > git log --pretty=oneline; git reset --soft 019d210de02415ecdafcb1c7ebf7f12b07e6c13c; git push origin master/main --force
 
-- [ ] 看一下残差网络应该怎样魔改。因为size不一样啊…………（可并行）
+- [ ] #### 看一下残差网络应该怎样魔改。因为size不一样啊…………（可并行）
 
 resnet tensorflow[实现](https://github.com/raghakot/keras-resnet/blob/master/resnet.py) 可以看一下看一下。
 
@@ -43,7 +43,39 @@ resnet tensorflow[实现](https://github.com/raghakot/keras-resnet/blob/master/r
 - 残差是否应该和network in network结合起来？
 - 如果要是修改原本的网络结构，需要对比跑一下。
 
-- [ ] 看一下network in network应该怎么加（重要）
+引用这篇[文章](https://blog.csdn.net/qq_37555071/article/details/108258862?spm=1001.2014.3001.5502)，残差网络是可以加1\*1卷积操作的。
+
+- [x] 先对整个图卷积模块加一下
+- [x] 每一个图卷积层加一下
+
+- [ ] #### 看一下network in network应该怎么加（重要）
+
+- try1: 把num_filters改成了16，这个改变仅仅对图卷积起作用。不知道会不会有什么影响。
+
+  影响，基本没有。
+
+- try2:不改图卷积部分，改一下图卷积结束之后的模块。
+
+  问题：要改成先concate之后再变16，还是先都16之后再concat
+
+  - [x] 先concat，然后直接16，有效果的
+  - [ ] 然后试一下平板上画的那个
+
+- try3:改图卷积部分。
+
+  问题：如何将3种128拼起来？
+
+  - [x] 再加一层，拼起来之后多一层1*1卷积，loss降得非常非常快
+  - [x] 在原本是64层那一层拼起来，输给128
+
+  由于loss降得太快，需要降低learning rate.
+
+  ~~调一下合适的learning rate。实在困姚明了。运行时已经存好。~~
+
+- try4: 结合残差和network in network
+
+上午问一下刘学长，对这个残差和inception的理解。问问看自己理解的对不对。
+
 - [ ] 计算网络参数个数（必要）
 
 ### 项目Toturial
@@ -121,9 +153,9 @@ https://zhuanlan.zhihu.com/p/116900199
 
 这里面的concatenate指的是通道的合并。
 
-Inception0: 多选几种kernel，最终合并几个kernel的计算结果。
+Inception0: 多选几种kernel，最终合并几个kernel的计算结果。motivation是，对不同的大小范围进行感知。
 
-Inception v1:先用1*1kernel降通道数，再进行多种kernel的计算。
+Inception v1:先用1*1kernel降通道数，再进行多种kernel的计算。motivation是，先降维减少通道数量
 
 Inception v2:多种kernel中的大kernel用多层小kernel来代替
 
@@ -189,4 +221,28 @@ geomview
 - [ ] 看懂其中的几种算法，然后改成自己的形式；
 
 - [ ] 写个脚本之类的东西，把程序发布出来，多跑一些模型写报告用。
+
+## 报告
+
+### 2
+
+两个改法的原理要理解，写出来
+
+然后画图，网络结构
+
+**算出来参数数目**
+
+把python绘图贴上去
+
+### 3
+
+算法伪代码
+
+程序架构
+
+运行效果贴图
+
+## 答辩准备
+
+需要准备一下3的脚本应该如何讲出来
 
