@@ -90,6 +90,7 @@ void Mesh::saveOff(string path)
 	}
 }
 
+// add a face according to the input vertices and side counts.
 void Mesh::addFace(size_t *vertices, size_t sideCount)
 {
 	Face *face = new Face(faces.size());
@@ -105,6 +106,7 @@ void Mesh::addFace(size_t *vertices, size_t sideCount)
 		face->verts.push_back(v); //sorted
 		v->faces.push_back(face); //not sorted
 
+		// need to add edge here
 		Edge *edge = NULL;
 		int vNextPos = v->getVertPos(vNext);
 
@@ -130,11 +132,13 @@ void Mesh::addFace(size_t *vertices, size_t sideCount)
 	}
 }
 
+// add a vertex
 void Mesh::addVertex(const Point &p)
 {
 	verts.push_back(new Vertex(verts.size(), p));
 }
 
+// add a edge according to vertex
 Edge *Mesh::addEdge(Vertex *v1, Vertex *v2)
 {
 	v1->verts.push_back(v2); // not sorted

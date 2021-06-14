@@ -78,15 +78,13 @@ BaseScheme* MyRunner::getSchemeInput()
 {
 	int in;
 	cout << "Enter a Subdivision Scheme:\n"
-		<< "1: Catmull-Clark\n2: Loop\n3: Butterfly\n4: Doo-Sabin\n5: Kobbelt Root3\n6: Peters-Reiff\n";
+		<< "1: Catmull-Clark\n2: Loop\n3: Butterfly\n4: Doo-Sabin\n";
 	cin >> in;
 
 	if (in == 1) return new CatmullClark();
 	else if (in == 2) return new Loop();
 	else if (in == 3) return new Butterfly();
 	else if (in == 4) return new DooSabin();
-	else if (in == 5) return new KobbeltRoot3();
-	else return new PetersReiff();
 }
 
 size_t MyRunner::getIterationInput()

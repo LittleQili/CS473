@@ -5,9 +5,7 @@
 #include "Loop.h"
 #include "CatmullClark.h"
 #include "DooSabin.h"
-#include "PetersReiff.h"
 #include "Butterfly.h"
-#include "KobbeltRoot3.h"
 
 #include <sstream>
 
