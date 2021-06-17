@@ -6,7 +6,7 @@
 int main(int, char** argv)
 {
 	MyRunner tryrun;
-	tryrun.run();
+	tryrun.run_body_mesh();
 
 	system("pause");
 	return 0;

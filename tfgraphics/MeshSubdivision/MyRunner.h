@@ -13,7 +13,12 @@ class MyRunner
 {
 public:
 	void run();
-	void getFilePathInput(string*);
-	BaseScheme* getSchemeInput();
+	void run_body_mesh();
+	void getFilePathInput(string *);
+	BaseScheme *getSchemeInput();
+	BaseScheme *getSchemeInput_body(int *);
 	size_t getIterationInput();
+
+private:
+	void true_run_body_mesh(string, string, size_t, int);
 };
