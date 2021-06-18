@@ -2,8 +2,6 @@
 
 #include "Point.h"
 #include "Mesh.h"
-#include "Loop.h"
-#include "CatmullClark.h"
 #include "DooSabin.h"
 #include "Butterfly.h"
 
@@ -12,11 +10,7 @@
 class MyRunner
 {
 public:
-	void run();
 	void run_body_mesh();
-	void getFilePathInput(string *);
-	BaseScheme *getSchemeInput();
-	BaseScheme *getSchemeInput_body(int *);
 	size_t getIterationInput();
 
 private:
