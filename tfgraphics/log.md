@@ -169,10 +169,6 @@ Bottleneck: 先用1\*1kernel降通道数，再正常卷积，再1\*1kernel升通
 
 #### ResNet
 
-这样的结构
-
-![image-20210605221409421](F:\term6\GPU\CS473\tfgraphics\log.assets\image-20210605221409421.png)
-
 前向传播解决问题：网络过深带来的模型退化的问题。因为当一定层数的网络有效时，后面x值基本都稳定变化，Fx就趋近于0。
 
 > 当浅层的输出已经足够成熟，让深层网络后面的层能够实现恒等映射的作用（即让后面的层从恒等映射的路径继续传递）
@@ -182,10 +178,6 @@ Bottleneck: 先用1\*1kernel降通道数，再正常卷积，再1\*1kernel升通
 [这篇博客](https://blog.csdn.net/qq_37555071/article/details/108258862?spm=1001.2014.3001.5502)用中文解释的比较清楚。
 
 #### DenseNet
-
-如果说ResNet是<img src="F:\term6\GPU\CS473\tfgraphics\log.assets\image-20210605223859665.png" alt="image-20210605223859665" style="zoom:50%;" />
-
-那么DenseNet就是<img src="F:\term6\GPU\CS473\tfgraphics\log.assets\image-20210605223925292.png" alt="image-20210605223925292" style="zoom:50%;" />
 
 其中，l表示layer,H可以表示BN, ReLU, Conv, Pooling之类的组合。
 

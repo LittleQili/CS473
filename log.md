@@ -3,6 +3,11 @@
 ## OpenGL 编程部分
 看[这里](opengl/learningOpenGL.md)
 看了一下，好像服务器不适合做opengl编程，因为没有办法显示
+
+## 大作业
+
+看[这里](tfgraphics/log.md)
+
 ## CUDA 编程部分
 ### 作业2思路
 #### CPU版本代码阅读
