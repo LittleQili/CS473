@@ -30,6 +30,6 @@ Source code of [OpenGL](https://github.com/LittleQili/CS473/tree/main/opengl/hw3
 
 The first part is to change the [mesh segmentation network structure](https://colab.research.google.com/github/tensorflow/graphics/blob/master/tensorflow_graphics/notebooks/mesh_segmentation_demo.ipynb) to get higher performance. The final version of the network can be found [here](https://github.com/LittleQili/CS473/blob/main/tfgraphics/my_mesh_segmentation_demo_indrive.ipynb).
 
-The second part is to do subdivision of  the mesh. [My work](https://github.com/LittleQili/CS473/tree/main/tfgraphics/MeshSubdivision) is referred to [ozkanyumsak's work](https://github.com/ozkanyumsak/mesh-subdivision).
+The second part is to do subdivision of  the mesh. I reference [ozkanyumsak's](https://github.com/ozkanyumsak/mesh-subdivision) in [my work](https://github.com/LittleQili/CS473/tree/main/tfgraphics/MeshSubdivision).
 
 Report can be found [here](https://github.com/LittleQili/CS473/blob/main/tfgraphics/report.pdf) (Only Chinese version).
